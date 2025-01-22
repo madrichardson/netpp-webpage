@@ -2,18 +2,13 @@ project:
   type: website
 
 website:
-  title: "netpp-webpage"
+  title: "CoastWatch Primary Productivity Project"
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+    logo: images/NOAA_logo.png
+    href: https://coastwatch.noaa.gov/cwn/index.html
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
-
-
 
