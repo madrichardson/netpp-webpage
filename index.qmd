@@ -20,9 +20,9 @@ format:
 
 <h1> Why do we need an interim product?</h1>
 
-<p>The only available primary productivity satellite product from NOAA was delevoped by the CoastWatch West Coast Node in 2007. The product is based on the Vertically Generalized Production Model (VPGM) descibed by Behrenfeld and Falkowski (1997) utilizing data from the MODIS sensor on the Aqua satellite.</p>
+<p>The only available primary productivity satellite product from NOAA was delevoped by the CoastWatch West Coast Node in 2007. The product is based on the Vertically Generalized Production Model (VPGM) described by Behrenfeld and Falkowski (1997) utilizing data from the MODIS sensor on the Aqua satellite.</p>
 
-<p>However, the MODIS Aqua sensor will be decommisioned soon. While new primary productivity algorithms that use the latest satellite sensors are under development, they are unlikely to be in production before MODIS Aqua is retired. Therefore, an interim product is required to address the needs of users for primary productivity data during the gap between the loss of the legacy MODIS primary productivity and the availablity of the new generation primary productivity products.</p>
+<p>However, the MODIS Aqua sensor will be decommissioned soon. While new primary productivity algorithms that use the latest satellite sensors are under development, they are unlikely to be in production before MODIS Aqua is retired. Therefore, an interim product is required to address the needs of users for primary productivity data during the gap between the loss of the legacy MODIS primary productivity and the availablity of the new generation primary productivity products.</p>
 
 <p>Two interim primary productivity products, VIIRS SNPP and VIIRS NOAA20, are now available. Details on how these products were developed, can be found under the **Algorithm and Data** tab.</p>
 <p></p>
@@ -47,7 +47,7 @@ For users interested in conducting their own statistical analyses tailored to th
   <p>The project team included: Dale Robinson, Cara Wilson, Sunny Hospital, Veronica Lance, Johnathon Sherman, Kim Hyde, Andrea VanderWoude, Kari Stlaurent, Melanie Abecassis, Ryan Rykaczewski, Ryan Vandermeulen, and Menghua Wang.
   </p>
 
-  <p>A special thanks to Jesse Espinoza and Madison Richardson who made important contribution to the project including helping to generate the production Python code to produce the nPP products.
+  <p>A special thanks to Jesse Espinoza and Madison Richardson who made important contributions to the project including helping to generate the production Python code to produce the netPP products.
   </p>
 
   <p>The project was supported by funding from the Portfolio Management Branch of NESDIS, NOAA CoastWatch, and CSU COAST.
