@@ -16,6 +16,12 @@ format:
 
 ::: {.panel-tabset}
 
+### Primary Productivity
+
+<h1> Why is primary productivity important?<h>
+
+---
+
 ### NetPP Product
 
 <h1> Why do we need an interim product?</h1>
@@ -54,6 +60,8 @@ For users interested in conducting their own statistical analyses tailored to th
   </p>
 </ul>
 </details>
+
+---
 
 ### Algorithm and Data
 
