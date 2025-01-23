@@ -11,7 +11,7 @@ format:
 
 :::{.figure}
 ![](images/productivity.png){fig-align="center"}
-<span style="text-align: right; display: block;">Photo courtesy of Elliot Hazen, NOAA Fisheries.</span>
+<span style="text-align: right; display: block;">PUT PRODUCTIVITY PICTURE HERE</span>
 :::
 
 ::: {.panel-tabset}
