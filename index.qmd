@@ -347,7 +347,7 @@ The contingency matrix is used to compute Cohen's Kappa, a statistical measure t
     Search satellite data on the CoastWatch West Coast Node ERDDAP data server.
 </p>
 
-<a href="https://coastwatch.pfeg.noaa.gov" target="_blank" style="text-decoration: none;">
+<a href="https://coastwatch.pfeg.noaa.gov/erddap/index.html" target="_blank" style="text-decoration: none;">
     <button style="padding: 10px 20px; font-size: 18px; color:white; background-color:  #0072ce; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
         ERDDAP<span style="margin-left: 10px;">&rarr;</span>
     </button>
