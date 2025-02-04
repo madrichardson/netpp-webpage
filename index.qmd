@@ -50,7 +50,7 @@ For users interested in conducting their own statistical analyses tailored to th
 <details>
 <summary style="font-weight: bold; font-size: 1.2em; margin-bottom: 5px; color: #0072ce;">Project Team and Funding</summary>
 <ul>
-  <p>The project team included: Dale Robinson, Cara Wilson, Sunny Hospital, Veronica Lance, Johnathon Sherman, Kim Hyde, Andrea VanderWoude, Kari Stlaurent, Melanie Abecassis, Ryan Rykaczewski, Ryan Vandermeulen, and Menghua Wang.
+  <p>The project team included: Dale Robinson, Cara Wilson, Sunny Hospital, Veronica Lance, Johnathon Sherman, Kim Hyde, Andrea Vander Woude, Kari St. Laurent, Melanie Abecassis, Ryan Rykaczewski, Ryan Vandermeulen, and Menghua Wang.
   </p>
 
   <p>A special thanks to Jesse Espinoza and Madison Richardson who made important contributions to the project including helping to generate the production Python code to produce the netPP products.
