@@ -11,22 +11,16 @@ format:
 
 :::{.figure}
 ![](images/productivity.png){fig-align="center"}
-<span style="text-align: right; display: block;">PUT PRODUCTIVITY PICTURE HERE</span>
+<span style="text-align: right; display: block;">Primary Productivity</span>
 :::
 
 ::: {.panel-tabset}
-
-### Primary Productivity
-
-<h1> Why is primary productivity important?<h>
-
----
 
 ### NetPP Product
 
 <h1> Why do we need an interim product?</h1>
 
-<p>The only available primary productivity satellite product from NOAA was delevoped by the CoastWatch West Coast Node in 2007. The product is based on the Vertically Generalized Production Model (VPGM) described by Behrenfeld and Falkowski (1997) utilizing data from the MODIS sensor on the Aqua satellite.</p>
+<p>The only available primary productivity satellite product from NOAA was developed by the CoastWatch West Coast Node in 2007. The product is based on the Vertically Generalized Production Model (VPGM) described by Behrenfeld and Falkowski (1997) utilizing data from the MODIS sensor on the Aqua satellite.</p>
 
 <p>However, the MODIS Aqua sensor will be decommissioned soon. While new primary productivity algorithms that use the latest satellite sensors are under development, they are unlikely to be in production before MODIS Aqua is retired. Therefore, an interim product is required to address the needs of users for primary productivity data during the gap between the loss of the legacy MODIS primary productivity and the availablity of the new generation primary productivity products.</p>
 
