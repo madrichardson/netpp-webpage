@@ -11,7 +11,7 @@ format:
 
 :::{.figure}
 ![](images/productivity.png){fig-align="center"}
-<span style="text-align: right; display: block;">Primary Productivity</span>
+<span style="text-align: right; display: block;"></span>
 :::
 
 ::: {.panel-tabset}
