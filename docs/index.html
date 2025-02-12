@@ -524,7 +524,7 @@ Where:
 Trends
 </h2>
 <p>
-The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. We calculated linear trends in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets. Finding trends using raw data allows us to anaylze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. We calculated p-values to test the statistical significance of the trends for each pixel.
+The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets. Finding trends using raw data allows us to anaylze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. We calculated p-values to test the statistical significance of the trends for each pixel.
 </p>
 <p>
 The linear trend is calculated for each pixel over all time steps for raw data as follows:
@@ -536,7 +536,7 @@ The linear trend is calculated for each pixel over all time steps for anomalies 
 Contingency Matrix
 </h2>
 <p>
-A contingency matrix helps assess the similarities and differences between the legacy and interim products. Using the linear trends we calculated above, we constructed a contingency matrix to compare the trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.
+Using the linear trends calculated above, a contingency matrix was constructed to compare the agreement or disagreement of trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.
 </p>
 <ul>
 <li>
