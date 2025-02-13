@@ -142,7 +142,7 @@ For users interested in conducting their own statistical analyses tailored to th
     <ul>
       <li><a href="https://example.com">MODIS netPP</a></li>
     </ul>
-  <li><a>MODIS Aqua input data for legacy nPP</a></li>
+  <li><a>MODIS Aqua input data for legacy netPP</a></li>
     <ul>
       <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/MODISA/L3SMI/contents.html">MODIS Chlorophyll_a</a></li>
       <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/MODISA/L3SMI/contents.html">MODIS PAR</a></li>
