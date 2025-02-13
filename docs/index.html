@@ -393,10 +393,10 @@ Satellite Data Sources
 Unbiased Relative Difference (ψ)
 </h2>
 <p>
-We calculated the unbiased relative difference (ψ<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets. This provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.
+The unbiased relative difference (ψ<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets. This provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.
 </p>
 <p>
-We created the pixel-by-pixel unbiased relative difference (ψ<sup>netPP</sup>) for the globe for each month at 9km resolution across two datasets:
+The pixel-by-pixel unbiased relative difference (ψ<sup>netPP</sup>) was created for the globe for each month at 9km resolution across two datasets:
 </p>
 <p><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_snpp_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Unbiased Relative Difference, VIIRS-SNPP - MODIS-Aqua Global, Monthly, 9km, 2013-2022</strong></a></p>
 <p><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Unbiased Relative Difference, VIIRS-NOAA20 - MODIS-Aqua Global, Monthly, 9km, 2018-2022</strong></a></p>
@@ -420,10 +420,10 @@ The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODI
 Absolute Relative Difference (Δ<sub>rel</sub>)
 </h2>
 <p>
-We calculated the mean absolute relative difference (Δ<sub>rel</sub>) of the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>).
+The mean absolute relative difference (Δ<sub>rel</sub>) of the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) was calculated.
 </p>
 <p>
-We created the pixel-by-pixel mean absolute difference (Δ<sub>rel</sub>) for the globe for each month at 9km resolution across two datasets:
+The pixel-by-pixel mean absolute difference (Δ<sub>rel</sub>) was created for the globe for each month at 9km resolution across two datasets:
 </p>
 <p><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_snpp_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Absolute Relative Difference, VIIRS-SNPP - MODIS-Aqua Global, Monthly, 9km, 2013-2022</strong></a></p>
 <p><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Absolute Relative Difference, VIIRS-NOAA20 - MODIS-Aqua Global, Monthly, 9km, 2018-2022</strong></a></p>
@@ -447,7 +447,7 @@ The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODI
 Correlations
 </h2>
 <p>
-The purpose of calculating Pearson’s correlation coefficient is to assess the agreement and disagreement across time and space between the MODIS and VIIRS datasets. Raw data and anomalies were used to calculate the correlation coefficents. Calculating the correlation coefficients with raw data enables us to evaluate the absolute agreement in primary productivity estimates, whereas calculating with anomalies enables us to focus on trends by removing seasonality. We also calculated p-values to test the statistical significance of the Pearson correlation coefficient for each pixel.
+The purpose of calculating Pearson’s correlation coefficient is to assess the agreement and disagreement across time and space between the MODIS and VIIRS datasets. Raw data and anomalies were used to calculate the correlation coefficents. Calculating the correlation coefficients with raw data enables us to evaluate the absolute agreement in primary productivity estimates, whereas calculating with anomalies helps to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the Pearson correlation coefficient for each pixel.
 </p>
 <p>
 We calculated Pearson’s correlation coefficient for each pixel over the time dimension for each of these datasets:
@@ -524,7 +524,7 @@ Where:
 Trends
 </h2>
 <p>
-The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets. Finding trends using raw data allows us to anaylze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. We calculated p-values to test the statistical significance of the trends for each pixel.
+The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets. Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.
 </p>
 <p>
 The trend analysis follows methods outlined in Melin et al.&nbsp;2017, see the section 2.3 “Trend estimates and comparison of trends”:
