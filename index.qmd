@@ -224,7 +224,7 @@ For users interested in conducting their own statistical analyses tailored to th
 
 <p>The purpose of calculating Pearson's correlation coefficient is to assess the agreement and disagreement across time and space between the MODIS and VIIRS datasets. Raw data and anomalies were used to calculate the correlation coefficents. Calculating the correlation coefficients with raw data enables us to evaluate the absolute agreement in primary productivity estimates, whereas calculating with anomalies helps to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the Pearson correlation coefficient for each pixel.</p>
 
-<p> We calculated Pearson's correlation coefficient for each pixel over the time dimension for each of these datasets:</p>
+<p> The Pearson's correlation coefficient was calculated for each pixel over the time dimension for each of these datasets:</p>
 
 <a href="http://localhost:8080/erddap/griddap/productivity_modis_aqua_monthly.graph" target="_blank" style="text-decoration: none; color: #0072ce;">**Primary Productivity, MODIS-AQUA, Science Quality, Global, 9km, 2013-2022 (Monthly Composite)**</a>
 
