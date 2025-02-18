@@ -144,9 +144,9 @@ For users interested in conducting their own statistical analyses tailored to th
     </ul>
   <li><a>MODIS Aqua input data for legacy netPP</a></li>
     <ul>
-      <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/MODISA/L3SMI/contents.html">MODIS Chlorophyll_a</a></li>
-      <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/MODISA/L3SMI/contents.html">MODIS PAR</a></li>
-      <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/MODISA/L3SMI/contents.html">MODIS SST</a></li>
+      <li><a href="https://www.earthdata.nasa.gov/">MODIS Chlorophyll_a</a></li>
+      <li><a href="https://www.earthdata.nasa.gov/">MODIS PAR</a></li>
+      <li><a href="https://www.earthdata.nasa.gov/">MODIS SST</a></li>
     </ul>
   <li><a>VIIRS SNPP netPP</a></li>
     <ul>
@@ -154,9 +154,9 @@ For users interested in conducting their own statistical analyses tailored to th
     </ul>
   <li><a>VIIRS SNPP input data for interim netPP</a></li>
     <ul>
-      <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/VIIRS/L3SMI/contents.html">VIIRS SNPP Chlorophyll_a</a></li>
-      <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/VIIRS/L3SMI/contents.html">VIIRS SNPP PAR</a></li>
-      <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/VIIRS/L3SMI/contents.html">VIIRS SNPP SST</a></li>
+      <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP Chlorophyll_a</a></li>
+      <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP PAR</a></li>
+      <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP SST</a></li>
     </ul>
   <li><a>VIIRS NOAA20 nPP</a></li>
     <ul>
@@ -164,9 +164,9 @@ For users interested in conducting their own statistical analyses tailored to th
     </ul>
   <li><a>VIIRS NOAA20 input data for interim netPP</a></li>
     <ul>
-      <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/VIIRSJ1/L3SMI/contents.html">VIIRS NOAA20 Chlorophyll_a</a></li>
-      <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/VIIRSJ1/L3SMI/contents.html">VIIRS NOAA20 PAR</a></li>
-      <li><a href="https://oceandata.sci.gsfc.nasa.gov/opendap/VIIRSJ1/L3SMI/contents.html">VIIRS NOAA20 SST</a></li>
+      <li><a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 Chlorophyll_a</a></li>
+      <li><a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 PAR</a></li>
+      <li><a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 SST</a></li>
     </ul>
 </ul>
 </details>
