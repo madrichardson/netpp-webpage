@@ -9,6 +9,12 @@ format:
 
 <h1> Why is primary productivity important?</h1>
 
+- Foundation of the food chain
+- Climate regulation & carbon cycle
+- Controls fish stock abundance
+- Fisheries management must account for primary production
+
+
 <h1> Why do we need an interim product?</h1>
 
 <p>The only available primary productivity satellite product from NOAA was developed by the CoastWatch West Coast Node in 2007. The product is based on the Vertically Generalized Production Model (VPGM) described by Behrenfeld and Falkowski (1997) utilizing data from the MODIS sensor on the Aqua satellite.</p>
