@@ -7,6 +7,15 @@ website:
   navbar:
     logo: images/NOAA_logo.png
     href: https://coastwatch.noaa.gov/cwn/index.html
+    left:
+      - text: "Primary Productivity"
+        href: prim_prod.qmd
+      - text: "Algorithm and Data"
+        href: algorithm.qmd
+      - text: "Statistical Analysis"
+        href: stats.qmd
+      - text: "User Resources"
+        href: user_resources.qmd
 
 format:
   html:

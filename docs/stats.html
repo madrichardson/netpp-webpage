@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CoastWatch Primary Productivity Project</title>
+<title>stats – CoastWatch Primary Productivity Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,7 +128,7 @@ window.Quarto = {
 <span class="menu-text">Algorithm and Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./stats.html"> 
+    <a class="nav-link active" href="./stats.html" aria-current="page"> 
 <span class="menu-text">Statistical Analysis</span></a>
   </li>  
   <li class="nav-item">
@@ -153,263 +153,6 @@ window.Quarto = {
 
 
 
-<section id="developing-an-interim-primary-productivity-product" class="level1">
-<h1>Developing an Interim Primary Productivity Product</h1>
-<div class="figure">
-<p><img src="images/productivity.png" class="img-fluid quarto-figure quarto-figure-center"> <span style="text-align: right; display: block;"></span></p>
-</div>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Primary Productivity</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Algorithm and Data</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Statistical Analysis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">User Resources</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<h1>
-Why is primary productivity important?
-</h1>
-<h1>
-Why do we need an interim product?
-</h1>
-<p>
-The only available primary productivity satellite product from NOAA was developed by the CoastWatch West Coast Node in 2007. The product is based on the Vertically Generalized Production Model (VPGM) described by Behrenfeld and Falkowski (1997) utilizing data from the MODIS sensor on the Aqua satellite.
-</p>
-<p>
-However, the MODIS Aqua sensor will be decommissioned soon. While new primary productivity algorithms that use the latest satellite sensors are under development, they are unlikely to be in production before MODIS Aqua is retired. Therefore, an interim product is required to address the needs of users for primary productivity data during the gap between the loss of the legacy MODIS primary productivity and the availablity of the new generation primary productivity products.
-</p>
-<p>
-Two interim primary productivity products, VIIRS SNPP and VIIRS NOAA20, are now available. Details on how these products were developed, can be found under the <strong>Algorithm and Data</strong> tab.
-</p>
-<p>
-</p>
-<p>
-Both interim products have undergone comprehensive statistical evaluation to ensure accuracy and reliability. The methods that were used to do so are found under the <strong>Statistical Analysis</strong> tab.
-</p>
-<p>
-</p>
-<p>
-For users interested in conducting their own statistical analyses tailored to their region of interest will find Python notebooks in the <strong>User Resources</strong> tab that provide step-by-step guidance.
-</p>
-<h2 data-anchor-id="developing-an-interim-primary-productivity-product">
-Additional Resources
-</h2>
-<details>
-<summary style="font-weight: bold; font-size: 1.2em; margin-bottom: 5px; color: #0072ce;">
-References
-</summary>
-<ul>
-<li>
-<a href="https://aslopubs.onlinelibrary.wiley.com/doi/10.4319/lo.1997.42.1.0001">Behrenfeld and Falkowski. (1997) Photosynthetic rates derived from satellite-based chlorophyll concentration Limnol. Oceanogr. . 42:1-20.</a>
-</li>
-</ul>
-</details>
-<details>
-<summary style="font-weight: bold; font-size: 1.2em; margin-bottom: 5px; color: #0072ce;">
-Project Team and Funding
-</summary>
-<ul>
-<p>
-The project team included: Dale Robinson, Cara Wilson, Sunny Hospital, Veronica Lance, Johnathon Sherman, Kim Hyde, Andrea Vander Woude, Kari St.&nbsp;Laurent, Melanie Abecassis, Ryan Rykaczewski, Ryan Vandermeulen, and Menghua Wang.
-</p>
-<p>
-A special thanks to Jesse Espinoza and Madison Richardson who made important contributions to the project including helping to generate the production Python code to produce the netPP products.
-</p>
-<p>
-The project was supported by funding from the Portfolio Management Branch of NESDIS, NOAA CoastWatch, and CSU COAST.
-</p>
-</ul>
-</details>
-<hr>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<h1>
-Primary Productivity (netPP) Algorithm
-</h1>
-<p>
-The Behrenfeld and Falkowski (1997) algorithm estimates primary productivity using satellite measurements and derived parameters. The algorithm formulation is listed below:
-</p>
-<blockquote class="blockquote">
-<p style="color: black;">
-<span class="math inline">\(netPP = 0.66125 \times P_{opt}^b \times \frac{PAR^o}{PAR^o + 4.1} \times Z_{eu} \times CHL \times DL\)</span>
-</p>
-</blockquote>
-<h3>
-Satellite Measurements
-</h3>
-<p>
-The algorithm uses three satellite measurements:
-</p>
-<ul>
-<li>
-<strong>CHL</strong> - Surface Chlorophyll_a Concentration
-</li>
-<li>
-<strong>PAR</strong> - Photosynthetically Active Radiation
-</li>
-<li>
-<strong>Sea Surface Temperature</strong>
-</li>
-</ul>
-<h3>
-Derived Parameters
-</h3>
-<p>
-The derived parameters are:
-</p>
-<ul>
-<li>
-<strong><span class="math inline">\(P_{opt}^b\)</span></strong> - Maximum Carbon fixation rate within the water column - Units: <span class="math inline">\(mg\)</span> <span class="math inline">\(C\)</span> <span class="math inline">\(mg^{-2}\)</span> <span class="math inline">\(chl\)</span> <span class="math inline">\(h^{-1}\)</span> :
-<blockquote style="margin: 0; padding-left: 1em; border-left: 4px solid #ddd;" class="blockquote">
-<p style="color: black; margin: 0;">
-<span class="math inline">\(P_{opt}^b = - 3.27E-8 \cdot SST^7 + 3.4132E-6 \cdot SST^6\)</span>
-</p>
-<p style="color: black; margin: 0;">
-<span class="math inline">\(- 1.348E-4 \cdot SST^5 + 2.462E-3 \cdot SST^4\)</span>
-</p>
-<p style="color: black; margin: 0;">
-<span class="math inline">\(- 0.0205 \cdot SST^3 + 0.0617 \cdot SST^2 + 0.2749 \cdot SST\)</span>
-</p>
-</blockquote>
-<p>
-</p>
-</li><li>
-<strong><span class="math inline">\(PAR/(PAR + 4.1)\)</span></strong> - Fraction of realized <span class="math inline">\(P_{opt}^b\)</span>
-</li>
-<p>
-</p>
-<li>
-<strong><span class="math inline">\(Z_{eu}\)</span></strong> - Depth where light is 1% of that at the surface - Units: meters (m)
-<p>
-</p>
-<p>
-<span class="math inline">\(Z_{eu}\)</span> is derived from an estimate of the total chlorophyll concentration within the euphotic layer (<span><span class="math inline">\(CHL_{eu}\)</span></span>) based on the Case I models of Morel and Berthon (1989):
-</p>
-<blockquote class="blockquote">
-<p style="color: black;">
-<span class="math inline">\(Z_{eu} = 568.2 \cdot CHL^{-0.746} \quad \text{when } CHL_{eu} &gt; 10.0\)</span>
-</p>
-<p>
-or
-</p>
-<p style="color: black;">
-<span class="math inline">\(Z_{eu} = 200.0 \cdot CHL^{-0.293} \quad \text{when } CHL_{eu} \leq 10.0\)</span>
-</p>
-</blockquote>
-<p>
-Where:
-</p>
-<ul>
-<blockquote class="blockquote">
-<p style="color: black;">
-<span class="math inline">\(CHL_{eu} = 38.0 \cdot CHL^{0.4250} \quad \text{when } CHL \leq 1.0\)</span>
-</p>
-<p>
-or
-</p>
-<p style="color: black;">
-<span class="math inline">\(CHL_{eu} = 40.2 \cdot CHL^{0.5070} \quad \text{when } CHL &gt; 1.0\)</span>
-</p>
-</blockquote>
-</ul>
-</li>
-<li>
-<strong>DL</strong> - Daylength determined from the day of the year and latitude - Units: hours
-</li>
-</ul>
-<h2>
-Satellite Data Used in the Algorithm
-</h2>
-<h4>
-<strong>Legacy Product</strong>
-</h4>
-<p>
-The original netPP product made by CoastWatch West Coast Node uses chlorophyll, sea surface temperature and photosynthetically active radiation derived from the MODIS sensor on the Aqua satellite. The dataset begins in 2002 and ends in 2024, offering daily, weekly, and monthly versions of the dataset.
-</p>
-<h4>
-<strong>VIIRS SNPP Interim Product</strong>
-</h4>
-<p>
-The VIIRS SNPP interim netPP product uses chlorophyll, sea surface temperature and photosynthetically active radiation derived from the VIIRS sensor on the SNPP satellite. The dataset begins in 2012 and continues to the present, offering daily, weekly, and monthly versions of the dataset.
-</p>
-<h4>
-<strong>VIIRS NOAA20 Interim Product</strong>
-</h4>
-<p>
-The VIIRS NOAA20 interim netPP product uses chlorophyll, sea surface temperature and photosynthetically active radiation derived from the VIIRS sensor on the NOAA20 satellite. The dataset begins in 2018 and continues to the present, offering daily, weekly, and monthly versions of the dataset.
-</p>
-<details>
-<summary style="font-weight: bold; font-size: 1.5em; margin-bottom: 5px; color: #0072ce;">
-Satellite Data Sources
-</summary>
-<ul>
-<li>
-<a>MODIS Aqua netPP</a>
-</li>
-<ul>
-<li>
-<a href="https://example.com">MODIS netPP</a>
-</li>
-</ul>
-<li>
-<a>MODIS Aqua input data for legacy netPP</a>
-</li>
-<ul>
-<li>
-<a href="https://www.earthdata.nasa.gov/">MODIS Chlorophyll_a</a>
-</li>
-<li>
-<a href="https://www.earthdata.nasa.gov/">MODIS PAR</a>
-</li>
-<li>
-<a href="https://www.earthdata.nasa.gov/">MODIS SST</a>
-</li>
-</ul>
-<li>
-<a>VIIRS SNPP netPP</a>
-</li>
-<ul>
-<li>
-<a href="https://example.com">VIIRS SNPP netPP</a>
-</li>
-</ul>
-<li>
-<a>VIIRS SNPP input data for interim netPP</a>
-</li>
-<ul>
-<li>
-<a href="https://www.earthdata.nasa.gov/">VIIRS SNPP Chlorophyll_a</a>
-</li>
-<li>
-<a href="https://www.earthdata.nasa.gov/">VIIRS SNPP PAR</a>
-</li>
-<li>
-<a href="https://www.earthdata.nasa.gov/">VIIRS SNPP SST</a>
-</li>
-</ul>
-<li>
-<a>VIIRS NOAA20 nPP</a>
-</li>
-<ul>
-<li>
-<a href="https://example.com">VIIRS NOAA20 netPP</a>
-</li>
-</ul>
-<li>
-<a>VIIRS NOAA20 input data for interim netPP</a>
-</li>
-<ul>
-<li>
-<a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 Chlorophyll_a</a>
-</li>
-<li>
-<a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 PAR</a>
-</li>
-<li>
-<a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 SST</a>
-</li>
-</ul>
-</ul>
-</details>
-<hr>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <h2>
 Unbiased Relative Difference (ψ)
 </h2>
@@ -570,33 +313,8 @@ Using the linear trends calculated above, a contingency matrix was constructed t
 </ul>
 <p>The contingency matrix shows the percentage of pixels where the legacy and interim primary productivity products agree or disagree. The diagonal cells descending from left to right show where the products agree, and the off-diagonal cells show where the products disagree.</p>
 <p>The contingency matrix is used to compute Cohen’s Kappa, a statistical measure that quantifies the level of agreement between the two NetPP products. Cohen’s Kappa accounts for the agreement occuring by chance and provides a standardized metric of similarity. The scale ranges from 0 (no agreement) to 1 (perfect agreement).</p>
-<hr>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<h2>
-Code Gallery
-</h2>
-<h2>
-Satellite Courses
-</h2>
-<p>
-CoastWatch hosts satellite training opportunites in-person and online, providing users with the knowledge and skills to utilize satellite data in their research.
-</p>
-<p><a href="https://coastwatch.pfeg.noaa.gov/courses/satellite_course.html" target="_blank" style="text-decoration: none;"> <button style="padding: 10px 20px; font-size: 18px; color:white; background-color:  #0072ce; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"> Satellite Courses<span style="margin-left: 10px;">→</span> </button> </a></p>
-<h2>
-ERDDAP Server
-</h2>
-<p>
-Search satellite data on the CoastWatch West Coast Node ERDDAP data server.
-</p>
-<p><a href="https://coastwatch.pfeg.noaa.gov/erddap/index.html" target="_blank" style="text-decoration: none;"> <button style="padding: 10px 20px; font-size: 18px; color:white; background-color:  #0072ce; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"> ERDDAP<span style="margin-left: 10px;">→</span> </button> </a></p>
-<hr>
 
 
-</div>
-</div>
-</div>
-</section>
 
 </main> <!-- /main -->
 <div style="text-align: center; padding: 20px; border-top: 1px solid #ddd;">

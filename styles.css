@@ -4,6 +4,15 @@ nav.quarto-navbar {
     justify-content: center;
 }
 
+.navbar-nav .nav-link {
+  color: #cccccc;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: white;
+}
+
 /*Center logo or adjust padding */
 nav.quarto-navbar .quarto-navbar-logo {
     margin-right: auto;
@@ -36,11 +45,17 @@ nav.quarto-navbar .quarto-navbar-logo {
     --bs-navbar-color: #545555;
     --bs-navbar-hover-color: #dee2e6;
     --bs-navbar-disabled-color: rgba(84, 85, 85, 0.75);
-    --bs-navbar-active-color: #1f4eb6;
+    --bs-navbar-active-color: white;
     --bs-navbar-brand-color: #545555;
     --bs-navbar-brand-hover-color: #dee2e6;
     --bs-navbar-toggler-border-color: rgba(84, 85, 85, 0);
     --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23545555' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link[aria-current="page"] {
+  color: white;
+  font-weight: bold;
 }
 
 .nav-tabs {
