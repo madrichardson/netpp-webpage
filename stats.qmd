@@ -29,6 +29,13 @@ format:
   <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by the mean of <i>netPP<sub>VIIRS</sub></i> and <i>netPP<sub>MODIS</sub></i>.</li>
 </ul>
 
+<h3>Comparing the best and worst fit Longhurst Provinces</h3>
+
+![](images/bestVSworstLonghurstPronvince.png){fig-align="center"}
+<span style="text-align: right; display: block;"></span>
+
+<p> Over the entire five-year timeseries (2018-2022), the ARAB province (green) had the lowest absolute mean absolute &psi;<sup>netPP</sup> (-0.0013), indicating the strongest agreement between MODIS-AQUA and VIIRS-NOAA20. The NPSW province (black) had the highest absolute mean absolute &psi;<sup>netPP</sup> (0.1130), indicating weak agreement between the sensors, with VIIRS-NOAA20 consistently overestimating netPP in this province. </p>
+
 <h2>Absolute Relative Difference (&Delta;<sub>rel</sub>)</h2>
 
 <p>The mean absolute relative difference (&Delta;<sub>rel</sub>) of the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) was calculated.</p>
