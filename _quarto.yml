@@ -7,7 +7,7 @@ website:
   navbar:
     logo: images/NOAA_logo.png
     href: https://coastwatch.noaa.gov/cwn/index.html
-    left:
+    right:
       - text: "Algorithm and Data"
         href: algorithm.qmd
       - text: "Statistical Analysis"
