@@ -29,7 +29,7 @@ format:
   <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by the mean of <i>netPP<sub>VIIRS</sub></i> and <i>netPP<sub>MODIS</sub></i>.</li>
 </ul>
 
-<h3>Comparing the best and worst fit Longhurst Provinces</h3>
+<h3>Comparing the Best and Worst Fit Longhurst Provinces</h3>
 
 ![](images/bestVSworstLonghurstPronvince.png){fig-align="center"}
 <span style="text-align: right; display: block;"></span>
