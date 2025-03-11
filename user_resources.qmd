@@ -12,6 +12,8 @@ sidebar:
   style: "floating"
 ---
 
+# User Resources
+
 ## Code Gallery
 
 **Explore tutorials designed to help users analyze and compare legacy and interim primary productivity using Python or R.**

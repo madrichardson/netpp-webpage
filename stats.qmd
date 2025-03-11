@@ -12,6 +12,8 @@ sidebar:
   style: "floating"
 ---
 
+# Statistical Analysis
+
 ## Unbiased Relative Difference (&psi;)
 
 <p>The unbiased relative difference (&psi;<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets. This provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.</p>
