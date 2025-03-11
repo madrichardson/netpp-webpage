@@ -99,7 +99,7 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -141,17 +141,37 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#unbiased-relative-difference-ψ" id="toc-unbiased-relative-difference-ψ" class="nav-link active" data-scroll-target="#unbiased-relative-difference-ψ">Unbiased Relative Difference (ψ)</a>
+  <ul class="collapse">
+  <li><a href="#comparing-the-best-and-worst-fit-longhurst-provinces" id="toc-comparing-the-best-and-worst-fit-longhurst-provinces" class="nav-link" data-scroll-target="#comparing-the-best-and-worst-fit-longhurst-provinces">Comparing the Best and Worst Fit Longhurst Provinces</a></li>
+  </ul></li>
+  <li><a href="#absolute-relative-difference-δrel" id="toc-absolute-relative-difference-δrel" class="nav-link" data-scroll-target="#absolute-relative-difference-δrel">Absolute Relative Difference (Δ<sub>rel</sub>)</a></li>
+  <li><a href="#correlations" id="toc-correlations" class="nav-link" data-scroll-target="#correlations">Correlations</a></li>
+  <li><a href="#trends" id="toc-trends" class="nav-link" data-scroll-target="#trends">Trends</a>
+  <ul class="collapse">
+  <li><a href="#visualize-global-trends" id="toc-visualize-global-trends" class="nav-link" data-scroll-target="#visualize-global-trends">Visualize Global Trends</a></li>
+  </ul></li>
+  <li><a href="#contingency-matrix" id="toc-contingency-matrix" class="nav-link" data-scroll-target="#contingency-matrix">Contingency Matrix</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
 
-<h2>
-Unbiased Relative Difference (ψ)
-</h2>
+<section id="unbiased-relative-difference-ψ" class="level2">
+<h2 data-anchor-id="unbiased-relative-difference-ψ">Unbiased Relative Difference (ψ)</h2>
 <p>
 The unbiased relative difference (ψ<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets. This provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.
 </p>
@@ -176,20 +196,34 @@ Where:
 The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by the mean of <i>netPP<sub>VIIRS</sub></i> and <i>netPP<sub>MODIS</sub></i>.
 </li>
 </ul>
-<h3>
-Comparing the Best and Worst Fit Longhurst Provinces
-</h3>
-<p><img src="images/best_worst_psi_snpp.png" class="img-fluid quarto-figure quarto-figure-center"> <span style="text-align: right; display: block;"></span></p>
+<section id="comparing-the-best-and-worst-fit-longhurst-provinces" class="level3">
+<h3 data-anchor-id="comparing-the-best-and-worst-fit-longhurst-provinces">Comparing the Best and Worst Fit Longhurst Provinces</h3>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/best_worst_psi_snpp.png" class="img-fluid figure-img" width="800"></p>
+<figcaption>Figure 1.</figcaption>
+</figure>
+</div>
+</div>
 <p>
 Over the entire ten-year timeseries (2013-2022), the ARAB province (green) had the lowest absolute mean absolute ψ<sup>netPP</sup> (-0.0013), indicating the strongest agreement between MODIS-AQUA and VIIRS-SNPP. The NPSW province (black) had the highest absolute mean absolute ψ<sup>netPP</sup> (0.1130), indicating weak agreement between the sensors, with VIIRS-SNPP consistently overestimating netPP in this province.
 </p>
-<p><img src="images/bestVSworstLonghurstPronvince.png" class="img-fluid quarto-figure quarto-figure-center"> <span style="text-align: right; display: block;"></span></p>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bestVSworstLonghurstPronvince.png" class="img-fluid figure-img" width="800"></p>
+<figcaption>Figure 2.</figcaption>
+</figure>
+</div>
+</div>
 <p>
 Similarly, the five-year timeseries between MODIS-AQUA and VIIRS-NOAA20 showed the ARAB province (green) had the lowest absolute mean absolute ψ<sup>netPP</sup> (-0.0013) and the NPSW province (black) had the highest absolute mean absolute ψ<sup>netPP</sup> (0.1130). For both comparisons of MODIS-AQUA and the two interim products, the strongest agreement between the sensors occurs in the ARAB province and is weakest in the NPSW province.
 </p>
-<h2>
-Absolute Relative Difference (Δ<sub>rel</sub>)
-</h2>
+</section>
+</section>
+<section id="absolute-relative-difference-δrel" class="level2">
+<h2 data-anchor-id="absolute-relative-difference-δrel">Absolute Relative Difference (Δ<sub>rel</sub>)</h2>
 <p>
 The mean absolute relative difference (Δ<sub>rel</sub>) of the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) was calculated.
 </p>
@@ -214,9 +248,9 @@ Where:
 The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by <i>netPP<sub>MODIS</sub></i>.
 </li>
 </ul>
-<h2>
-Correlations
-</h2>
+</section>
+<section id="correlations" class="level2">
+<h2 data-anchor-id="correlations">Correlations</h2>
 <p>
 The purpose of calculating Pearson’s correlation coefficient is to assess the agreement and disagreement across time and space between the MODIS and VIIRS datasets. Raw data and anomalies were used to calculate the correlation coefficents. Calculating the correlation coefficients with raw data enables us to evaluate the absolute agreement in primary productivity estimates, whereas calculating with anomalies helps to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the Pearson correlation coefficient for each pixel.
 </p>
@@ -291,9 +325,9 @@ Where:
 <strong><i>N</i></strong>: Number of time points (number of months).
 </li>
 </ul>
-<h2>
-Trends
-</h2>
+</section>
+<section id="trends" class="level2">
+<h2 data-anchor-id="trends">Trends</h2>
 <p>
 The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets. Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.
 </p>
@@ -301,12 +335,20 @@ The purpose of calculating linear trends for each of the datasets is to evaluate
 The trend analysis follows methods outlined in Melin et al.&nbsp;2017, see the section 2.3 “Trend estimates and comparison of trends”:
 </p>
 <p><a href="https://www.sciencedirect.com/science/article/pii/S0034425717301426" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Mélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151.</strong></a></p>
+<section id="visualize-global-trends" class="level3">
+<h3 data-anchor-id="visualize-global-trends">Visualize Global Trends</h3>
 <div style="text-align: center;">
-<p><img src="images/trends_comparison.png" class="img-fluid" width="600"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/trends_comparison.png" class="img-fluid figure-img" width="600"></p>
+<figcaption>Figure 3.</figcaption>
+</figure>
 </div>
-<h2>
-Contingency Matrix
-</h2>
+</div>
+</section>
+</section>
+<section id="contingency-matrix" class="level2">
+<h2 data-anchor-id="contingency-matrix">Contingency Matrix</h2>
 <p>
 Using the linear trends calculated above, a contingency matrix was constructed to compare the agreement or disagreement of trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.
 </p>
@@ -325,6 +367,7 @@ Using the linear trends calculated above, a contingency matrix was constructed t
 <p>The contingency matrix is used to compute Cohen’s Kappa, a statistical measure that quantifies the level of agreement between the two NetPP products. Cohen’s Kappa accounts for the agreement occuring by chance and provides a standardized metric of similarity. The scale ranges from 0 (no agreement) to 1 (perfect agreement).</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <div style="text-align: center; padding: 20px; border-top: 1px solid #ddd;">

@@ -5,18 +5,23 @@ format:
     theme: cosmo
     css: styles.css
     include-after-body: footer.html
+    toc: true
+    toc-depth: 2
+    toc-location: left
+sidebar:
+  style: "floating"
 ---
 
-# Developing an Interim Primary Productivity Product
+<h1> Developing an Interim Primary Productivity Product </h1>
 
 :::{.figure}
 ![](images/productivity.png){fig-align="center"}
 <span style="text-align: right; display: block;"></span>
 :::
 
-<h1> Why were we tasked with this project? (For Dale)</h1>
+## Why were we tasked with this project? (For Dale)
 
-<h1> Why is primary productivity important?</h1>
+## Why is primary productivity important?
 
 - Foundation of the food chain
 - Climate regulation & carbon cycle
@@ -24,7 +29,7 @@ format:
 - Fisheries management must account for primary production
 
 
-<h1> Why do we need an interim product?</h1>
+## Why do we need an interim product? 
 
 <p>The only available primary productivity satellite product from NOAA was developed by the CoastWatch West Coast Node in 2007. The product is based on the Vertically Generalized Production Model (VPGM) described by Behrenfeld and Falkowski (1997) utilizing data from the MODIS sensor on the Aqua satellite.</p>
 
@@ -38,7 +43,7 @@ Both interim products have undergone comprehensive statistical evaluation to ens
 <p>
 For users interested in conducting their own statistical analyses tailored to their region of interest will find Python notebooks in the [User Resources](user_resources.qmd) tab that provide step-by-step guidance.</p>
 
-<h2>Additional Resources</h2>
+## Additional Resources
 
 <details>
 <summary style="font-weight: bold; font-size: 1.2em; margin-bottom: 5px; color: #0072ce;">References</summary>

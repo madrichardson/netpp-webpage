@@ -66,11 +66,40 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -112,33 +141,83 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#code-gallery" id="toc-code-gallery" class="nav-link active" data-scroll-target="#code-gallery">Code Gallery</a></li>
+  <li><a href="#satellite-courses" id="toc-satellite-courses" class="nav-link" data-scroll-target="#satellite-courses">Satellite Courses</a></li>
+  <li><a href="#erddap-server" id="toc-erddap-server" class="nav-link" data-scroll-target="#erddap-server">ERDDAP Server</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
 
-<h2>
-Code Gallery
-</h2>
-<h2>
-Satellite Courses
-</h2>
+<section id="code-gallery" class="level2">
+<h2 data-anchor-id="code-gallery">Code Gallery</h2>
+<p><strong>Explore tutorials designed to help users analyze and compare legacy and interim primary productivity using Python or R.</strong></p>
+<section id="unbiased-relative-difference-analysis-of-the-legacy-and-interim-products" class="level4">
+<h4 data-anchor-id="unbiased-relative-difference-analysis-of-the-legacy-and-interim-products"><strong>Unbiased Relative Difference Analysis of the Legacy and Interim Products</strong></h4>
+<div class="grid">
+<div class="g-col-6">
+<p><img src="images/CCAL_MODIS_SNPP_psi.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div class="g-col-6">
+<p>Calculate the mean unbiased relative difference (<span class="math inline">\(\psi\)</span>) between the legacy and interim products for a user-specified region.</p>
+<p><a href="https://example.com">View in Github</a></p>
+</div>
+</div>
+</section>
+<section id="biased-relative-difference-analysis-of-the-legacy-and-interim-products" class="level4">
+<h4 data-anchor-id="biased-relative-difference-analysis-of-the-legacy-and-interim-products"><strong>Biased Relative Difference Analysis of the Legacy and Interim Products</strong></h4>
+<div class="grid">
+<div class="g-col-6">
+<p><img src="images/CCAL_MODIS_SNPP_delta.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div class="g-col-6">
+<p>Calculate the biased relative difference (<span class="math inline">\(\Delta\)</span>) between the legacy and interim products for a user-specified region.</p>
+<p><a href="https://example.com">View in Github</a></p>
+</div>
+</div>
+</section>
+<section id="correlation-analysis-of-the-legacy-and-interim-products" class="level4">
+<h4 data-anchor-id="correlation-analysis-of-the-legacy-and-interim-products"><strong>Correlation Analysis of the Legacy and Interim Products</strong></h4>
+<div class="grid">
+<div class="g-col-6">
+<p><img src="images/CCAl_MODIS_SNPP_corr.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div class="g-col-6">
+<p>Visualize correlations and p-values between two time series of monthly means of primary productivity for a user-specified region.</p>
+<p><a href="https://example.com">View in Github</a></p>
+</div>
+</div>
+</section>
+</section>
+<section id="satellite-courses" class="level2">
+<h2 data-anchor-id="satellite-courses">Satellite Courses</h2>
 <p>
 CoastWatch hosts satellite training opportunites in-person and online, providing users with the knowledge and skills to utilize satellite data in their research.
 </p>
 <p><a href="https://coastwatch.pfeg.noaa.gov/courses/satellite_course.html" target="_blank" style="text-decoration: none;"> <button style="padding: 10px 20px; font-size: 18px; color:white; background-color:  #0072ce; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"> Satellite Courses<span style="margin-left: 10px;">→</span> </button> </a></p>
-<h2>
-ERDDAP Server
-</h2>
+</section>
+<section id="erddap-server" class="level2">
+<h2 data-anchor-id="erddap-server">ERDDAP Server</h2>
 <p>
 Search satellite data on the CoastWatch West Coast Node ERDDAP data server.
 </p>
 <p><a href="https://coastwatch.pfeg.noaa.gov/erddap/index.html" target="_blank" style="text-decoration: none;"> <button style="padding: 10px 20px; font-size: 18px; color:white; background-color:  #0072ce; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"> ERDDAP<span style="margin-left: 10px;">→</span> </button> </a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <div style="text-align: center; padding: 20px; border-top: 1px solid #ddd;">

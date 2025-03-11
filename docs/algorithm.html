@@ -99,7 +99,7 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -141,17 +141,32 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#primary-productivity-netpp-algorithm" id="toc-primary-productivity-netpp-algorithm" class="nav-link active" data-scroll-target="#primary-productivity-netpp-algorithm">Primary Productivity (netPP) Algorithm</a>
+  <ul class="collapse">
+  <li><a href="#satellite-measurements" id="toc-satellite-measurements" class="nav-link" data-scroll-target="#satellite-measurements">Satellite Measurements</a></li>
+  <li><a href="#derived-parameters" id="toc-derived-parameters" class="nav-link" data-scroll-target="#derived-parameters">Derived Parameters</a></li>
+  </ul></li>
+  <li><a href="#satellite-data-used-in-the-algorithm" id="toc-satellite-data-used-in-the-algorithm" class="nav-link" data-scroll-target="#satellite-data-used-in-the-algorithm">Satellite Data Used in the Algorithm</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
 
-<h1>
-Primary Productivity (netPP) Algorithm
-</h1>
+<section id="primary-productivity-netpp-algorithm" class="level2">
+<h2 data-anchor-id="primary-productivity-netpp-algorithm">Primary Productivity (netPP) Algorithm</h2>
 <p>
 The Behrenfeld and Falkowski (1997) algorithm estimates primary productivity using satellite measurements and derived parameters. The algorithm formulation is listed below:
 </p>
@@ -160,9 +175,8 @@ The Behrenfeld and Falkowski (1997) algorithm estimates primary productivity usi
 <span class="math inline">\(netPP = 0.66125 \times P_{opt}^b \times \frac{PAR^o}{PAR^o + 4.1} \times Z_{eu} \times CHL \times DL\)</span>
 </p>
 </blockquote>
-<h3>
-Satellite Measurements
-</h3>
+<section id="satellite-measurements" class="level3">
+<h3 data-anchor-id="satellite-measurements">Satellite Measurements</h3>
 <p>
 The algorithm uses three satellite measurements:
 </p>
@@ -177,9 +191,9 @@ The algorithm uses three satellite measurements:
 <strong>Sea Surface Temperature</strong>
 </li>
 </ul>
-<h3>
-Derived Parameters
-</h3>
+</section>
+<section id="derived-parameters" class="level3">
+<h3 data-anchor-id="derived-parameters">Derived Parameters</h3>
 <p>
 The derived parameters are:
 </p>
@@ -243,9 +257,10 @@ or
 <strong>DL</strong> - Daylength determined from the day of the year and latitude - Units: hours
 </li>
 </ul>
-<h2>
-Satellite Data Used in the Algorithm
-</h2>
+</section>
+</section>
+<section id="satellite-data-used-in-the-algorithm" class="level2">
+<h2 data-anchor-id="satellite-data-used-in-the-algorithm">Satellite Data Used in the Algorithm</h2>
 <h4>
 <strong>Legacy Product</strong>
 </h4>
@@ -339,6 +354,7 @@ Satellite Data Sources
 </details>
 
 
+</section>
 
 </main> <!-- /main -->
 <div style="text-align: center; padding: 20px; border-top: 1px solid #ddd;">

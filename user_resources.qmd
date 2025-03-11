@@ -5,11 +5,54 @@ format:
     theme: cosmo
     css: styles.css
     include-after-body: footer.html
+    toc: true
+    toc-depth: 2
+    toc-location: left
+sidebar:
+  style: "floating"
 ---
 
-<h2>Code Gallery</h2>
+## Code Gallery
 
-<h2>Satellite Courses</h2>
+**Explore tutorials designed to help users analyze and compare legacy and interim primary productivity using Python or R.**
+
+#### **Unbiased Relative Difference Analysis of the Legacy and Interim Products**
+::: {.grid}
+::::{.g-col-6}
+![](images/CCAL_MODIS_SNPP_psi.png){width=100%}
+::::
+:::: {.g-col-6}
+Calculate the mean unbiased relative difference ($\psi$) between the legacy and interim products for a user-specified region.
+
+[View in Github](https://example.com)
+::::
+:::
+
+#### **Biased Relative Difference Analysis of the Legacy and Interim Products**
+::: {.grid}
+::::{.g-col-6}
+![](images/CCAL_MODIS_SNPP_delta.png){width=100%}
+::::
+:::: {.g-col-6}
+Calculate the biased relative difference ($\Delta$) between the legacy and interim products for a user-specified region.
+
+[View in Github](https://example.com)
+::::
+:::
+
+#### **Correlation Analysis of the Legacy and Interim Products**
+::: {.grid}
+::::{.g-col-6}
+![](images/CCAl_MODIS_SNPP_corr.png){width=100%}
+::::
+:::: {.g-col-6}
+Visualize correlations and p-values between two time series of monthly means of primary productivity for a user-specified region.
+
+[View in Github](https://example.com)
+::::
+:::
+
+## Satellite Courses
 
 <p>
     CoastWatch hosts satellite training opportunites in-person and online, providing users with the knowledge and skills to utilize satellite data in their research.
@@ -21,7 +64,7 @@ format:
     </button>
 </a>
 
-<h2>ERDDAP Server</h2>
+## ERDDAP Server
 
 <p>
     Search satellite data on the CoastWatch West Coast Node ERDDAP data server.

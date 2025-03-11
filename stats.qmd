@@ -5,9 +5,14 @@ format:
     theme: cosmo
     css: styles.css
     include-after-body: footer.html
+    toc: true
+    toc-depth: 3
+    toc-location: left
+sidebar:
+  style: "floating"
 ---
 
-<h2>Unbiased Relative Difference (&psi;)</h2>
+## Unbiased Relative Difference (&psi;)
 
 <p>The unbiased relative difference (&psi;<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets. This provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.</p>
 
@@ -29,19 +34,21 @@ format:
   <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by the mean of <i>netPP<sub>VIIRS</sub></i> and <i>netPP<sub>MODIS</sub></i>.</li>
 </ul>
 
-<h3>Comparing the Best and Worst Fit Longhurst Provinces</h3>
+### Comparing the Best and Worst Fit Longhurst Provinces
 
-![](images/best_worst_psi_snpp.png){fig-align="center"}
-<span style="text-align: right; display: block;"></span>
+::: {style="text-align: center;"}
+![Figure 1.](images/best_worst_psi_snpp.png){width=800px}
+:::
 
 <p> Over the entire ten-year timeseries (2013-2022), the ARAB province (green) had the lowest absolute mean absolute &psi;<sup>netPP</sup> (-0.0013), indicating the strongest agreement between MODIS-AQUA and VIIRS-SNPP. The NPSW province (black) had the highest absolute mean absolute &psi;<sup>netPP</sup> (0.1130), indicating weak agreement between the sensors, with VIIRS-SNPP consistently overestimating netPP in this province. </p>
 
-![](images/bestVSworstLonghurstPronvince.png){fig-align="center"}
-<span style="text-align: right; display: block;"></span>
+::: {style="text-align: center;"}
+![Figure 2.](images/bestVSworstLonghurstPronvince.png){width=800px}
+:::
 
 <p> Similarly, the five-year timeseries between MODIS-AQUA and VIIRS-NOAA20 showed the ARAB province (green) had the lowest absolute mean absolute &psi;<sup>netPP</sup> (-0.0013) and the NPSW province (black) had the highest absolute mean absolute &psi;<sup>netPP</sup> (0.1130). For both comparisons of MODIS-AQUA and the two interim products, the strongest agreement between the sensors occurs in the ARAB province and is weakest in the NPSW province. </p>
 
-<h2>Absolute Relative Difference (&Delta;<sub>rel</sub>)</h2>
+## Absolute Relative Difference (&Delta;<sub>rel</sub>)
 
 <p>The mean absolute relative difference (&Delta;<sub>rel</sub>) of the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) was calculated.</p>
 
@@ -64,7 +71,7 @@ format:
   <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by <i>netPP<sub>MODIS</sub></i>.</li>
 </ul>
 
-<h2>Correlations</h2>
+## Correlations
 
 <p>The purpose of calculating Pearson's correlation coefficient is to assess the agreement and disagreement across time and space between the MODIS and VIIRS datasets. Raw data and anomalies were used to calculate the correlation coefficents. Calculating the correlation coefficients with raw data enables us to evaluate the absolute agreement in primary productivity estimates, whereas calculating with anomalies helps to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the Pearson correlation coefficient for each pixel.</p>
 
@@ -139,7 +146,7 @@ format:
     </li>
   </ul>
 
-<h2>Trends</h2>
+## Trends
 
 <p> The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets. Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.</p>
 
@@ -147,11 +154,13 @@ format:
 
 <a href="https://www.sciencedirect.com/science/article/pii/S0034425717301426" target="_blank" style="text-decoration: none; color: #0072ce;">**Mélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151.**</a>
 
+### Visualize Global Trends 
+
 ::: {style="text-align: center;"}
-![](images/trends_comparison.png){width=600px}
+![Figure 3.](images/trends_comparison.png){width=600px}
 :::
 
-<h2>Contingency Matrix</h2>
+## Contingency Matrix
 
 <p>Using the linear trends calculated above, a contingency matrix was constructed to compare the agreement or disagreement of trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.</p>
 
