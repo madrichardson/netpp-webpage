@@ -156,10 +156,16 @@ sidebar:
 
 <a href="https://www.sciencedirect.com/science/article/pii/S0034425717301426" target="_blank" style="text-decoration: none; color: #0072ce;">**Mélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151.**</a>
 
-### Visualize Global Trends 
+### MODIS vs SNPP
 
 ::: {style="text-align: center;"}
-![Figure 3.](images/trends_comparison.png){width=600px}
+![Figure 3.](images/modis_snpp_trends_comparison.png){width=600px}
+:::
+
+### MODIS vs NOAA20
+
+::: {style="text-align: center;"}
+![Figure 4.](images/modis_noaa20_trends_comparison.png){width=600px}
 :::
 
 ## Contingency Matrix
