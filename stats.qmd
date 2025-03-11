@@ -12,7 +12,7 @@ sidebar:
   style: "floating"
 ---
 
-# Statistical Analysis
+<h1> Statistical Analysis </h1>
 
 ## Unbiased Relative Difference (&psi;)
 

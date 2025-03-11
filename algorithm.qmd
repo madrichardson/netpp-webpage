@@ -11,7 +11,7 @@ format:
 sidebar:
   style: "floating"
 ---
-# Algorithm and Data
+<h1> Algorithm and Data </h1>
 
 ## Primary Productivity (netPP) Algorithm 
 

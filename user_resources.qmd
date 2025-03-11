@@ -12,7 +12,7 @@ sidebar:
   style: "floating"
 ---
 
-# User Resources
+<h1> User Resources </h1>
 
 ## Code Gallery
 
