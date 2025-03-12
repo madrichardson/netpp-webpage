@@ -191,13 +191,13 @@ The contingency matrix is used to compute Cohen's Kappa, a statistical measure t
 ### MODIS vs SNPP (2013-2022)
 
 ::: {style="text-align: center;"}
-![Figure 5.](images/global_modis_snpp_contingency.png){width=600px}
+![Figure 5.](images/global_modis_snpp_contingency.png){width=1000px}
 :::
 
 ### MODIS vs NOAA20 (2018-2022)
 
 ::: {style="text-align: center;"}
-![Figure 6.](images/global_modis_noaa20_contingency.png){width=600px}
+![Figure 6.](images/global_modis_noaa20_contingency.png){width=1000px}
 :::
 
 
