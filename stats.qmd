@@ -79,11 +79,17 @@ sidebar:
   <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by <i>netPP<sub>MODIS</sub></i>.</li>
 </ul>
 
+### Spatial Variability in the Timeseries Monthly &Delta; Mean
+
+::: {style="text-align: center;"}
+![Figure ](images/modis_viirs_delta_comparison.png){width=600px}
+:::
+
 ## Correlations
 
 <p>The purpose of calculating Pearson's correlation coefficient is to assess the agreement and disagreement across time and space between the MODIS and VIIRS datasets. Raw data and anomalies were used to calculate the correlation coefficents. Calculating the correlation coefficients with raw data enables us to evaluate the absolute agreement in primary productivity estimates, whereas calculating with anomalies helps to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the Pearson correlation coefficient for each pixel.</p>
 
-<p> The Pearson's correlation coefficient was calculated for each pixel over the time dimension for each of these datasets:</p>
+<p> The Pearson correlation coefficient was calculated for each pixel over the time dimension for each of these datasets:</p>
 
 <a href="http://localhost:8080/erddap/griddap/productivity_modis_aqua_monthly.graph" target="_blank" style="text-decoration: none; color: #0072ce;">**Primary Productivity, MODIS-AQUA, Science Quality, Global, 9km, 2013-2022 (Monthly Composite)**</a>
 
@@ -123,7 +129,7 @@ sidebar:
     </li>
   </ul>
 
-<p>The Pearson's correlation coefficent is calculated for each pixel over all time steps for anomalies as follows:</p>
+<p>The Pearson correlation coefficent is calculated for each pixel over all time steps for anomalies as follows:</p>
 
 <blockquote>
   <p style="text-align: left; color: black; font-size: 1.25em;">

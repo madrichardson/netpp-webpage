@@ -151,7 +151,10 @@ window.Quarto = {
   <li><a href="#spatial-variability-in-the-timeseries-monthly-ψ-mean" id="toc-spatial-variability-in-the-timeseries-monthly-ψ-mean" class="nav-link" data-scroll-target="#spatial-variability-in-the-timeseries-monthly-ψ-mean">Spatial Variability in the Timeseries Monthly ψ Mean</a></li>
   <li><a href="#comparing-the-best-and-worst-fit-longhurst-provinces" id="toc-comparing-the-best-and-worst-fit-longhurst-provinces" class="nav-link" data-scroll-target="#comparing-the-best-and-worst-fit-longhurst-provinces">Comparing the Best and Worst Fit Longhurst Provinces</a></li>
   </ul></li>
-  <li><a href="#absolute-relative-difference-δrel" id="toc-absolute-relative-difference-δrel" class="nav-link" data-scroll-target="#absolute-relative-difference-δrel">Absolute Relative Difference (Δ<sub>rel</sub>)</a></li>
+  <li><a href="#absolute-relative-difference-δrel" id="toc-absolute-relative-difference-δrel" class="nav-link" data-scroll-target="#absolute-relative-difference-δrel">Absolute Relative Difference (Δ<sub>rel</sub>)</a>
+  <ul class="collapse">
+  <li><a href="#spatial-variability-in-the-timeseries-monthly-δ-mean" id="toc-spatial-variability-in-the-timeseries-monthly-δ-mean" class="nav-link" data-scroll-target="#spatial-variability-in-the-timeseries-monthly-δ-mean">Spatial Variability in the Timeseries Monthly Δ Mean</a></li>
+  </ul></li>
   <li><a href="#correlations" id="toc-correlations" class="nav-link" data-scroll-target="#correlations">Correlations</a></li>
   <li><a href="#trends" id="toc-trends" class="nav-link" data-scroll-target="#trends">Trends</a>
   <ul class="collapse">
@@ -268,6 +271,17 @@ Where:
 The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by <i>netPP<sub>MODIS</sub></i>.
 </li>
 </ul>
+<section id="spatial-variability-in-the-timeseries-monthly-δ-mean" class="level3">
+<h3 data-anchor-id="spatial-variability-in-the-timeseries-monthly-δ-mean">Spatial Variability in the Timeseries Monthly Δ Mean</h3>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/modis_viirs_delta_comparison.png" class="img-fluid figure-img" width="600"></p>
+<figcaption>Figure</figcaption>
+</figure>
+</div>
+</div>
+</section>
 </section>
 <section id="correlations" class="level2">
 <h2 data-anchor-id="correlations">Correlations</h2>
@@ -275,7 +289,7 @@ The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODI
 The purpose of calculating Pearson’s correlation coefficient is to assess the agreement and disagreement across time and space between the MODIS and VIIRS datasets. Raw data and anomalies were used to calculate the correlation coefficents. Calculating the correlation coefficients with raw data enables us to evaluate the absolute agreement in primary productivity estimates, whereas calculating with anomalies helps to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the Pearson correlation coefficient for each pixel.
 </p>
 <p>
-The Pearson’s correlation coefficient was calculated for each pixel over the time dimension for each of these datasets:
+The Pearson correlation coefficient was calculated for each pixel over the time dimension for each of these datasets:
 </p>
 <p><a href="http://localhost:8080/erddap/griddap/productivity_modis_aqua_monthly.graph" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Primary Productivity, MODIS-AQUA, Science Quality, Global, 9km, 2013-2022 (Monthly Composite)</strong></a></p>
 <p><a href="http://localhost:8080/erddap/griddap/productivity_viirs_snpp_monthly.graph" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Primary Productivity, VIIRS-SNPP, Science Quality, Global, 9km, 2013-2022 (Monthly Composite)</strong></a></p>
@@ -314,7 +328,7 @@ Where:
 </li>
 </ul>
 <p>
-The Pearson’s correlation coefficent is calculated for each pixel over all time steps for anomalies as follows:
+The Pearson correlation coefficent is calculated for each pixel over all time steps for anomalies as follows:
 </p>
 <blockquote class="blockquote">
 <p style="text-align: left; color: black; font-size: 1.25em;">
