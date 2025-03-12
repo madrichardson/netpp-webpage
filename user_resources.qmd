@@ -54,6 +54,18 @@ Visualize correlations and p-values between two time series of monthly means of 
 ::::
 :::
 
+#### **Contingency Tables: Assessing the Similarity Between Two Primary Productivity Products**
+::: {.grid}
+::::{.g-col-6}
+![](images/CCAL_modis_snpp_3x3_contingency.png){width=100%}
+::::
+:::: {.g-col-6}
+Construct a contingency matrix to compare the trends between the legacy and interim product for a user-specified region.
+
+[View in Github](https://example.com)
+::::
+:::
+
 ## Satellite Courses
 
 <p>
