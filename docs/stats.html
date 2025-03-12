@@ -154,10 +154,14 @@ window.Quarto = {
   <li><a href="#correlations" id="toc-correlations" class="nav-link" data-scroll-target="#correlations">Correlations</a></li>
   <li><a href="#trends" id="toc-trends" class="nav-link" data-scroll-target="#trends">Trends</a>
   <ul class="collapse">
-  <li><a href="#modis-vs-snpp" id="toc-modis-vs-snpp" class="nav-link" data-scroll-target="#modis-vs-snpp">MODIS vs SNPP</a></li>
-  <li><a href="#modis-vs-noaa20" id="toc-modis-vs-noaa20" class="nav-link" data-scroll-target="#modis-vs-noaa20">MODIS vs NOAA20</a></li>
+  <li><a href="#modis-vs-snpp-2013-2022" id="toc-modis-vs-snpp-2013-2022" class="nav-link" data-scroll-target="#modis-vs-snpp-2013-2022">MODIS vs SNPP (2013-2022)</a></li>
+  <li><a href="#modis-vs-noaa20-2018-2022" id="toc-modis-vs-noaa20-2018-2022" class="nav-link" data-scroll-target="#modis-vs-noaa20-2018-2022">MODIS vs NOAA20 (2018-2022)</a></li>
   </ul></li>
-  <li><a href="#contingency-matrix" id="toc-contingency-matrix" class="nav-link" data-scroll-target="#contingency-matrix">Contingency Matrix</a></li>
+  <li><a href="#contingency-matrix" id="toc-contingency-matrix" class="nav-link" data-scroll-target="#contingency-matrix">Contingency Matrix</a>
+  <ul class="collapse">
+  <li><a href="#modis-vs-snpp-2013-2022-1" id="toc-modis-vs-snpp-2013-2022-1" class="nav-link" data-scroll-target="#modis-vs-snpp-2013-2022-1">MODIS vs SNPP (2013-2022)</a></li>
+  <li><a href="#modis-vs-noaa20-2018-2022-1" id="toc-modis-vs-noaa20-2018-2022-1" class="nav-link" data-scroll-target="#modis-vs-noaa20-2018-2022-1">MODIS vs NOAA20 (2018-2022)</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -339,8 +343,8 @@ The purpose of calculating linear trends for each of the datasets is to evaluate
 The trend analysis follows methods outlined in Melin et al.&nbsp;2017, see the section 2.3 “Trend estimates and comparison of trends”:
 </p>
 <p><a href="https://www.sciencedirect.com/science/article/pii/S0034425717301426" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Mélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151.</strong></a></p>
-<section id="modis-vs-snpp" class="level3">
-<h3 data-anchor-id="modis-vs-snpp">MODIS vs SNPP</h3>
+<section id="modis-vs-snpp-2013-2022" class="level3">
+<h3 data-anchor-id="modis-vs-snpp-2013-2022">MODIS vs SNPP (2013-2022)</h3>
 <div style="text-align: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -350,8 +354,8 @@ The trend analysis follows methods outlined in Melin et al.&nbsp;2017, see the s
 </div>
 </div>
 </section>
-<section id="modis-vs-noaa20" class="level3">
-<h3 data-anchor-id="modis-vs-noaa20">MODIS vs NOAA20</h3>
+<section id="modis-vs-noaa20-2018-2022" class="level3">
+<h3 data-anchor-id="modis-vs-noaa20-2018-2022">MODIS vs NOAA20 (2018-2022)</h3>
 <div style="text-align: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -380,8 +384,30 @@ Using the linear trends calculated above, a contingency matrix was constructed t
 </ul>
 <p>The contingency matrix shows the percentage of pixels where the legacy and interim primary productivity products agree or disagree. The diagonal cells descending from left to right show where the products agree, and the off-diagonal cells show where the products disagree.</p>
 <p>The contingency matrix is used to compute Cohen’s Kappa, a statistical measure that quantifies the level of agreement between the two NetPP products. Cohen’s Kappa accounts for the agreement occuring by chance and provides a standardized metric of similarity. The scale ranges from 0 (no agreement) to 1 (perfect agreement).</p>
+<section id="modis-vs-snpp-2013-2022-1" class="level3">
+<h3 data-anchor-id="modis-vs-snpp-2013-2022-1">MODIS vs SNPP (2013-2022)</h3>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/modis_snpp_trends_comparison.png" class="img-fluid figure-img" width="600"></p>
+<figcaption>Figure 5.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="modis-vs-noaa20-2018-2022-1" class="level3">
+<h3 data-anchor-id="modis-vs-noaa20-2018-2022-1">MODIS vs NOAA20 (2018-2022)</h3>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/modis_noaa20_trends_comparison.png" class="img-fluid figure-img" width="600"></p>
+<figcaption>Figure 6.</figcaption>
+</figure>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
