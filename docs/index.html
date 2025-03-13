@@ -117,10 +117,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#why-were-we-tasked-with-this-project-for-dale" id="toc-why-were-we-tasked-with-this-project-for-dale" class="nav-link active" data-scroll-target="#why-were-we-tasked-with-this-project-for-dale">Why were we tasked with this project? (For Dale)</a></li>
-  <li><a href="#why-is-primary-productivity-important" id="toc-why-is-primary-productivity-important" class="nav-link" data-scroll-target="#why-is-primary-productivity-important">Why is primary productivity important?</a></li>
-  <li><a href="#why-do-we-need-an-interim-product" id="toc-why-do-we-need-an-interim-product" class="nav-link" data-scroll-target="#why-do-we-need-an-interim-product">Why do we need an interim product?</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
+  <li><a href="#what-is-ocean-primary-productivity-and-why-is-it-important" id="toc-what-is-ocean-primary-productivity-and-why-is-it-important" class="nav-link active" data-scroll-target="#what-is-ocean-primary-productivity-and-why-is-it-important">What is ocean primary productivity and why is it important?</a></li>
+  <li><a href="#overview-project-and-need" id="toc-overview-project-and-need" class="nav-link" data-scroll-target="#overview-project-and-need">Overview Project and Need</a></li>
+  <li><a href="#project-goals" id="toc-project-goals" class="nav-link" data-scroll-target="#project-goals">Project Goals</a></li>
+  <li><a href="#download-interim-product-data" id="toc-download-interim-product-data" class="nav-link" data-scroll-target="#download-interim-product-data">Download Interim Product Data</a></li>
+  <li><a href="#project-team-and-funding" id="toc-project-team-and-funding" class="nav-link" data-scroll-target="#project-team-and-funding">Project Team and Funding</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
 </nav>
@@ -140,68 +142,63 @@ Developing an Interim Primary Productivity Product
 <div class="figure">
 <p><img src="images/productivity.png" class="img-fluid quarto-figure quarto-figure-center"> <span style="text-align: right; display: block;"></span></p>
 </div>
-<section id="why-were-we-tasked-with-this-project-for-dale" class="level2">
-<h2 data-anchor-id="why-were-we-tasked-with-this-project-for-dale">Why were we tasked with this project? (For Dale)</h2>
+<section id="what-is-ocean-primary-productivity-and-why-is-it-important" class="level2">
+<h2 data-anchor-id="what-is-ocean-primary-productivity-and-why-is-it-important">What is ocean primary productivity and why is it important?</h2>
+<p>Primary productivity in marine surface waters is primarily the rate at which phytoplankton convert light energy into chemical energy stored as carbon biomass via the process of photosynthesis. Primary productivity forms the base of the marine food web, supplying higher trophic levels and microbial food webs with an energy and carbon source. It also contributes to the release oxygen and uptake of carbon dioxide in the ocean and atmosphere, and plays a crucial role in the global carbon cycle. Therefore, monitoring primary productivity is important for studying marine ecosystems, managing fisheries, and understanding global biogeochemical cycling.</p>
 </section>
-<section id="why-is-primary-productivity-important" class="level2">
-<h2 data-anchor-id="why-is-primary-productivity-important">Why is primary productivity important?</h2>
-<ul>
-<li>Foundation of the food chain</li>
-<li>Climate regulation &amp; carbon cycle</li>
-<li>Controls fish stock abundance</li>
-<li>Fisheries management must account for primary production</li>
-</ul>
+<section id="overview-project-and-need" class="level2">
+<h2 data-anchor-id="overview-project-and-need">Overview Project and Need</h2>
+<p>Since 2007, the only <a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMH1pp1day">satellite product</a> available from NOAA for monitoring primary productivity has been the global product developed by the NOAA CoastWatch West Coast Node. The product is based on the Vertically Generalized Production Model (VPGM) described by <a href="#references">Behrenfeld and Falkowski (1997)</a> and relies on data from the MODIS sensor on the Aqua satellite to drive the algorithm. The MODIS Aqua sensor will be decommissioned soon, effectively ending this legacy MODIS-based primary productivity product. New primary productivity algorithms that use the latest satellite sensors are under development, but are unlikely to be in production before MODIS Aqua is retired.</p>
+<p>Interim products are required to address the needs of users for primary productivity data during the gap between the loss of the legacy MODIS primary productivity and the availability of the new generation primary productivity products. The NOAA CoastWatch was funded to produce the interim products.</p>
 </section>
-<section id="why-do-we-need-an-interim-product" class="level2">
-<h2 data-anchor-id="why-do-we-need-an-interim-product">Why do we need an interim product?</h2>
-<p>
-The only available primary productivity satellite product from NOAA was developed by the CoastWatch West Coast Node in 2007. The product is based on the Vertically Generalized Production Model (VPGM) described by Behrenfeld and Falkowski (1997) utilizing data from the MODIS sensor on the Aqua satellite.
-</p>
-<p>
-However, the MODIS Aqua sensor will be decommissioned soon. While new primary productivity algorithms that use the latest satellite sensors are under development, they are unlikely to be in production before MODIS Aqua is retired. Therefore, an interim product is required to address the needs of users for primary productivity data during the gap between the loss of the legacy MODIS primary productivity and the availablity of the new generation primary productivity products.
-</p>
-<p>
-Two interim primary productivity products, VIIRS SNPP and VIIRS NOAA20, are now available. Details on how these products were developed, can be found under the <a href="./algorithm.html">Algorithm and Data</a> tab.
-</p>
-<p>
-</p>
-<p>
-Both interim products have undergone comprehensive statistical evaluation to ensure accuracy and reliability. The methods that were used to do so are found under the <a href="./stats.html">Statistical Analysis</a> tab.
-</p>
-<p>
-</p>
-<p>
-For users interested in conducting their own statistical analyses tailored to their region of interest will find Python notebooks in the <a href="./user_resources.html">User Resources</a> tab that provide step-by-step guidance.
-</p>
+<section id="project-goals" class="level2">
+<h2 data-anchor-id="project-goals">Project Goals</h2>
+<p>Our group was funded to create two interim primary productivity products. The products use the Behrenfeld and Falkowski VPGM, but are driven by newer generation satellite data. 1. A product based on data from the VIIRS SNPP sensor – The SNPP VIRS data provide a product time series that extends back to 2012; 2. A product based on the VIIRS NOAA-20 sensor, to ensure the future availability of an interim product until a new generation product is available. An important objective of the project was for the interim products to yield results that are similar to those generated by the legacy products, facilitating easy transitions by users to the interim product that require fewer resources for recalibrating their application. A comprehensive statistical evaluation was applied to both interim product lines to document their similarities to the legacy product. On a global level, both product lines yielded results similar to those of the legacy MODIS product. The detailed results and statistical methods can be found on the <a href="./stats.html">Statistical Analysis</a> page. Users interested in conducting a statistical analyses tailored to their region of interest will find Python and R notebooks on the <a href="./user_resources.html">User Resources</a> page that will guide them through the process.</p>
 </section>
-<section id="additional-resources" class="level2">
-<h2 data-anchor-id="additional-resources">Additional Resources</h2>
-<details>
-<summary style="font-weight: bold; font-size: 1.2em; margin-bottom: 5px; color: #0072ce;">
-References
-</summary>
+<section id="download-interim-product-data" class="level2">
+<h2 data-anchor-id="download-interim-product-data">Download Interim Product Data</h2>
+<p>The two interim products lines are routinely produced and are available online as daily and monthly composites via the <a href="https://coastwatch.pfeg.noaa.gov/erddap/index.html">West Coast Node ERDDAP data server.</a></p>
 <ul>
 <li>
-<a href="https://aslopubs.onlinelibrary.wiley.com/doi/10.4319/lo.1997.42.1.0001">Behrenfeld and Falkowski. (1997) Photosynthetic rates derived from satellite-based chlorophyll concentration Limnol. Oceanogr. . 42:1-20.</a>
+<a>VIIRS SNPP Interim Primary Productivity</a>
+</li>
+<ul>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/productivity_viirs_snpp_daily.graph">Daily Composites</a>
+</li>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/productivity_viirs_snpp_monthly.graph">Monthly Composites</a>
 </li>
 </ul>
-</details>
-<details>
-<summary style="font-weight: bold; font-size: 1.2em; margin-bottom: 5px; color: #0072ce;">
-Project Team and Funding
-</summary>
+<li>
+<a>VIIRS NOAA-20 Interim Primary Productivity</a>
+</li>
 <ul>
+<li>
+<a href="https://example.com">Daily Composites</a>
+</li>
+<li>
+<a href="https://example.com">Monthly Composites</a>
+</li>
+</ul>
+</ul>
+</section>
+<section id="project-team-and-funding" class="level2">
+<h2 data-anchor-id="project-team-and-funding">Project Team and Funding</h2>
 <p>
-<strong>The project team included:</strong> Dale Robinson, Cara Wilson, Sunny Hospital, Veronica Lance, Johnathon Sherman, Kim Hyde, Andrea Vander Woude, Kari St.&nbsp;Laurent, Melanie Abecassis, Ryan Rykaczewski, Ryan Vandermeulen, and Menghua Wang.
+The project team included Dale Robinson, Cara Wilson, Sunny Hospital, Veronica Lance, Johnathon Sherman, Ryan Rykaczewski, Andrea Vander Woude, Menghua Wang, and Melanie Abecassis associated with NOAA CoastWatch; Kim Hyde from NOAA Southeast Fisheries Science Center; and Ryan Vandermeulen from the NOAA National Marine Fisheries Service.
 </p>
 <p>
-A special thanks to Jesse Espinoza and Madison Richardson who made important contributions to the project including helping to generate the production Python code to produce the netPP products.
+A special thanks to Jesse Espinoza and Madison Richardson who made important contributions to the project including helping to generate the production Python code, produce the primary productivity products and develop the web presence.
 </p>
 <p>
 The project was supported by funding from the Portfolio Management Branch of NESDIS, NOAA CoastWatch, and CSU COAST.
 </p>
-</ul>
-</details>
+</section>
+<section id="references" class="level2">
+<h2 data-anchor-id="references">References</h2>
+<a href="https://doi.org/10.4319/lo.1997.42.1.0001">Behrenfeld and Falkowski. (1997) Photosynthetic rates derived from satellite-based chlorophyll concentration Limnol. Oceanogr. 42:1-20. </a>
+
 
 
 </section>
