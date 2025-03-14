@@ -32,7 +32,10 @@ nav.quarto-navbar .quarto-navbar-logo {
 
 .navbar-brand {
     color: white;
+    font-weight: normal;
 }
+
+
 
 .navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
     width: 26px;
