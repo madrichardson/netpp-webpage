@@ -151,17 +151,17 @@ window.Quarto = {
   <li><a href="#spatial-variability-in-the-timeseries-monthly-ψ-mean" id="toc-spatial-variability-in-the-timeseries-monthly-ψ-mean" class="nav-link" data-scroll-target="#spatial-variability-in-the-timeseries-monthly-ψ-mean">Spatial Variability in the Timeseries Monthly ψ Mean</a></li>
   <li><a href="#comparing-the-best-and-worst-fit-longhurst-provinces" id="toc-comparing-the-best-and-worst-fit-longhurst-provinces" class="nav-link" data-scroll-target="#comparing-the-best-and-worst-fit-longhurst-provinces">Comparing the Best and Worst Fit Longhurst Provinces</a></li>
   </ul></li>
-  <li><a href="#absolute-relative-difference-δrel" id="toc-absolute-relative-difference-δrel" class="nav-link" data-scroll-target="#absolute-relative-difference-δrel">Absolute Relative Difference (Δ<sub>rel</sub>)</a>
+  <li><a href="#biased-relative-difference-δrel" id="toc-biased-relative-difference-δrel" class="nav-link" data-scroll-target="#biased-relative-difference-δrel">Biased Relative Difference (Δ<sub>rel</sub>)</a>
   <ul class="collapse">
   <li><a href="#spatial-variability-in-the-timeseries-monthly-δ-mean" id="toc-spatial-variability-in-the-timeseries-monthly-δ-mean" class="nav-link" data-scroll-target="#spatial-variability-in-the-timeseries-monthly-δ-mean">Spatial Variability in the Timeseries Monthly Δ Mean</a></li>
   </ul></li>
-  <li><a href="#correlations" id="toc-correlations" class="nav-link" data-scroll-target="#correlations">Correlations</a></li>
-  <li><a href="#trends" id="toc-trends" class="nav-link" data-scroll-target="#trends">Trends</a>
+  <li><a href="#pearson-correlation-coefficients" id="toc-pearson-correlation-coefficients" class="nav-link" data-scroll-target="#pearson-correlation-coefficients">Pearson Correlation Coefficients</a></li>
+  <li><a href="#linear-regression-trends" id="toc-linear-regression-trends" class="nav-link" data-scroll-target="#linear-regression-trends">Linear Regression Trends</a>
   <ul class="collapse">
   <li><a href="#modis-vs-snpp-2013-2022" id="toc-modis-vs-snpp-2013-2022" class="nav-link" data-scroll-target="#modis-vs-snpp-2013-2022">MODIS vs SNPP (2013-2022)</a></li>
   <li><a href="#modis-vs-noaa20-2018-2022" id="toc-modis-vs-noaa20-2018-2022" class="nav-link" data-scroll-target="#modis-vs-noaa20-2018-2022">MODIS vs NOAA20 (2018-2022)</a></li>
   </ul></li>
-  <li><a href="#contingency-matrix" id="toc-contingency-matrix" class="nav-link" data-scroll-target="#contingency-matrix">Contingency Matrix</a>
+  <li><a href="#contingency-matrices" id="toc-contingency-matrices" class="nav-link" data-scroll-target="#contingency-matrices">Contingency Matrices</a>
   <ul class="collapse">
   <li><a href="#modis-vs-snpp-2013-2022-1" id="toc-modis-vs-snpp-2013-2022-1" class="nav-link" data-scroll-target="#modis-vs-snpp-2013-2022-1">MODIS vs SNPP (2013-2022)</a></li>
   <li><a href="#modis-vs-noaa20-2018-2022-1" id="toc-modis-vs-noaa20-2018-2022-1" class="nav-link" data-scroll-target="#modis-vs-noaa20-2018-2022-1">MODIS vs NOAA20 (2018-2022)</a></li>
@@ -182,6 +182,16 @@ window.Quarto = {
 <h1>
 Statistical Analysis
 </h1>
+<p>To evaluate the differences and similarities between the legacy <strong>MODIS-Aqua</strong> primary productivity product and the interim <strong>VIIRS-SNPP</strong> and <strong>VIIRS-NOAA20</strong> products, we conducted a comprehensive statistical analysis.</p>
+<p>
+The analysis includes:
+</p>
+<ul>
+<li><a href="#unbiased-relative-difference"><strong>Unbiased Relative Difference (ψ)</strong></a> &amp; <a href="#biased-relative-difference"><strong>Biased Relative Difference (Δ<sub>rel</sub>)</strong></a> <span class="math inline">\(\Rightarrow\)</span> Measures how VIIRS compares to MODIS without and with bias.</li>
+<li><a href="#pearson-correlation-coefficients"><strong>Pearson Correlation Coefficients &amp; P-values</strong></a> <span class="math inline">\(\Rightarrow\)</span> Evaluates how VIIRS follows MODIS over time.</li>
+<li><a href="#linear-regression-trends"><strong>Linear Regression Trends &amp; P-values</strong></a> <span class="math inline">\(\Rightarrow\)</span> Identifies long-term changes in productivity.</li>
+<li><a href="#contingency-matrices"><strong>Contingency Matrices</strong></a> <span class="math inline">\(\Rightarrow\)</span> Measures trend agreement across datasets.</li>
+</ul>
 <section id="unbiased-relative-difference-ψ" class="level2">
 <h2 data-anchor-id="unbiased-relative-difference-ψ">Unbiased Relative Difference (ψ)</h2>
 <p>
@@ -245,18 +255,18 @@ Similarly, the five-year timeseries between MODIS-AQUA and VIIRS-NOAA20 showed t
 </p>
 </section>
 </section>
-<section id="absolute-relative-difference-δrel" class="level2">
-<h2 data-anchor-id="absolute-relative-difference-δrel">Absolute Relative Difference (Δ<sub>rel</sub>)</h2>
+<section id="biased-relative-difference-δrel" class="level2">
+<h2 data-anchor-id="biased-relative-difference-δrel">Biased Relative Difference (Δ<sub>rel</sub>)</h2>
 <p>
-The mean absolute relative difference (Δ<sub>rel</sub>) of the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) was calculated.
+The mean biased relative difference (Δ<sub>rel</sub>) of the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) was calculated.
 </p>
 <p>
-The pixel-by-pixel mean absolute difference (Δ<sub>rel</sub>) was created for the globe for each month at 9km resolution across two datasets:
+The pixel-by-pixel mean biased relative difference (Δ<sub>rel</sub>) was created for the globe for each month at 9km resolution across two datasets:
 </p>
-<p><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_snpp_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Absolute Relative Difference, VIIRS-SNPP - MODIS-Aqua Global, Monthly, 9km, 2013-2022</strong></a></p>
-<p><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Absolute Relative Difference, VIIRS-NOAA20 - MODIS-Aqua Global, Monthly, 9km, 2018-2022</strong></a></p>
+<p><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_snpp_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Biased Relative Difference, VIIRS-SNPP - MODIS-Aqua Global, Monthly, 9km, 2013-2022</strong></a></p>
+<p><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;"><strong>Biased Relative Difference, VIIRS-NOAA20 - MODIS-Aqua Global, Monthly, 9km, 2018-2022</strong></a></p>
 <p>
-The absolute relative difference (Δ<sup>netPP</sup>) is calculated for each pixel as follows:
+The biased relative difference (Δ<sup>netPP</sup>) is calculated for each pixel as follows:
 </p>
 <blockquote class="blockquote">
 <p style="text-align: left; color: black; font-size: 1.5em;">
@@ -283,8 +293,8 @@ The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODI
 </div>
 </section>
 </section>
-<section id="correlations" class="level2">
-<h2 data-anchor-id="correlations">Correlations</h2>
+<section id="pearson-correlation-coefficients" class="level2">
+<h2 data-anchor-id="pearson-correlation-coefficients">Pearson Correlation Coefficients</h2>
 <p>
 The purpose of calculating Pearson’s correlation coefficient is to assess the agreement and disagreement across time and space between the MODIS and VIIRS datasets. Raw data and anomalies were used to calculate the correlation coefficents. Calculating the correlation coefficients with raw data enables us to evaluate the absolute agreement in primary productivity estimates, whereas calculating with anomalies helps to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the Pearson correlation coefficient for each pixel.
 </p>
@@ -368,8 +378,8 @@ Where:
 </div>
 </div>
 </section>
-<section id="trends" class="level2">
-<h2 data-anchor-id="trends">Trends</h2>
+<section id="linear-regression-trends" class="level2">
+<h2 data-anchor-id="linear-regression-trends">Linear Regression Trends</h2>
 <p>
 The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets. Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.
 </p>
@@ -400,8 +410,8 @@ The trend analysis follows methods outlined in Melin et al.&nbsp;2017, see the s
 </div>
 </section>
 </section>
-<section id="contingency-matrix" class="level2">
-<h2 data-anchor-id="contingency-matrix">Contingency Matrix</h2>
+<section id="contingency-matrices" class="level2">
+<h2 data-anchor-id="contingency-matrices">Contingency Matrices</h2>
 <p>
 Using the linear trends calculated above, a contingency matrix was constructed to compare the agreement or disagreement of trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.
 </p>

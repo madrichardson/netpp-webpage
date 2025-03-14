@@ -14,6 +14,15 @@ sidebar:
 
 <h1> Statistical Analysis </h1>
 
+To evaluate the differences and similarities between the legacy **MODIS-Aqua** primary productivity product and the interim **VIIRS-SNPP** and **VIIRS-NOAA20** products, we conducted a comprehensive statistical analysis.
+
+<p>The analysis includes:</p>
+
+- [**Unbiased Relative Difference (&psi;)**](#unbiased-relative-difference) & [**Biased Relative Difference (&Delta;<sub>rel</sub>)**](#biased-relative-difference) $\Rightarrow$ Measures how VIIRS compares to MODIS without and with bias.
+- [**Pearson Correlation Coefficients & P-values**](#pearson-correlation-coefficients) $\Rightarrow$  Evaluates how VIIRS follows MODIS over time.
+- [**Linear Regression Trends & P-values**](#linear-regression-trends) $\Rightarrow$  Identifies long-term changes in productivity.
+- [**Contingency Matrices**](#contingency-matrices) $\Rightarrow$  Measures trend agreement across datasets.
+
 ## Unbiased Relative Difference (&psi;)
 
 <p>The unbiased relative difference (&psi;<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets. This provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.</p>
@@ -56,17 +65,17 @@ sidebar:
 
 <p> Similarly, the five-year timeseries between MODIS-AQUA and VIIRS-NOAA20 showed the ARAB province (green) had the lowest absolute mean absolute &psi;<sup>netPP</sup> (-0.0013) and the NPSW province (black) had the highest absolute mean absolute &psi;<sup>netPP</sup> (0.1130). For both comparisons of MODIS-AQUA and the two interim products, the strongest agreement between the sensors occurs in the ARAB province and is weakest in the NPSW province. </p>
 
-## Absolute Relative Difference (&Delta;<sub>rel</sub>)
+## Biased Relative Difference (&Delta;<sub>rel</sub>)
 
-<p>The mean absolute relative difference (&Delta;<sub>rel</sub>) of the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) was calculated.</p>
+<p>The mean biased relative difference (&Delta;<sub>rel</sub>) of the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) was calculated.</p>
 
-<p>The pixel-by-pixel mean absolute difference (&Delta;<sub>rel</sub>) was created for the globe for each month at 9km resolution across two datasets:</p>
+<p>The pixel-by-pixel mean biased relative difference (&Delta;<sub>rel</sub>) was created for the globe for each month at 9km resolution across two datasets:</p>
 
-<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_snpp_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;">**Absolute Relative Difference, VIIRS-SNPP - MODIS-Aqua Global, Monthly, 9km, 2013-2022**</a>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_snpp_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;">**Biased Relative Difference, VIIRS-SNPP - MODIS-Aqua Global, Monthly, 9km, 2013-2022**</a>
 
-<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;">**Absolute Relative Difference, VIIRS-NOAA20 - MODIS-Aqua Global, Monthly, 9km, 2018-2022**</a>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph" target="_blank" style="text-decoration: none; color: #0072ce;">**Biased Relative Difference, VIIRS-NOAA20 - MODIS-Aqua Global, Monthly, 9km, 2018-2022**</a>
 
-<p>The absolute relative difference (&Delta;<sup>netPP</sup>) is calculated for each pixel as follows:</p>
+<p>The biased relative difference (&Delta;<sup>netPP</sup>) is calculated for each pixel as follows:</p>
 
 <blockquote>
   <p style="text-align: left; color: black; font-size: 1.5em;">
@@ -85,7 +94,7 @@ sidebar:
 ![Figure ](images/modis_viirs_delta_comparison.png){width=600px}
 :::
 
-## Correlations
+## Pearson Correlation Coefficients
 
 <p>The purpose of calculating Pearson's correlation coefficient is to assess the agreement and disagreement across time and space between the MODIS and VIIRS datasets. Raw data and anomalies were used to calculate the correlation coefficents. Calculating the correlation coefficients with raw data enables us to evaluate the absolute agreement in primary productivity estimates, whereas calculating with anomalies helps to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the Pearson correlation coefficient for each pixel.</p>
 
@@ -164,7 +173,7 @@ sidebar:
 ![Figure ](images/modis_viirs_corr_comparison.png){width=600px}
 :::
 
-## Trends
+## Linear Regression Trends
 
 <p> The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets. Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.</p>
 
@@ -184,7 +193,7 @@ sidebar:
 ![Figure ](images/modis_noaa20_trends_comparison.png){width=600px}
 :::
 
-## Contingency Matrix
+## Contingency Matrices
 
 <p>Using the linear trends calculated above, a contingency matrix was constructed to compare the agreement or disagreement of trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.</p>
 

@@ -78,13 +78,12 @@ sidebar:
   <p>The original netPP product made by CoastWatch West Coast Node uses chlorophyll, sea surface temperature and photosynthetically active radiation derived from the MODIS sensor on the Aqua satellite. The dataset begins in 2002 and ends in 2024, offering daily, weekly, and monthly versions of the dataset.</p>
 
   <h4><strong>VIIRS SNPP Interim Product</strong></h4>
-  <p>The VIIRS SNPP interim netPP product uses chlorophyll, sea surface temperature and photosynthetically active radiation derived from the VIIRS sensor on the SNPP satellite. The dataset begins in 2012 and continues to the present, offering daily, weekly, and monthly versions of the dataset.</p>
+  <p>The VIIRS SNPP interim netPP product uses chlorophyll, sea surface temperature and photosynthetically active radiation derived from the VIIRS sensor on the SNPP satellite. The dataset begins in 2012 and continues to the present, offering daily and monthly versions of the dataset.</p>
 
   <h4><strong>VIIRS NOAA20 Interim Product</strong></h4>
-  <p>The VIIRS NOAA20 interim netPP product uses chlorophyll, sea surface temperature and photosynthetically active radiation derived from the VIIRS sensor on the NOAA20 satellite. The dataset begins in 2018 and continues to the present, offering daily, weekly, and monthly versions of the dataset.</p>
+  <p>The VIIRS NOAA20 interim netPP product uses chlorophyll, sea surface temperature and photosynthetically active radiation derived from the VIIRS sensor on the NOAA20 satellite. The dataset begins in 2018 and continues to the present, offering daily and monthly versions of the dataset.</p>
 
-<details>
-<summary style="font-weight: bold; font-size: 1.5em; margin-bottom: 5px; color: #0072ce;">Satellite Data Sources</summary>
+## Download Algorithm Input Data
 <ul>
   <li><a>MODIS Aqua netPP</a></li>
     <ul>
@@ -117,4 +116,3 @@ sidebar:
       <li><a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 SST</a></li>
     </ul>
 </ul>
-</details>
