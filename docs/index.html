@@ -117,9 +117,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#what-is-ocean-primary-productivity-and-why-is-it-important" id="toc-what-is-ocean-primary-productivity-and-why-is-it-important" class="nav-link active" data-scroll-target="#what-is-ocean-primary-productivity-and-why-is-it-important">What is ocean primary productivity and why is it important?</a></li>
-  <li><a href="#overview-project-and-need" id="toc-overview-project-and-need" class="nav-link" data-scroll-target="#overview-project-and-need">Overview Project and Need</a></li>
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project Overview</a></li>
   <li><a href="#project-goals" id="toc-project-goals" class="nav-link" data-scroll-target="#project-goals">Project Goals</a></li>
+  <li><a href="#the-importance-of-primary-productivity" id="toc-the-importance-of-primary-productivity" class="nav-link" data-scroll-target="#the-importance-of-primary-productivity">The importance of primary productivity</a></li>
   <li><a href="#download-interim-product-data" id="toc-download-interim-product-data" class="nav-link" data-scroll-target="#download-interim-product-data">Download Interim Product Data</a></li>
   <li><a href="#project-team-and-funding" id="toc-project-team-and-funding" class="nav-link" data-scroll-target="#project-team-and-funding">Project Team and Funding</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -136,24 +136,31 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<h1>
-Developing an Interim Primary Productivity Product
+<header>
+&nbsp; &nbsp;
+<h1 style="margin-bottom: -12px">
+VIIRS-based Primary Productivity Products
 </h1>
+&nbsp; &nbsp;
+<p style="font-size: 1.5em; margin-top: -12px">
+&gt; Replacing the Legacy MODIS-based Products
+</p>
+</header>
 <div class="figure">
 <p><img src="images/productivity.png" class="img-fluid quarto-figure quarto-figure-center"> <span style="text-align: right; display: block;"></span></p>
 </div>
-<section id="what-is-ocean-primary-productivity-and-why-is-it-important" class="level2">
-<h2 data-anchor-id="what-is-ocean-primary-productivity-and-why-is-it-important">What is ocean primary productivity and why is it important?</h2>
-<p>Primary productivity in marine surface waters is primarily the rate at which phytoplankton convert light energy into chemical energy stored as carbon biomass via the process of photosynthesis. Primary productivity forms the base of the marine food web, supplying higher trophic levels and microbial food webs with an energy and carbon source. It also contributes to the release oxygen and uptake of carbon dioxide in the ocean and atmosphere, and plays a crucial role in the global carbon cycle. Therefore, monitoring primary productivity is important for studying marine ecosystems, managing fisheries, and understanding global biogeochemical cycling.</p>
-</section>
-<section id="overview-project-and-need" class="level2">
-<h2 data-anchor-id="overview-project-and-need">Overview Project and Need</h2>
+<section id="project-overview" class="level2">
+<h2 data-anchor-id="project-overview">Project Overview</h2>
 <p>Since 2007, the only <a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMH1pp1day">satellite product</a> available from NOAA for monitoring primary productivity has been the global product developed by the NOAA CoastWatch West Coast Node. The product is based on the Vertically Generalized Production Model (VPGM) described by <a href="#references">Behrenfeld and Falkowski (1997)</a> and relies on data from the MODIS sensor on the Aqua satellite to drive the algorithm. The MODIS Aqua sensor will be decommissioned soon, effectively ending this legacy MODIS-based primary productivity product. New primary productivity algorithms that use the latest satellite sensors are under development, but are unlikely to be in production before MODIS Aqua is retired.</p>
 <p>Interim products are required to address the needs of users for primary productivity data during the gap between the loss of the legacy MODIS primary productivity and the availability of the new generation primary productivity products. The NOAA CoastWatch was funded to produce the interim products.</p>
 </section>
 <section id="project-goals" class="level2">
 <h2 data-anchor-id="project-goals">Project Goals</h2>
 <p>Our group was funded to create two interim primary productivity products. The products use the Behrenfeld and Falkowski VPGM, but are driven by newer generation satellite data. 1. A product based on data from the VIIRS SNPP sensor – The SNPP VIRS data provide a product time series that extends back to 2012; 2. A product based on the VIIRS NOAA-20 sensor, to ensure the future availability of an interim product until a new generation product is available. An important objective of the project was for the interim products to yield results that are similar to those generated by the legacy products, facilitating easy transitions by users to the interim product that require fewer resources for recalibrating their application. A comprehensive statistical evaluation was applied to both interim product lines to document their similarities to the legacy product. On a global level, both product lines yielded results similar to those of the legacy MODIS product. The detailed results and statistical methods can be found on the <a href="./stats.html">Statistical Analysis</a> page. Users interested in conducting a statistical analyses tailored to their region of interest will find Python and R notebooks on the <a href="./user_resources.html">User Resources</a> page that will guide them through the process.</p>
+</section>
+<section id="the-importance-of-primary-productivity" class="level2">
+<h2 data-anchor-id="the-importance-of-primary-productivity">The importance of primary productivity</h2>
+<p>Primary productivity in marine surface waters is primarily the rate at which phytoplankton convert light energy into chemical energy stored as carbon biomass via the process of photosynthesis. Primary productivity forms the base of the marine food web, supplying higher trophic levels and microbial food webs with an energy and carbon source. It also contributes to the release oxygen and uptake of carbon dioxide in the ocean and atmosphere, and plays a crucial role in the global carbon cycle. Therefore, monitoring primary productivity is important for studying marine ecosystems, managing fisheries, and understanding global biogeochemical cycling.</p>
 </section>
 <section id="download-interim-product-data" class="level2">
 <h2 data-anchor-id="download-interim-product-data">Download Interim Product Data</h2>
@@ -207,8 +214,11 @@ The project was supported by funding from the Portfolio Management Branch of NES
 <div style="text-align: center; padding: 20px; border-top: 1px solid #ddd;">
     <img src="images/DeptCommerce.png" alt="Logo 1" style="height: 70px; margin-right: 20px;">
     <img src="images/CoastWatchLogo.png" alt="Logo 2" style="height: 70px;">
-  </div>
-  
+</div>
+
+<p style="text-align: right; font-size: 14px; margin-top: 10px;">
+  <em>Created 2025-02-01 | Last modified 2025-03-14</em>
+</p>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
