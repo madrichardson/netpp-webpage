@@ -172,19 +172,26 @@ Across both datasets, the strongest agreement occurs in the ARAB province, while
   </ul>
 
 ::: {style="text-align: center;"}
-![Figure ](images/modis_viirs_corr_comparison.png){width=100%}
+![](images/modis_viirs_corr_comparison.png){width=100%}
+**Figure 5.**  Global maps of the Pearson Correlation coefficient calculated between MODIS-Aqua with VIIRS-SNPP (top) and VIIRS-NOAA20 (bottom). The color scale ranges from -1.0 (red, strong negative correlation) to 1.0 (blue, strong positive correlation).
 :::
+
+The majority of both maps are dark blue (close to r = 1.0) (**Fig. 5**), indicating MODIS and VIIRS-based sensors show strong positive correlations in these areas. Both VIIRS sensors agree with MODIS in estimating primary productivity throught most of the globe. 
+
+Areas such as upwelling regions and polar regions appear lighter blue, indicating weaker agreement between the sensors. MORE INFO HERE
+
+
 
 ## Linear Regression Trends
 
 <p> The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 [datasets](#download-statistical-analysis-data-products). Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.</p>
 
-<p> The trend analysis follows methods outlined in [Melin et al. 2017](#references), see the section 2.3 "Trend estimates and comparison of trends"</p>
+<p> The trend analysis follows methods outlined in [Melin et al. 2017](#references), see the section 2.3 "Trend estimates and comparison of trends".</p>
 
 ### MODIS vs SNPP (2013-2022)
 
 ::: {style="text-align: center;"}
-![Figure ](images/modis_snpp_trends_comparison.png){width=600px}
+![](images/modis_snpp_trends_comparison.png){width=600px}
 :::
 
 ### MODIS vs NOAA20 (2018-2022)
