@@ -48,7 +48,7 @@ To evaluate the differences and similarities between the legacy **MODIS-Aqua** p
 **Figure 1.** Global maps of the monthly mean unbiased relative difference ($\bar{\psi}_{lat/lon}$) comparing MODIS-Aqua with VIIRS-SNPP (top) and VIIRS-NOAA20 (bottom).
 :::
 
-<p>The lighter blue and yellow regions in both maps suggest strong agreement between MODIS-Aqua and VIIRS netPP estimates, particularly in mid-latitude open ocean regions where differences are relatively small. This suggests that VIIRS provides a reliable continuation of MODIS-based estimates in these areas.</p>
+<p>The lighter blue and yellow regions in both maps (**Fig. 1**) suggest strong agreement between MODIS-Aqua and VIIRS netPP estimates, particularly in mid-latitude open ocean regions where differences are relatively small. This suggests that VIIRS provides a reliable continuation of MODIS-based estimates in these areas.</p>
 
 <p>The dark blue (positive $\bar{\psi}_{lat/lon}$) regions show where VIIRS estimates are higher than MODIS, while the dark red (negative $\bar{\psi}_{lat/lon}$) regions highlight where VIIRS estimates are lower than MODIS. Most regions are blue, indicating the VIIRS generally produces slightly higher netPP estimates compared to MODIS. The most prominent disagreements are seen in coastal upwelling zones and polar regions, where environmental factors and sensor differences may contribute to variability.</p>
 
@@ -66,7 +66,7 @@ To evaluate the differences and similarities between the legacy **MODIS-Aqua** p
 **Figure 3.** Best and worst agreement between MODIS-Aqua and VIIRS-NOAA20.
 :::
 
-The Arabian Sea Province (ARAB) (green) consistently shows the **strongest agreement** between MODIS-Aqua and VIIRS-based netPP estimates, with an absolute mean unbiased relative difference of **-0.0013**. This indicates minimal deviation between the sensors.
+The Arabian Sea Province (ARAB) (green) consistently shows the **strongest agreement** between MODIS-Aqua and VIIRS-based netPP estimates (**Fig. 2 & 3**), with an absolute mean unbiased relative difference of **-0.0013**. This indicates minimal deviation between the sensors.
 
 In contrast, the North Pacific Subtropical Water Province (NPSW) (black) has the **weakest agreement**, with a significantly higher absolute mean unbiased relative difference of **0.1130**. This suggests that **VIIRS-SNPP and NOAA20 tend to overestimate netPP** in this region.
 
@@ -98,7 +98,7 @@ Across both datasets, the strongest agreement occurs in the ARAB province, while
 **Figure 4.** Global maps of the monthly mean biased relative difference ($\bar{\Delta}_{lat/lon}$) comparing MODIS-Aqua with VIIRS-SNPP (top) and VIIRS-NOAA20 (bottom).
 :::
 
-<p>The light blue and yellow regions in both maps indicate that VIIRS and MODIS netPP estimates are relatively similar in most mid-latitude open ocean regions. The dark blue (positive $\bar{\Delta}_{lat/lon}$) regions suggest that VIIRS estimates are generally higher than MODIS in many parts of the globe. The strongest positive $\bar{\Delta}_{lat/lon}$ values appear in the equatorial upwelling zones, while polar regions and coastal upwelling regions show lower VIIRS estimates (red areas (negative $\bar{\Delta}_{lat/lon}$)).</p>
+<p>The light blue and yellow regions in both maps (**Fig. 4**) indicate that VIIRS and MODIS netPP estimates are relatively similar in most mid-latitude open ocean regions. The dark blue (positive $\bar{\Delta}_{lat/lon}$) regions suggest that VIIRS estimates are generally higher than MODIS in many parts of the globe. The strongest positive $\bar{\Delta}_{lat/lon}$ values appear in the equatorial upwelling zones, while polar regions and coastal upwelling regions show lower VIIRS estimates (red areas (negative $\bar{\Delta}_{lat/lon}$)).</p>
 
 <p> Overall, VIIRS tends to produce higher netPP estimates than MODIS as indicated by the widespread blue regions. VIIRS-SNPP shows slightly better agreement with MODIS than VIIRS-NOAA20, but both sensors demonstrate consistent spatial patterns.</p>
 
