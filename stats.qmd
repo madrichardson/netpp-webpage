@@ -172,16 +172,14 @@ Across both datasets, the strongest agreement occurs in the ARAB province, while
   </ul>
 
 ::: {style="text-align: center;"}
-![Figure ](images/modis_viirs_corr_comparison.png){width=600px}
+![Figure ](images/modis_viirs_corr_comparison.png){width=100%}
 :::
 
 ## Linear Regression Trends
 
-<p> The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets. Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.</p>
+<p> The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 [datasets](#download-statistical-analysis-data-products). Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.</p>
 
-<p> The trend analysis follows methods outlined in Melin et al. 2017, see the section 2.3 "Trend estimates and comparison of trends":</p>
-
-<a href="https://www.sciencedirect.com/science/article/pii/S0034425717301426" target="_blank" style="text-decoration: none; color: #0072ce;">**Mélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151.**</a>
+<p> The trend analysis follows methods outlined in [Melin et al. 2017](#references), see the section 2.3 "Trend estimates and comparison of trends"</p>
 
 ### MODIS vs SNPP (2013-2022)
 
@@ -254,6 +252,8 @@ Access datasets used in the statistical analysis, including unbiased and biased 
     </ul>
 </ul>
 
+## References
+<a href="https://www.sciencedirect.com/science/article/pii/S0034425717301426">Mélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151. </a></li>
 
 
 
