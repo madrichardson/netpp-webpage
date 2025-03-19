@@ -25,22 +25,6 @@ To evaluate the differences and similarities between the legacy **MODIS-Aqua** p
 
 ## Unbiased Relative Difference (&psi;)
 
-<p>The unbiased relative difference (&psi;<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets. This provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.</p>
-
-<p>The pixel-by-pixel unbiased relative difference (&psi;<sup>netPP</sup>) was created for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)</p>
-
-<p>The unbiased relative difference (&psi;<sup>netPP</sup>) is calculated for each pixel as follows:</p>
-
-<blockquote>
-  <p style="text-align: left; color: black;  font-size: 1.5em;">
-  $ψ^{netPP} = \frac{netPP_{VIIRS} - netPP_{MODIS}}{\left(\frac{netPP_{VIIRS} + netPP_{MODIS}}{2}\right)}$</p>
-</blockquote>
-
-<p>Where:</p>
-<ul>
-  <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by the mean of <i>netPP<sub>VIIRS</sub></i> and <i>netPP<sub>MODIS</sub></i>.</li>
-</ul>
-
 ### Spatial Variability in the Timeseries Monthly Mean &psi;
 
 ::: {style="text-align: center;"}
@@ -74,23 +58,6 @@ Across both datasets, the strongest agreement occurs in the ARAB province, while
 
 ## Biased Relative Difference (&Delta;<sub>rel</sub>)
 
-<p>The biased relative difference (&Delta;<sub>rel</sub>) compares the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) estimates, using MODIS as the reference. This approach helps determine whether VIIRS systematically overestimates or underestimates netPP compared to MODIS.</p>
-
-<p>The pixel-by-pixel mean biased relative difference (&Delta;<sub>rel</sub>) was created for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)</p>
-
-<p>The biased relative difference (&Delta;<sup>netPP</sup>) is calculated for each pixel as follows:</p>
-
-<blockquote>
-  <p style="text-align: left; color: black; font-size: 1.5em;">
-  $\Delta^{netPP} = \frac{netPP_{VIIRS} - netPP_{MODIS}}{netPP_{MODIS}}$
-  </p>
-</blockquote>
-
-<p>Where:</p>
-<ul>
-  <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by <i>netPP<sub>MODIS</sub></i>.</li>
-</ul>
-
 ### Spatial Variability in the Timeseries Monthly &Delta; Mean
 
 ::: {style="text-align: center;"}
@@ -102,91 +69,7 @@ Across both datasets, the strongest agreement occurs in the ARAB province, while
 
 <p> Overall, VIIRS tends to produce higher netPP estimates than MODIS as indicated by the widespread blue regions. VIIRS-SNPP shows slightly better agreement with MODIS than VIIRS-NOAA20, but both sensors demonstrate consistent spatial patterns.</p>
 
-## Pearson Correlation Coefficients
-
-<p>The purpose of calculating Pearson's correlation coefficient is to assess the agreement and disagreement across time and space between the MODIS and VIIRS datasets. Raw data and anomalies were used to calculate the correlation coefficents. Calculating the correlation coefficients with raw data enables us to evaluate the absolute agreement in primary productivity estimates, whereas calculating with anomalies helps to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the Pearson correlation coefficient for each pixel.</p>
-
-<p> The Pearson correlation coefficient was calculated for each pixel over the time dimension for [two datasets](#download-statistical-analysis-data-products).</p>
-
-<p>The Pearson's correlation coefficent is calculated for each pixel over all time steps for raw data as follows:</p>
-
-<blockquote>
-  <p style="text-align: left; color: black; font-size: 1.25em;">
-  $$
-  r_{i,j} = \frac{\sum_{t=1}^N (X_{t,i,j} - \bar{X}_{i,j})(Y_{t,i,j} - \bar{Y}_{i,j})}{\sqrt{\sum_{t=1}^N (X_{t,i,j} - \bar{X}_{i,j})^2 \cdot \sum_{t=1}^N (Y_{t,i,j} - \bar{Y}_{i,j})^2}}
-  $$
-  </p>
-</blockquote>
-
-<p>Where:</p>
-  <ul style="margin-top: 20px; margin-bottom: 20px;">
-    <li style="margin-bottom: 15px;">
-      <strong><i>r<sub> i , j </sub></i></strong>: Pearson correlation coefficient for the pixel <strong><i>(i, j)</i></strong>.
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong><i>X<sub> t, i, j </sub></i></strong>: Value from dataset <strong><i>X</i></strong> (MODIS) at time <strong><i>t</i></strong> for pixel <strong><i>(i, j)</i></strong>.
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong><i>Y<sub> t, i, j </sub></i></strong>: Value from dataset <strong><i>Y</i></strong> (VIIRS) at time <strong><i>t</i></strong> for pixel <strong><i>(i, j)</i></strong>.
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong><i>X̄<sub> i, j </sub></i></strong>: Mean of <strong><i>X<sub> t, i, j </sub></i></strong> over all <strong><i>t</i></strong> for pixel <strong><i>(i, j)</i></strong>.
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong><i>Ȳ<sub> i, j\ </sub></i></strong>: Mean of  <strong><i>Y<sub> t, i, j </sub></i></strong> over all <strong><i>t</i></strong> for pixel <strong><i>(i, j)</i></strong>.
-    </li>
-    <li>
-      <strong><i>N</i></strong>: Number of time points (number of months).
-    </li>
-  </ul>
-
-<p>The Pearson correlation coefficent is calculated for each pixel over all time steps for anomalies as follows:</p>
-
-<blockquote>
-  <p style="text-align: left; color: black; font-size: 1.25em;">
-  $$
-  r_{i,j} = \frac{\sum_{t=1}^N \left(X'_{t,i,j} \cdot Y'_{t,i,j}\right)}{\sqrt{\sum_{t=1}^N \left(X'_{t,i,j}\right)^2 \cdot \sum_{t=1}^N \left(Y'_{t,i,j}\right)^2}}
-  $$
-  </p>
-</blockquote>
-
-<p>Where:</p>
-  <ul style="margin-top: 20px; margin-bottom: 20px;">
-    <li style="margin-bottom: 15px;">
-      <strong><i>r<sub> i , j </sub></i></strong>: Pearson correlation coefficient for the pixel <strong><i>(i, j)</i></strong>.
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong><i>X'<sub> t, i, j </sub></i></strong>: Anomaly of dataset <strong><i>X</strong></i> (MODIS) at time <strong><i>t</i></strong> for pixel <strong><i>(i, j)</i></strong> calculated as:
-      <ul style="margin-bottom: 20px; color: #005b96; text-align: left;">
-          <strong><i>X'<sub> t, i, j </sub></i></strong> = <strong><i>X <sub> t, i, j </sub></i></strong> - Climatology<sub>X</sub>(<strong><i> i, j </i></strong> month(<strong><i>t</i></strong>))
-      </ul>
-    <li style="margin-bottom: 15px;">
-      <strong><i>Y'<sub> t, i, j </sub></i></strong>: Anomaly of dataset <strong><i>Y</strong></i> (VIIRS) at time <strong><i>t</i></strong> for pixel <strong><i>(i, j)</i></strong> calculated as:
-      <ul style="margin-bottom: 20px; color: #005b96; text-align: left;">
-        <strong><i>Y'<sub> t, i, j </sub></i></strong> = <strong><i>Y<sub> t, i, j </sub></i></strong> - Climatology<sub>Y</sub>(<strong><i> i, j </i></strong> month(<strong><i>t</i></strong>))
-      </ul>
-    </li>
-    <li>
-      <strong><i>N</i></strong>: Number of time points (number of months).
-    </li>
-  </ul>
-
-::: {style="text-align: center;"}
-![](images/modis_viirs_corr_comparison.png){width=100%}
-**Figure 5.**  Global maps of the Pearson Correlation coefficient calculated between MODIS-Aqua with VIIRS-SNPP (top) and VIIRS-NOAA20 (bottom). The color scale ranges from -1.0 (red, strong negative correlation) to 1.0 (blue, strong positive correlation).
-:::
-
-The majority of both maps are dark blue (close to r = 1.0) (**Fig. 5**), indicating MODIS and VIIRS-based sensors show strong positive correlations in these areas. Both VIIRS sensors agree with MODIS in estimating primary productivity throught most of the globe. 
-
-Areas such as upwelling regions and polar regions appear lighter blue, indicating weaker agreement between the sensors. MORE INFO HERE
-
-
-
 ## Linear Regression Trends
-
-<p> The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 [datasets](#download-statistical-analysis-data-products). Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.</p>
-
-<p> The trend analysis follows methods outlined in [Melin et al. 2017](#references), see the section 2.3 "Trend estimates and comparison of trends".</p>
 
 ### MODIS vs SNPP (2013-2022)
 
@@ -196,37 +79,23 @@ Areas such as upwelling regions and polar regions appear lighter blue, indicatin
 
 ### MODIS vs NOAA20 (2018-2022)
 
-::: {style="text-align: center;"}
-![Figure ](images/modis_noaa20_trends_comparison.png){width=600px}
-:::
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="modis18_trends.png" style="height: 300px;">
+  <img src="noaa20_trends.png" style="height: 300px;">
+</div>
+<div style="display: flex; justify-content: center; margin-top: 10px;">
+  <img src="trends_colorbar.png" style="width: 50%;">
+</div>
 
-## Contingency Matrices
+### Contingency Matrices
 
-<p>Using the linear trends calculated above, a contingency matrix was constructed to compare the agreement or disagreement of trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.</p>
-
-<ul>
-  <li>
-    <strong>Postive trend</strong>: Increasing trend (positive slope).
-  </li>
-  <li>
-    <strong>Negative trend</strong>: Decreasing trend (negative slope).
-  </li>
-  <li>
-    <strong>No significant trend</strong>: Slope not significantly different from zero.
-  </li>
-</ul>
-
-The contingency matrix shows the percentage of pixels where the legacy and interim primary productivity products agree or disagree. The diagonal cells descending from left to right show where the products agree, and the off-diagonal cells show where the products disagree.
-
-The contingency matrix is used to compute Cohen's Kappa, a statistical measure that quantifies the level of agreement between the two NetPP products. Cohen's Kappa accounts for the agreement occuring by chance and provides a standardized metric of similarity. The scale ranges from 0 (no agreement) to 1 (perfect agreement). 
-
-### MODIS vs SNPP (2013-2022)
+#### MODIS vs SNPP (2013-2022)
 
 ::: {style="text-align: center;"}
 ![Figure ](images/global_modis_snpp_contingency.png){width=1200px}
 :::
 
-### MODIS vs NOAA20 (2018-2022)
+#### MODIS vs NOAA20 (2018-2022)
 
 ::: {style="text-align: center;"}
 ![Figure ](images/global_modis_noaa20_contingency.png){width=1200px}
@@ -262,5 +131,67 @@ Access datasets used in the statistical analysis, including unbiased and biased 
 ## References
 <a href="https://www.sciencedirect.com/science/article/pii/S0034425717301426">Mélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151. </a></li>
 
+## Appendix
 
+### Unbiased Relative Difference (&psi;)
 
+<p>The unbiased relative difference (&psi;<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets. This provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.</p>
+
+<p>The pixel-by-pixel unbiased relative difference (&psi;<sup>netPP</sup>) was created for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)</p>
+
+<p>The unbiased relative difference (&psi;<sup>netPP</sup>) is calculated for each pixel as follows:</p>
+
+<blockquote>
+  <p style="text-align: left; color: black;  font-size: 1.5em;">
+  $ψ^{netPP} = \frac{netPP_{VIIRS} - netPP_{MODIS}}{\left(\frac{netPP_{VIIRS} + netPP_{MODIS}}{2}\right)}$</p>
+</blockquote>
+
+<p>Where:</p>
+<ul>
+  <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by the mean of <i>netPP<sub>VIIRS</sub></i> and <i>netPP<sub>MODIS</sub></i>.</li>
+</ul>
+
+### Biased Relative Difference (&Delta;<sub>rel</sub>)
+
+<p>The biased relative difference (&Delta;<sub>rel</sub>) compares the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) estimates, using MODIS as the reference. This approach helps determine whether VIIRS systematically overestimates or underestimates netPP compared to MODIS.</p>
+
+<p>The pixel-by-pixel mean biased relative difference (&Delta;<sub>rel</sub>) was created for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)</p>
+
+<p>The biased relative difference (&Delta;<sup>netPP</sup>) is calculated for each pixel as follows:</p>
+
+<blockquote>
+  <p style="text-align: left; color: black; font-size: 1.5em;">
+  $\Delta^{netPP} = \frac{netPP_{VIIRS} - netPP_{MODIS}}{netPP_{MODIS}}$
+  </p>
+</blockquote>
+
+<p>Where:</p>
+<ul>
+  <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by <i>netPP<sub>MODIS</sub></i>.</li>
+</ul>
+
+### Linear Regression Trends
+
+<p> The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 [datasets](#download-statistical-analysis-data-products). Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.</p>
+
+<p> The trend analysis follows methods outlined in [Melin et al. 2017](#references), see the section 2.3 "Trend estimates and comparison of trends".</p>
+
+### Contingency Matrices
+
+<p>Using the linear trends calculated above, a contingency matrix was constructed to compare the agreement or disagreement of trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.</p>
+
+<ul>
+  <li>
+    <strong>Postive trend</strong>: Increasing trend (positive slope).
+  </li>
+  <li>
+    <strong>Negative trend</strong>: Decreasing trend (negative slope).
+  </li>
+  <li>
+    <strong>No significant trend</strong>: Slope not significantly different from zero.
+  </li>
+</ul>
+
+The contingency matrix shows the percentage of pixels where the legacy and interim primary productivity products agree or disagree. The diagonal cells descending from left to right show where the products agree, and the off-diagonal cells show where the products disagree.
+
+The contingency matrix is used to compute Cohen's Kappa, a statistical measure that quantifies the level of agreement between the two NetPP products. Cohen's Kappa accounts for the agreement occuring by chance and provides a standardized metric of similarity. The scale ranges from 0 (no agreement) to 1 (perfect agreement). 
