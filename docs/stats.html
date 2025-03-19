@@ -360,12 +360,11 @@ Where:
 The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by the mean of <i>netPP<sub>VIIRS</sub></i> and <i>netPP<sub>MODIS</sub></i>.
 </li>
 </ul>
-<p>This metric alls for sensor-to-sensor consistency assessment, ensuring that variations are not biased by absolute magnitude differences.</p>
+<p>This metric allows for sensor-to-sensor consistency assessment, ensuring that variations are not biased by absolute magnitude differences.</p>
 </section>
 <section id="biased-relative-difference-δrel-1" class="level3">
 <h3 data-anchor-id="biased-relative-difference-δrel-1">Biased Relative Difference (Δ<sub>rel</sub>)</h3>
-<p>The biased relative difference (Δ<sub>rel</sub>) compares the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) estimates, using MODIS as the reference. This approach helps determine whether VIIRS systematically overestimates or underestimates netPP compared to MODIS.</p>
-<p>The pixel-by-pixel mean biased relative difference (Δ<sub>rel</sub>) was created for the globe for each month at 9km resolution across <a href="#download-statistical-analysis-data-products">two datasets.</a></p>
+<p>The pixel-by-pixel <strong>biased relative difference (Δ<sub>rel</sub>)</strong> was created for the globe for each month at 9km resolution across <a href="#download-statistical-analysis-data-products">two datasets.</a></p>
 <p>The biased relative difference (Δ<sup>netPP</sup>) is calculated for each pixel as follows:</p>
 <blockquote class="blockquote">
 <p style="text-align: left; color: black; font-size: 1.5em;">
@@ -380,6 +379,7 @@ Where:
 The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by <i>netPP<sub>MODIS</sub></i>.
 </li>
 </ul>
+<p>This metric is useful for identifying systematic overestimations or underestimations in primary productivity estimates between the sensors.</p>
 </section>
 <section id="linear-regression-trends-1" class="level3">
 <h3 data-anchor-id="linear-regression-trends-1">Linear Regression Trends</h3>

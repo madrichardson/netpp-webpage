@@ -164,13 +164,11 @@ The unbiased relative difference (&psi;<sup>netPP</sup>) is calculated for each 
   <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by the mean of <i>netPP<sub>VIIRS</sub></i> and <i>netPP<sub>MODIS</sub></i>.</li>
 </ul>
 
-This metric alls for sensor-to-sensor consistency assessment, ensuring that variations are not biased by absolute magnitude differences.
+This metric allows for sensor-to-sensor consistency assessment, ensuring that variations are not biased by absolute magnitude differences.
 
 ### Biased Relative Difference (&Delta;<sub>rel</sub>)
 
-The biased relative difference (&Delta;<sub>rel</sub>) compares the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) estimates, using MODIS as the reference. This approach helps determine whether VIIRS systematically overestimates or underestimates netPP compared to MODIS.
-
-The pixel-by-pixel mean biased relative difference (&Delta;<sub>rel</sub>) was created for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)
+The pixel-by-pixel **biased relative difference (&Delta;<sub>rel</sub>)** was created for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)
 
 The biased relative difference (&Delta;<sup>netPP</sup>) is calculated for each pixel as follows:
 
@@ -184,6 +182,8 @@ The biased relative difference (&Delta;<sup>netPP</sup>) is calculated for each 
 <ul>
   <li>The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by <i>netPP<sub>MODIS</sub></i>.</li>
 </ul>
+
+This metric is useful for identifying systematic overestimations or underestimations in primary productivity estimates between the sensors. 
 
 ### Linear Regression Trends
 
