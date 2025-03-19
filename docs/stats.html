@@ -187,9 +187,7 @@ window.Quarto = {
 Statistical Analysis
 </h1>
 <p>To evaluate the differences and similarities between the legacy <strong>MODIS-Aqua</strong> primary productivity product and the interim <strong>VIIRS-SNPP</strong> and <strong>VIIRS-NOAA20</strong> products, we conducted a comprehensive statistical analysis.</p>
-<p>
-The analysis includes:
-</p>
+<p>The analysis includes:</p>
 <ul>
 <li><a href="#unbiased-relative-difference"><strong>Unbiased Relative Difference (ψ)</strong></a> &amp; <a href="#biased-relative-difference"><strong>Biased Relative Difference (Δ<sub>rel</sub>)</strong></a> <span class="math inline">\(\Rightarrow\)</span> Measures how VIIRS compares to MODIS without and with bias.</li>
 <li><a href="#pearson-correlation-coefficients"><strong>Pearson Correlation Coefficients &amp; P-values</strong></a> <span class="math inline">\(\Rightarrow\)</span> Evaluates how VIIRS follows MODIS over time.</li>
@@ -198,47 +196,50 @@ The analysis includes:
 </ul>
 <section id="unbiased-relative-difference-ψ" class="level2">
 <h2 data-anchor-id="unbiased-relative-difference-ψ">Unbiased Relative Difference (ψ)</h2>
+<p>The unbiased relative difference (ψ<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to assess the consistency in netPP estimates between interim VIIRS and legacy MODIS datasets. This metric provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.</p>
+<p>For a detailed explanation of the calculation, see the <a href="#appendix">Appendix</a>.</p>
 <section id="spatial-variability-in-the-timeseries-monthly-mean-ψ" class="level3">
 <h3 data-anchor-id="spatial-variability-in-the-timeseries-monthly-mean-ψ">Spatial Variability in the Timeseries Monthly Mean ψ</h3>
 <div style="text-align: center;">
-<p><img src="images/modis_viirs_psi_comparison.png" class="img-fluid" style="width:100.0%"> <strong>Figure 1.</strong> Global maps of the monthly mean unbiased relative difference (<span class="math inline">\(\bar{\psi}_{lat/lon}\)</span>) comparing MODIS-Aqua with VIIRS-SNPP (top) and VIIRS-NOAA20 (bottom).</p>
+<p><img src="images/modis_viirs_psi_comparison.png" class="img-fluid" style="width:100.0%"> <strong>Figure 1.</strong> Global maps of the monthly mean unbiased relative difference (<span class="math inline">\(\bar{\psi}_{lat/lon}\)</span>) comparing MODIS-Aqua with VIIRS-SNPP (top) and VIIRS-NOAA20 (bottom). Positive values indicate higher VIIRS estimates; negative values indicate lower VIIRS estimates.</p>
 </div>
-<p>
-The lighter blue and yellow regions in both maps (<strong>Fig. 1</strong>) suggest strong agreement between MODIS-Aqua and VIIRS netPP estimates, particularly in mid-latitude open ocean regions where differences are relatively small. This suggests that VIIRS provides a reliable continuation of MODIS-based estimates in these areas.
-</p>
-<p>
-The dark blue (positive <span class="math inline">\(\bar{\psi}_{lat/lon}\)</span>) regions show where VIIRS estimates are higher than MODIS, while the dark red (negative <span class="math inline">\(\bar{\psi}_{lat/lon}\)</span>) regions highlight where VIIRS estimates are lower than MODIS. Most regions are blue, indicating the VIIRS generally produces slightly higher netPP estimates compared to MODIS. The most prominent disagreements are seen in coastal upwelling zones and polar regions, where environmental factors and sensor differences may contribute to variability.
-</p>
-<p>
-Despite these regional differences, the overall agreement between MODIS and VIIRS is strong, ensuring that users can confidently transition to the interim VIIRS-based primarily productivity products.
-</p>
+<p>The lighter blue and yellow regions in <strong>Fig. 1</strong> suggest strong agreement between MODIS-Aqua and VIIRS netPP estimates, particularly in mid-latitude open ocean regions where differences are relatively small. This reinforces that VIIRS provides a reliable continuation of MODIS-based estimates in these areas.</p>
+<ul>
+<li><strong>Dark blue (positive <span class="math inline">\(\bar{\psi}_{lat/lon}\)</span>) regions</strong> <span class="math inline">\(\Rightarrow\)</span> VIIRS estimates are <strong>higher</strong> than MODIS.</li>
+<li><strong>Dark red (negative <span class="math inline">\(\bar{\psi}_{lat/lon}\)</span>) regions</strong> <span class="math inline">\(\Rightarrow\)</span> VIIRS estimates are <strong>lower</strong> than MODIS.</li>
+</ul>
+<p>Most regions exhibit slightly higher VIIRS estimates, with larger disagreements in coastal upwelling zones and polar regions, where environmental factors and sensor differences may contribute to variability.</p>
+<p>Despite these regional differences, the overall agreement between MODIS and VIIRS is strong, ensuring that users can confidently transition to the interim VIIRS-based primarily productivity products.</p>
 </section>
 <section id="comparing-the-best-and-worst-fit-longhurst-provinces" class="level3">
 <h3 data-anchor-id="comparing-the-best-and-worst-fit-longhurst-provinces">Comparing the Best and Worst Fit Longhurst Provinces</h3>
 <div style="text-align: center;">
-<p><img src="images/best_worst_psi_snpp.png" class="img-fluid" style="width:100.0%" alt="Best &amp; Worst ψ Regions (VIIRS-SNPP)"> <strong>Figure 2.</strong> Best and worst agreement between MODIS-Aqua and VIIRS-SNPP.</p>
+<p><img src="images/best_worst_psi_snpp.png" class="img-fluid" style="width:100.0%" alt="Best &amp; Worst ψ Regions (VIIRS-SNPP)"> <strong>Figure 2.</strong> Regions with the strongest (green) and weakest (black) agreement between MODIS-Aqua and VIIRS-SNPP.</p>
 </div>
 <div style="text-align: center;">
-<p><img src="images/bestVSworstLonghurstPronvince.png" class="img-fluid" style="width:100.0%" alt="Best &amp; Worst ψ Regions (VIIRS-NOAA20)"> <strong>Figure 3.</strong> Best and worst agreement between MODIS-Aqua and VIIRS-NOAA20.</p>
+<p><img src="images/bestVSworstLonghurstPronvince.png" class="img-fluid" style="width:100.0%" alt="Best &amp; Worst ψ Regions (VIIRS-NOAA20)"> <strong>Figure 3.</strong> Regions with the strongest (green) and weakest (black) agreement between MODIS-Aqua and VIIRS-NOAA20.</p>
 </div>
-<p>The Arabian Sea Province (ARAB) (green) consistently shows the <strong>strongest agreement</strong> between MODIS-Aqua and VIIRS-based netPP estimates (<strong>Fig. 2 &amp; 3</strong>), with an absolute mean unbiased relative difference of <strong>-0.0013</strong>. This indicates minimal deviation between the sensors.</p>
-<p>In contrast, the North Pacific Subtropical Water Province (NPSW) (black) has the <strong>weakest agreement</strong>, with a significantly higher absolute mean unbiased relative difference of <strong>0.1130</strong>. This suggests that <strong>VIIRS-SNPP and NOAA20 tend to overestimate netPP</strong> in this region.</p>
-<p>Across both datasets, the strongest agreement occurs in the ARAB province, while the weakest agreement is found in the NPSW province.</p>
+<p>In both sensor comparisons, the <strong>Arabian Sea Province (ARAB)</strong> consistently shows the <strong>strongest agreement</strong> with an absolute mean unbiased relative difference of <strong>-0.0013</strong>. This suggests minimal deviation between the sensors.</p>
+<p>In contrast, the <strong>North Pacific Subtropical Water Province (NPSW)</strong> exhibits the <strong>weakest agreement</strong>, with a significantly higher absolute mean unbiased relative difference of <strong>0.1130</strong>, indicating that <strong>VIIRS-SNPP and NOAA20 tend to overestimate netPP</strong> in this region.</p>
+<p>Overall, the ARAB province consistently exhibits the strongest agreement, while the NPSW province experiences the greatest discrepancies.</p>
 </section>
 </section>
 <section id="biased-relative-difference-δrel" class="level2">
 <h2 data-anchor-id="biased-relative-difference-δrel">Biased Relative Difference (Δ<sub>rel</sub>)</h2>
+<p>The biased relative difference (Δ<sub>rel</sub>) provides an alternative measure of variation between MODIS and VIIRS netPP estimates, revealing patterns of overestimation or underestimation between MODIS and VIIRS. The biased relative difference directly shows the magnitude of disagreement between MODIS and VIIRS.</p>
+<p>For a detailed explanation of the calculation, see the <a href="#appendix">Appendix</a>.</p>
 <section id="spatial-variability-in-the-timeseries-monthly-δ-mean" class="level3">
 <h3 data-anchor-id="spatial-variability-in-the-timeseries-monthly-δ-mean">Spatial Variability in the Timeseries Monthly Δ Mean</h3>
 <div style="text-align: center;">
-<p><img src="images/modis_viirs_delta_comparison.png" class="img-fluid" style="width:100.0%"> <strong>Figure 4.</strong> Global maps of the monthly mean biased relative difference (<span class="math inline">\(\bar{\Delta}_{lat/lon}\)</span>) comparing MODIS-Aqua with VIIRS-SNPP (top) and VIIRS-NOAA20 (bottom).</p>
+<p><img src="images/modis_viirs_delta_comparison.png" class="img-fluid" style="width:100.0%"> <strong>Figure 4.</strong> Global maps of the monthly mean biased relative difference (<span class="math inline">\(\bar{\Delta}_{lat/lon}\)</span>) comparing MODIS-Aqua with VIIRS-SNPP (top) and VIIRS-NOAA20 (bottom). Positive values indicate higher VIIRS estimates; negative values indicate lower VIIRS estimates.</p>
 </div>
-<p>
-The light blue and yellow regions in both maps (<strong>Fig. 4</strong>) indicate that VIIRS and MODIS netPP estimates are relatively similar in most mid-latitude open ocean regions. The dark blue (positive <span class="math inline">\(\bar{\Delta}_{lat/lon}\)</span>) regions suggest that VIIRS estimates are generally higher than MODIS in many parts of the globe. The strongest positive <span class="math inline">\(\bar{\Delta}_{lat/lon}\)</span> values appear in the equatorial upwelling zones, while polar regions and coastal upwelling regions show lower VIIRS estimates (red areas (negative <span class="math inline">\(\bar{\Delta}_{lat/lon}\)</span>)).
-</p>
-<p>
-Overall, VIIRS tends to produce higher netPP estimates than MODIS as indicated by the widespread blue regions. VIIRS-SNPP shows slightly better agreement with MODIS than VIIRS-NOAA20, but both sensors demonstrate consistent spatial patterns.
-</p>
+<p>The light blue and yellow regions in <strong>Fig. 4</strong> indicate that VIIRS and MODIS netPP estimates are relatively similar in most mid-latitude open ocean regions.</p>
+<ul>
+<li><strong>Dark blue (positive <span class="math inline">\(\bar{\Delta}_{lat/lon}\)</span>) regions</strong> <span class="math inline">\(\Rightarrow\)</span> VIIRS <strong>overestimates</strong> netPP compared to MODIS.</li>
+<li><strong>Dark red (negative <span class="math inline">\(\bar{\Delta}_{lat/lon}\)</span>) regions</strong> <span class="math inline">\(\Rightarrow\)</span> VIIRS <strong>underestimates</strong> netPP compared MODIS.</li>
+</ul>
+<p>The <strong>largest overestimations</strong> occur in equitorial upwelling zones, where VIIRS reports significantly higher productivity than MODIS. In contrast, polar regions and coastal upwelling zones show the <strong>most pronounced underestimations</strong>, indicating lower VIIRS estimates relative to MODIS.</p>
+<p>VIIRS-SNPP aligns more closely with MODIS than VIIRS-NOAA20, however both VIIRS sensor demonstrate consistent spatial patterns, reflecting that they can be used for long-term productivity analyses.</p>
 </section>
 </section>
 <section id="linear-regression-trends" class="level2">
@@ -251,11 +252,8 @@ Overall, VIIRS tends to produce higher netPP estimates than MODIS as indicated b
 </section>
 <section id="modis-vs-noaa20-2018-2022" class="level3">
 <h3 data-anchor-id="modis-vs-noaa20-2018-2022">MODIS vs NOAA20 (2018-2022)</h3>
-<div style="display: flex; justify-content: center; align-items: center;">
-<p><img src="modis18_trends.png" style="height: 300px;"> <img src="noaa20_trends.png" style="height: 300px;"></p>
-</div>
-<div style="display: flex; justify-content: center; margin-top: 10px;">
-<p><img src="trends_colorbar.png" style="width: 50%;"></p>
+<div style="text-align: center;">
+<p><img src="images/modis_noaa20_trends_comparison.png" class="img-fluid" width="600"></p>
 </div>
 </section>
 <section id="contingency-matrices" class="level3">
@@ -346,15 +344,9 @@ Overall, VIIRS tends to produce higher netPP estimates than MODIS as indicated b
 <h2 data-anchor-id="appendix">Appendix</h2>
 <section id="unbiased-relative-difference-ψ-1" class="level3">
 <h3 data-anchor-id="unbiased-relative-difference-ψ-1">Unbiased Relative Difference (ψ)</h3>
-<p>
-The unbiased relative difference (ψ<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets. This provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.
-</p>
-<p>
-The pixel-by-pixel unbiased relative difference (ψ<sup>netPP</sup>) was created for the globe for each month at 9km resolution across <a href="#download-statistical-analysis-data-products">two datasets.</a>
-</p>
-<p>
-The unbiased relative difference (ψ<sup>netPP</sup>) is calculated for each pixel as follows:
-</p>
+<p>The pixel-by-pixel <strong>unbiased relative difference (ψ<sup>netPP</sup>)</strong> was computed for the globe for each month at 9km resolution across <a href="#download-statistical-analysis-data-products">two datasets.</a></p>
+<p><strong>Formula</strong></p>
+<p>The unbiased relative difference (ψ<sup>netPP</sup>) is calculated for each pixel as follows:</p>
 <blockquote class="blockquote">
 <p style="text-align: left; color: black;  font-size: 1.5em;">
 <span class="math inline">\(ψ^{netPP} = \frac{netPP_{VIIRS} - netPP_{MODIS}}{\left(\frac{netPP_{VIIRS} + netPP_{MODIS}}{2}\right)}\)</span>
@@ -368,18 +360,13 @@ Where:
 The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by the mean of <i>netPP<sub>VIIRS</sub></i> and <i>netPP<sub>MODIS</sub></i>.
 </li>
 </ul>
+<p>This metric alls for sensor-to-sensor consistency assessment, ensuring that variations are not biased by absolute magnitude differences.</p>
 </section>
 <section id="biased-relative-difference-δrel-1" class="level3">
 <h3 data-anchor-id="biased-relative-difference-δrel-1">Biased Relative Difference (Δ<sub>rel</sub>)</h3>
-<p>
-The biased relative difference (Δ<sub>rel</sub>) compares the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) estimates, using MODIS as the reference. This approach helps determine whether VIIRS systematically overestimates or underestimates netPP compared to MODIS.
-</p>
-<p>
-The pixel-by-pixel mean biased relative difference (Δ<sub>rel</sub>) was created for the globe for each month at 9km resolution across <a href="#download-statistical-analysis-data-products">two datasets.</a>
-</p>
-<p>
-The biased relative difference (Δ<sup>netPP</sup>) is calculated for each pixel as follows:
-</p>
+<p>The biased relative difference (Δ<sub>rel</sub>) compares the interim VIIRS netPP product (netPP<sub>VIIRS</sub>) and legacy MODIS netPP product (netPP<sub>MODIS</sub>) estimates, using MODIS as the reference. This approach helps determine whether VIIRS systematically overestimates or underestimates netPP compared to MODIS.</p>
+<p>The pixel-by-pixel mean biased relative difference (Δ<sub>rel</sub>) was created for the globe for each month at 9km resolution across <a href="#download-statistical-analysis-data-products">two datasets.</a></p>
+<p>The biased relative difference (Δ<sup>netPP</sup>) is calculated for each pixel as follows:</p>
 <blockquote class="blockquote">
 <p style="text-align: left; color: black; font-size: 1.5em;">
 <span class="math inline">\(\Delta^{netPP} = \frac{netPP_{VIIRS} - netPP_{MODIS}}{netPP_{MODIS}}\)</span>
@@ -396,18 +383,13 @@ The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODI
 </section>
 <section id="linear-regression-trends-1" class="level3">
 <h3 data-anchor-id="linear-regression-trends-1">Linear Regression Trends</h3>
-<p>
-The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 <a href="#download-statistical-analysis-data-products">datasets</a>. Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.
-</p>
-<p>
-The trend analysis follows methods outlined in <a href="#references">Melin et al.&nbsp;2017</a>, see the section 2.3 “Trend estimates and comparison of trends”.
-</p>
+<p>The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 <a href="#download-statistical-analysis-data-products">datasets</a>. Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.</p>
+<p>The trend analysis follows methods outlined in <a href="#references">Melin et al.&nbsp;2017</a>, see the section 2.3 “Trend estimates and comparison of trends”.</p>
 </section>
 <section id="contingency-matrices-1" class="level3">
 <h3 data-anchor-id="contingency-matrices-1">Contingency Matrices</h3>
 <p>
-Using the linear trends calculated above, a contingency matrix was constructed to compare the agreement or disagreement of trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.
-</p>
+</p><p>Using the linear trends calculated above, a contingency matrix was constructed to compare the agreement or disagreement of trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.</p>
 <ul>
 <li>
 <strong>Postive trend</strong>: Increasing trend (positive slope).
