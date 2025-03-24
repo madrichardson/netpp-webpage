@@ -6,7 +6,7 @@ format:
     css: styles.css
     include-after-body: footer.html
     toc: true
-    toc-depth: 3
+    toc-depth: 4
     toc-location: left
 sidebar:
   style: "floating"
@@ -87,32 +87,82 @@ VIIRS-SNPP aligns more closely with MODIS than VIIRS-NOAA20, however both VIIRS 
 
 ## Linear Regression Trends
 
-### MODIS vs SNPP (2013-2022)
+In order to identify temporal patterns in primary productivity, linear regression trends are calculated at each pixel (latitude and longitude) over a timeseries of monthly data. This approach allows us to visualize spatial patterns of change and evaluate how different satellite sensors track long-term primary productivity patterns. For this analysis, trends between MODIS-Aqua and VIIRS-SNPP were calculated over a 10-year period (2013-2018; 120 months), while trends between MODIS-Aqua and VIIRS-NOAA20 were calculated over a 5-year period (2018-2022; 60 months). The maps shown below provide a visual comparison of these trends between MODIS-Aqua and the VIIRS sensors, highlighting regions of agreement and disagreement.
+
+While the maps are useful for visually identifying patterns, a more quantitative assessment of agreement is provided through [contingency matrices and Cohen's Kappa statistics](#contingency-matrices-and-cohens-kappa).
+
+For a detailed explanation of the calculations, see the [Appendix](#appendix).
 
 ::: {style="text-align: center;"}
-![](images/modis_snpp_trends_comparison.png){width=600px}
+![](images/modis_snpp_trends_comparison.png){width=100%}
+**Figure 5.**  Linear trends in monthly primary productivity from MODIS-Aqua (top) and VIIRS-SNPP (bottom) datasets (2013-2022). Positive values (blue) indicate increasing trends in netPP, while negative values (red) indicate decreasing trends.
 :::
 
-### MODIS vs NOAA20 (2018-2022)
+The comparison of MODIS-Aqua and VIIRS-SNPP in **Fig 5.** shows **strong overall agreement** in primary productivity trends, with VIIRS-SNPP displaying fewer extreme changes in magnitude. Most differences in trends occur primarily in the coastal upwelling zones and polar regions, where MODIS-Aqua tends to show slightly more intense positive or negative trends. In the open ocean regions, trends are weaker demonstrating high spatial agreement between both sensors. This suggests that SNPP produces trend estimates that align closely with MODIS estimates, providing users with confidence that VIIRS-SNPP can **reliably replace** MODIS-Aqua for long-term primary productivity analyses. 
 
 ::: {style="text-align: center;"}
-![](images/modis_noaa20_trends_comparison.png){width=600px}
+![](images/modis_noaa20_trends_comparison.png){width=100%}
+**Figure 6.** Linear trends in monthly primary productivity from MODIS-Aqua (top) and VIIRS-NOAA20 (bottom) datasets (2018-2022). Positive values (blue) indicate increasing trends in netPP, while negative values (red) indicate decreasing trends.
 :::
 
-### Contingency Matrices
+The comparison of MODIS-Aqua and VIIRS-NOAA20 in **Fig 6.** also shows **strong overall agreement** in primary productivity trends. However, compared to **Fig 5.**, the MODIS-Aqua - VIIRS-NOAA20 pairing shows more widespread and stronger positive trends (dark blue) specifically in the polar regions of the Northern and Southern Hemispheres. Areas of strong negative trends (dark red) for both sensors are concentrated in coastal upwelling zones, particulary off the coasts of Northwest Africa, Peru, and Arabian Sea, though MODIS shows slightly higher intensities. In contrast, trends in open ocean regions are generally weaker and show a high degree of spatial consistency between MODIS and NOAA20. The consistent temporal patterns captured by both sensors support VIIRS-NOAA20 as a **reliable continuation** of the MODIS record for long-term primary productivity analyses. 
 
-#### MODIS vs SNPP (2013-2022)
+### Contingency Matrices and Cohen's Kappa
+
+The contingency matrix categorizes each pixel by direction of the trend - positive, negative, or not statistically significant - across both datasets. 
+
+The rows correspond to VIIRS classifications, and the columns to MODIS-Aqua classifications:
+
+- **n.s.** = No significant trend  
+- **β > 0** = Statistically significant positive trend  
+- **β < 0** = Statistically significant negative trend
+
+Each cell in the matrix contains the **percentage of pixels** that share that classification combination.
+
+Cohen's Kappa then summarizes the overall agreement, accounting for agreement due to chance and offering a standardized measure of consistency between MODIS and VIIRS trend classifications.
+
+| **Kappa Value** | **Interpretation**        |
+|-----------------|---------------------------|
+| < 0.00          | No agreement              |
+| 0.00–0.20       | Slight agreement          |
+| 0.21–0.40       | Fair agreement            |
+| 0.41–0.60       | Moderate agreement        |
+| 0.61–0.80       | Substantial agreement     |
+| 0.81–1.00       | Almost perfect agreement  |
+
+For a detailed explanation of the calculations, see the [Appendix](#appendix).
 
 ::: {style="text-align: center;"}
-![Figure ](images/global_modis_snpp_contingency.png){width=1200px}
+![](images/global_modis_snpp_3x3_contingency.png){width=100%}
+**Figure 7.** Global contingency table comparing MODIS-Aqua and VIIRS-SNPP, along with Cohen's Kappa statistic.
 :::
 
+The key takeaways for **Fig. 7** are:
 
-#### MODIS vs NOAA20 (2018-2022)
+- **75.9%** of pixels show **no significant trend** in either sensor (top-left cell).
+- **11.4%** of pixels show a **positive trend** in both MODIS and SNPP (center cell).
+- **5.0%** of pixels show a **negative trend** in both sensors (bottom-right cell).
+
+These diagonal cells reflect cases where MODIS-Aqua and VIIRS-SNPP agree on the direction and significance of the trend. In total, these agreements account for approximately **92.3%** of all valid ocean pixels, indicating a **very high level of agreement** between the two.
+
+A Cohen's Kappa value of **0.77** indicates **“substantial agreement”** between MODIS-Aqua and VIIRS-SNPP trend classifications.
 
 ::: {style="text-align: center;"}
-![Figure ](images/global_modis_noaa20_contingency.png){width=1200px}
+![](images/global_modis_noaa20_3x3_contingency.png){width=100%}
+**Figure 8.** Global contingency table comparing MODIS-Aqua and VIIRS-NOAA20, along with Cohen's Kappa statistic.
 :::
+
+The key takeaways for **Fig. 8** are:
+
+- **76.5%** of pixels show **no significant trend** in either sensor (top-left cell).
+- **13.3%** of pixels show a **positive trend** in both MODIS and NOAA20 (center cell).
+- **4.1%** of pixels show a **negative trend** in both sensors (bottom-right cell).
+
+These diagonal cells represent agreement between MODIS and NOAA20. Together, they account for approximately **93.9%** of all pixels, a **very high level of agreement**.
+
+A Cohen's Kappa value of **0.82** indicates **"almost perfect agreement"**, meaning that MODIS-Aqua and VIIRS-NOAA20 classify the direction and significance of productivity trends similarly far more often than would be expected by chance alone.
+
+Both VIIRS sensors show strong agreement with MODIS-Aqua in classifying long-term primary productivity trends with Cohen's Kappa values that indicate substantial to almost perfect agreement. This confirms that both VIIRS-SNPP and VIIRS-NOAA20 are reliable successors to MODIS for long-term primary productivity analyses. 
 
 ## Download Statistical Analysis Data Products
 Access datasets used in the statistical analysis, including unbiased and biased relative differences, correlations, trends, and contingency matrices.
@@ -128,11 +178,6 @@ Access datasets used in the statistical analysis, including unbiased and biased 
       <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_snpp_modis.graph">VIIRS-SNPP - MODIS-Aqua</a></li>
       <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_noaa20_modis.graph">VIIRS-NOAA20 - MODIS-Aqua</a></li>
     </ul>
-  <li><a>Pearson Correlation Coefficients</a></li>
-    <ul>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/correlations_modis_snpp_monthly_9km.graph">VIIRS-SNPP - MODIS-Aqua</a></li>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/correlations_modis_noaa20_monthly_9km.graph">VIIRS-NOAA20 - MODIS-Aqua</a></li>
-    </ul>
   <li><a>Linear Regression Trends</a></li>
     <ul>
       <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/trends_modis_monthly_9km.graph">MODIS-Aqua</a></li>
@@ -146,11 +191,11 @@ Access datasets used in the statistical analysis, including unbiased and biased 
 
 ## Appendix
 
+The following sections provide detailed explanations of how the statistical analyses between the legacy and interim products were calculated. If you are interested in exploring or replicating these analyses yoursel, check out our [Code Gallery](user_resources.qmd) for step-by-step tutorials. 
+
 ### Unbiased Relative Difference (&psi;)
 
 The pixel-by-pixel **unbiased relative difference (&psi;<sup>netPP</sup>)** was computed for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)
-
-**Formula**
 
 The unbiased relative difference (&psi;<sup>netPP</sup>) is calculated for each pixel as follows:
 
@@ -187,26 +232,62 @@ This metric is useful for identifying systematic overestimations or underestimat
 
 ### Linear Regression Trends
 
-The purpose of calculating linear trends for each of the datasets is to evaluate how much the products agree or disagree over time and across regions. Linear trends were calculated in the time series of monthly primary productivity for each pixel with either raw data or anomalies for the MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 [datasets](#download-statistical-analysis-data-products). Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.
+The purpose of calculating **linear regression trends** for each of the datasets is to evaluate how much the products agree or disagree in temporal patterns. Linear trends were calculated in the time series of monthly primary productivity for every pixel with either raw data or anomalies for the [MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets](#download-statistical-analysis-data-products). Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.
 
 The trend analysis follows methods outlined in [Melin et al. 2017](#references), see the section 2.3 "Trend estimates and comparison of trends".
 
-### Contingency Matrices
+### Contingency Matrix and Cohen’s Kappa
 
-<p>Using the linear trends calculated above, a contingency matrix was constructed to compare the agreement or disagreement of trends between the legacy and interim primary productivity products. Pixels were categorized by the matrix into three groups based on the sign of the slope.
+To quantitatively assess agreement in trend classifications between MODIS-Aqua and the VIIRS sensors, we use a **contingency matrix** and compute **Cohen’s Kappa**.
 
-<ul>
-  <li>
-    <strong>Postive trend</strong>: Increasing trend (positive slope).
-  </li>
-  <li>
-    <strong>Negative trend</strong>: Decreasing trend (negative slope).
-  </li>
-  <li>
-    <strong>No significant trend</strong>: Slope not significantly different from zero.
-  </li>
-</ul>
+A contingency matrix compares the **direction of linear trends** between two datasets—MODIS and VIIRS—at each pixel. Each trend is classified into one of three categories:
 
-The contingency matrix shows the percentage of pixels where the legacy and interim primary productivity products agree or disagree. The diagonal cells descending from left to right show where the products agree, and the off-diagonal cells show where the products disagree.
+- **Positive trend**: statistically significant increasing trend  
+- **Negative trend**: statistically significant decreasing trend  
+- **No significant trend**: slope not significantly different from zero (e.g., *p* > 0.05)
 
-The contingency matrix is used to compute Cohen's Kappa, a statistical measure that quantifies the level of agreement between the two NetPP products. Cohen's Kappa accounts for the agreement occuring by chance and provides a standardized metric of similarity. The scale ranges from 0 (no agreement) to 1 (perfect agreement). 
+We then count how often each combination occurs across all pixels to build a 3×3 matrix:
+
+|                     | VIIRS Positive | VIIRS Negative | VIIRS No Trend |
+|---------------------|----------------|----------------|----------------|
+| **MODIS Positive**  | a              | b              | c              |
+| **MODIS Negative**  | d              | e              | f              |
+| **MODIS No Trend**  | g              | h              | i              |
+
+- **Diagonal cells** (a, e, i) indicate agreement.
+- **Off-diagonal cells** indicate disagreement.
+
+---
+
+#### Cohen’s Kappa: Measuring Agreement Beyond Chance
+
+**Cohen’s Kappa (κ)** quantifies how much the agreement between MODIS and VIIRS exceeds what would be expected by chance. It ranges from:
+
+- **1** = perfect agreement  
+- **0** = no better than random
+
+<blockquote>
+  <p style="text-align: left; color: black; font-size: 1.5em;">
+  $\kappa = \frac{P_o - P_e}{1 - P_e}$
+  </p>
+</blockquote>
+
+Where:
+
+- **\( P_o \)** = observed agreement (proportion of pixels where MODIS and VIIRS agree):
+
+$$
+P_o = \frac{a + e + i}{N}
+$$
+
+- **\( P_e \)** = expected agreement by chance:
+
+$$
+P_e = \frac{(a + b + c)(a + d + g) + (d + e + f)(b + e + h) + (g + h + i)(c + f + i)}{N^2}
+$$
+
+- **\( N \)** = total number of valid pixels (sum of all cells):
+
+$$
+N = a + b + c + d + e + f + g + h + i
+$$

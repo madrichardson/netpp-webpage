@@ -6,7 +6,7 @@ format:
     css: styles.css
     include-after-body: footer.html
     toc: true
-    toc-depth: 2
+    toc-depth: 4
     toc-location: left
 sidebar:
   style: "floating"
@@ -16,9 +16,9 @@ sidebar:
 
 ## Code Gallery
 
-**Explore tutorials designed to help users analyze and compare legacy and interim primary productivity using Python or R.**
+Explore tutorials designed to help users analyze and compare legacy and interim primary productivity using Python or R.
 
-#### **Unbiased Relative Difference Analysis of the Legacy and Interim Products**
+#### Unbiased Relative Difference Analysis of the Legacy and Interim Products
 ::: {.grid}
 ::::{.g-col-6}
 ![](images/CCAL_MODIS_SNPP_psi.png){width=100%}
@@ -30,7 +30,7 @@ Calculate the mean unbiased relative difference ($\psi$) between the legacy and 
 ::::
 :::
 
-#### **Biased Relative Difference Analysis of the Legacy and Interim Products**
+#### Biased Relative Difference Analysis of the Legacy and Interim Products
 ::: {.grid}
 ::::{.g-col-6}
 ![](images/CCAL_MODIS_SNPP_delta.png){width=100%}
@@ -42,19 +42,7 @@ Calculate the biased relative difference ($\Delta$) between the legacy and inter
 ::::
 :::
 
-#### **Correlation Analysis of the Legacy and Interim Products**
-::: {.grid}
-::::{.g-col-6}
-![](images/CCAl_MODIS_SNPP_corr.png){width=100%}
-::::
-:::: {.g-col-6}
-Visualize correlations and p-values between two time series of monthly means of primary productivity for a user-specified region.
-
-[View in Github](https://example.com)
-::::
-:::
-
-#### **Contingency Tables: Assessing the Similarity Between Two Primary Productivity Products**
+#### Contingency Tables: Assessing the Similarity Between Two Primary Productivity Products
 ::: {.grid}
 ::::{.g-col-6}
 ![](images/CCAL_modis_snpp_3x3_contingency.png){width=100%}
