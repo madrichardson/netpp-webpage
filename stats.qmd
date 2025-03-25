@@ -27,7 +27,7 @@ The analysis includes:
 
 The unbiased relative difference (&psi;<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to assess the consistency in netPP estimates between interim VIIRS and legacy MODIS datasets. This metric provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.
 
-For a detailed explanation of the calculation, see the [Appendix](#appendix).
+For a detailed explanation of the calculation, see the [Appendix](#psi_appendix).
 
 ### Spatial Variability in the Timeseries Monthly Mean &psi;
 
@@ -63,17 +63,17 @@ In contrast, the **North Pacific Subtropical Water Province (NPSW)** exhibits th
 
 Overall, the ARAB province consistently exhibits the strongest agreement, while the NPSW province experiences the greatest discrepancies.
 
-## Biased Relative Difference (&Delta;<sub>rel</sub>)
+## Absolute Relative Difference (&Delta;<sub>rel</sub>)
 
-The biased relative difference (&Delta;<sub>rel</sub>) provides an alternative measure of variation between MODIS and VIIRS netPP estimates, revealing patterns of overestimation or underestimation between MODIS and VIIRS. The biased relative difference directly shows the magnitude of disagreement between MODIS and VIIRS.
+The absolute relative difference (&Delta;<sub>rel</sub>) provides an alternative measure of variation between MODIS and VIIRS netPP estimates, revealing patterns of overestimation or underestimation between MODIS and VIIRS. The absolute relative difference directly shows the magnitude of disagreement between MODIS and VIIRS.
 
-For a detailed explanation of the calculation, see the [Appendix](#appendix).
+For a detailed explanation of the calculation, see the [Appendix](#delta_appendix).
 
 ### Spatial Variability in the Timeseries Monthly &Delta; Mean
 
 ::: {style="text-align: center;"}
 ![](images/modis_viirs_delta_comparison.png){width=100%}
-**Figure 4.** Global maps of the monthly mean biased relative difference ($\bar{\Delta}_{lat/lon}$) comparing MODIS-Aqua with VIIRS-SNPP (top) and VIIRS-NOAA20 (bottom). Positive values indicate higher VIIRS estimates; negative values indicate lower VIIRS estimates.
+**Figure 4.** Global maps of the monthly mean absolute relative difference ($\bar{\Delta}_{lat/lon}$) comparing MODIS-Aqua with VIIRS-SNPP (top) and VIIRS-NOAA20 (bottom). Positive values indicate higher VIIRS estimates; negative values indicate lower VIIRS estimates.
 :::
 
 The light blue and yellow regions in **Fig. 4** indicate that VIIRS and MODIS netPP estimates are relatively similar in most mid-latitude open ocean regions.
@@ -91,7 +91,7 @@ In order to identify temporal patterns in primary productivity, linear regressio
 
 While the maps are useful for visually identifying patterns, a more quantitative assessment of agreement is provided through [contingency matrices and Cohen's Kappa statistics](#contingency-matrices-and-cohens-kappa).
 
-For a detailed explanation of the calculations, see the [Appendix](#appendix).
+For a detailed explanation of the calculations, see the [Appendix](#trends_appendix).
 
 ::: {style="text-align: center;"}
 ![](images/modis_snpp_trends_comparison.png){width=100%}
@@ -130,7 +130,7 @@ Cohen's Kappa then summarizes the overall agreement, accounting for agreement du
 | 0.61–0.80       | Substantial agreement     |
 | 0.81–1.00       | Almost perfect agreement  |
 
-For a detailed explanation of the calculations, see the [Appendix](#appendix).
+For a detailed explanation of the calculations, see the [Appendix](#tables_appendix).
 
 ::: {style="text-align: center;"}
 ![](images/global_modis_snpp_3x3_contingency.png){width=100%}
@@ -193,7 +193,7 @@ Access datasets used in the statistical analysis, including unbiased and biased 
 
 The following sections provide detailed explanations of how the statistical analyses between the legacy and interim products were calculated. If you are interested in exploring or replicating these analyses yoursel, check out our [Code Gallery](user_resources.qmd) for step-by-step tutorials. 
 
-### Unbiased Relative Difference (&psi;)
+### Unbiased Relative Difference (&psi;) {#psi_appendix}
 
 The pixel-by-pixel **unbiased relative difference (&psi;<sup>netPP</sup>)** was computed for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)
 
@@ -211,11 +211,11 @@ The unbiased relative difference (&psi;<sup>netPP</sup>) is calculated for each 
 
 This metric allows for sensor-to-sensor consistency assessment, ensuring that variations are not biased by absolute magnitude differences.
 
-### Biased Relative Difference (&Delta;<sub>rel</sub>)
+### Absolute Relative Difference (&Delta;<sub>rel</sub>) {#delta_appendix}
 
-The pixel-by-pixel **biased relative difference (&Delta;<sub>rel</sub>)** was created for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)
+The pixel-by-pixel **absolute relative difference (&Delta;<sub>rel</sub>)** was created for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)
 
-The biased relative difference (&Delta;<sup>netPP</sup>) is calculated for each pixel as follows:
+The absolute relative difference (&Delta;<sup>netPP</sup>) is calculated for each pixel as follows:
 
 <blockquote>
   <p style="text-align: left; color: black; font-size: 1.5em;">
@@ -230,13 +230,13 @@ The biased relative difference (&Delta;<sup>netPP</sup>) is calculated for each 
 
 This metric is useful for identifying systematic overestimations or underestimations in primary productivity estimates between the sensors. 
 
-### Linear Regression Trends
+### Linear Regression Trends {#trends_appendix}
 
 The purpose of calculating **linear regression trends** for each of the datasets is to evaluate how much the products agree or disagree in temporal patterns. Linear trends were calculated in the time series of monthly primary productivity for every pixel with either raw data or anomalies for the [MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets](#download-statistical-analysis-data-products). Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.
 
 The trend analysis follows methods outlined in [Melin et al. 2017](#references), see the section 2.3 "Trend estimates and comparison of trends".
 
-### Contingency Matrix and Cohen’s Kappa
+### Contingency Matrix and Cohen’s Kappa {#tables_appendix}
 
 To quantitatively assess agreement in trend classifications between MODIS-Aqua and the VIIRS sensors, we use a **contingency matrix** and compute **Cohen’s Kappa**.
 

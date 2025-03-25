@@ -18,6 +18,8 @@ sidebar:
 
 Explore tutorials designed to help users analyze and compare legacy and interim primary productivity using Python or R.
 
+### Customizable Regional Analysis Tutorials
+
 #### Unbiased Relative Difference Analysis of the Legacy and Interim Products
 ::: {.grid}
 ::::{.g-col-6}
@@ -30,13 +32,13 @@ Calculate the mean unbiased relative difference ($\psi$) between the legacy and 
 ::::
 :::
 
-#### Biased Relative Difference Analysis of the Legacy and Interim Products
+#### Absolute Relative Difference Analysis of the Legacy and Interim Products
 ::: {.grid}
 ::::{.g-col-6}
 ![](images/CCAL_MODIS_SNPP_delta.png){width=100%}
 ::::
 :::: {.g-col-6}
-Calculate the biased relative difference ($\Delta$) between the legacy and interim products for a user-specified region.
+Calculate the absolute relative difference ($\Delta$) between the legacy and interim products for a user-specified region.
 
 [View in Github](https://example.com)
 ::::
@@ -53,6 +55,39 @@ Construct a contingency matrix to compare the trends between the legacy and inte
 [View in Github](https://example.com)
 ::::
 :::
+
+### Full Statistical Analysis Tutorials 
+
+#### Primary Productivity Unbiased Relative Difference Analysis  
+::: {.grid}
+::::{.g-col-12}
+
+Calculate the mean unbiased relative difference ($\psi$) of the interim VIIRS netPP and legacy MODIS netPP products for each month from the timeseries shared between the two sensors. 
+
+[View in Github](https://example.com)
+::::
+:::
+
+#### Primary Productivity Absolute Relative Difference Analysis  
+::: {.grid}
+::::{.g-col-12}
+
+Calculate the mean absolute relative difference ($\Delta$) of the interim VIIRS netPP product and legacy MODIS netPP product for each month from a timeseries shared between the two sensors. 
+
+[View in Github](https://example.com)
+::::
+:::
+
+#### Calculating Trends and P-Values for Legacy and Interim NetPP Products  
+::: {.grid}
+::::{.g-col-12}
+
+Generate trends for satellite-derived hourly means of legacy or interim primary productivity products.
+
+[View in Github](https://example.com)
+::::
+:::
+
 
 ## Satellite Courses
 
