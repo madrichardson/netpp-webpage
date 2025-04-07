@@ -46,7 +46,7 @@ MIGHT NEED A LEGEND
 **Temporal Variability**. For VIIRS SNPP interim product relative to the legacy product, monthly mean global &psi; values are positive over most of the 10-year timeseries, indicating that the interim netPP values are on average greater than the legacy values. The values for the interim product were quite similar to the legacy values, as indicated by &psi; values ranging from 0 to 0.07 (0-7% difference from the legacy product) over the entire timeseries. For VIIRS SNPP interim product relative to the legacy product (ADD TEXT HERE)
 
 ::: {style="text-align: center;"}
-![psi timeseries](images/psi_timeseries.png){width=100%}
+![psi timeseries](images/greyscale_psi_timeseries.png){width=100%}
 **Figure 2.** The timeseries of mean global &psi; values for each month from January 2013 to December 2022 (a ten-year period).
 :::
 
