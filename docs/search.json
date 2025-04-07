@@ -165,7 +165,14 @@
     "href": "stats2.html",
     "title": "\nStatistical Analysis\n",
     "section": "",
-    "text": "Statistical Analysis\nTo evaluate how the interim primary productivity products (VIIRS-SNPP and VIIRS-NOAA20) differ from the legacy product (MODIS-Aqua), we conducted a comprehensive statistical analysis that includes the following methods:\nFor the VIIRS SNPP analysis we used a 10-year time period from January 2013 to December 2023. For the VIIRS NOAA-20 analysis we used a 5-year time period from January 2018 to December 2023.\nShort summary here:\nThe relatively small differences between the interim products and the legacy product suggests that either interim would be a suitable replacement for the legacy product in many applications."
+    "text": "Statistical Analysis\nTo evaluate how the interim primary productivity products (VIIRS-SNPP and VIIRS-NOAA20) differ from the legacy product (MODIS-Aqua), we conducted a comprehensive statistical analysis that includes the following methods:\nFor the VIIRS SNPP analysis we used a 10-year time period from January 2013 to December 2023. For the VIIRS NOAA-20 analysis we used a 5-year time period from January 2018 to December 2023."
+  },
+  {
+    "objectID": "stats2.html#summary-of-results",
+    "href": "stats2.html#summary-of-results",
+    "title": "\nStatistical Analysis\n",
+    "section": "Summary of Results",
+    "text": "Summary of Results\nShort summary here:\n\nVIIRS SNPP and VIIRS NOAA-20 interim primary productivity products both have generate similar values as the legacy product. Multi-year analysis showed that the mean monthly difference between either interim product and the legacy product was no more that 7%. There where spatial difference…\nTrends…\n\nThe relatively small differences between the interim products and the legacy product suggests that either interim would be a suitable replacement for the legacy product in many applications."
   },
   {
     "objectID": "stats2.html#unbiased-relative-difference-ψ",

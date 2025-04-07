@@ -22,7 +22,7 @@ To evaluate how the interim primary productivity products (**VIIRS-SNPP** and **
 
 For the VIIRS SNPP analysis we used a 10-year time period from January 2013 to December 2023. For the VIIRS NOAA-20 analysis we used a 5-year time period from January 2018 to December 2023.
 
-<h2> Summary of Results</h2>
+## Summary of Results
 
 Short summary here:
 
