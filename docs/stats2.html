@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>user_resources – CoastWatch Primary Productivity Project</title>
+<title>stats2 – CoastWatch Primary Productivity Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,11 +128,11 @@ window.Quarto = {
 <span class="menu-text">Statistical Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./stats2.html"> 
+    <a class="nav-link active" href="./stats2.html" aria-current="page"> 
 <span class="menu-text">Statistical Analysis 2</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./user_resources.html" aria-current="page"> 
+    <a class="nav-link" href="./user_resources.html"> 
 <span class="menu-text">User Resources</span></a>
   </li>  
 </ul>
@@ -150,23 +150,23 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#code-gallery" id="toc-code-gallery" class="nav-link active" data-scroll-target="#code-gallery">Code Gallery</a>
+  <li><a href="#unbiased-relative-difference-ψ" id="toc-unbiased-relative-difference-ψ" class="nav-link active" data-scroll-target="#unbiased-relative-difference-ψ">Unbiased Relative Difference (ψ)</a></li>
+  <li><a href="#trends-analysis" id="toc-trends-analysis" class="nav-link" data-scroll-target="#trends-analysis">Trends Analysis</a>
   <ul>
-  <li><a href="#customizable-regional-analysis-tutorials" id="toc-customizable-regional-analysis-tutorials" class="nav-link" data-scroll-target="#customizable-regional-analysis-tutorials">Customizable Regional Analysis Tutorials</a>
+  <li><a href="#contingency-matrices-and-cohens-kappa" id="toc-contingency-matrices-and-cohens-kappa" class="nav-link" data-scroll-target="#contingency-matrices-and-cohens-kappa">Contingency Matrices and Cohen’s Kappa</a></li>
+  </ul></li>
+  <li><a href="#download-statistical-analysis-data-products" id="toc-download-statistical-analysis-data-products" class="nav-link" data-scroll-target="#download-statistical-analysis-data-products">Download Statistical Analysis Data Products</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
+  <ul>
+  <li><a href="#psi_appendix" id="toc-psi_appendix" class="nav-link" data-scroll-target="#psi_appendix">Unbiased Relative Difference (ψ)</a></li>
+  <li><a href="#delta_appendix" id="toc-delta_appendix" class="nav-link" data-scroll-target="#delta_appendix">Absolute Relative Difference (Δ<sub>rel</sub>)</a></li>
+  <li><a href="#trends_appendix" id="toc-trends_appendix" class="nav-link" data-scroll-target="#trends_appendix">Linear Regression Trends</a></li>
+  <li><a href="#tables_appendix" id="toc-tables_appendix" class="nav-link" data-scroll-target="#tables_appendix">Contingency Matrix and Cohen’s Kappa</a>
   <ul class="collapse">
-  <li><a href="#unbiased-relative-difference-analysis-of-the-legacy-and-interim-products" id="toc-unbiased-relative-difference-analysis-of-the-legacy-and-interim-products" class="nav-link" data-scroll-target="#unbiased-relative-difference-analysis-of-the-legacy-and-interim-products">Unbiased Relative Difference Analysis of the Legacy and Interim Products</a></li>
-  <li><a href="#absolute-relative-difference-analysis-of-the-legacy-and-interim-products" id="toc-absolute-relative-difference-analysis-of-the-legacy-and-interim-products" class="nav-link" data-scroll-target="#absolute-relative-difference-analysis-of-the-legacy-and-interim-products">Absolute Relative Difference Analysis of the Legacy and Interim Products</a></li>
-  <li><a href="#contingency-tables-assessing-the-similarity-between-two-primary-productivity-products" id="toc-contingency-tables-assessing-the-similarity-between-two-primary-productivity-products" class="nav-link" data-scroll-target="#contingency-tables-assessing-the-similarity-between-two-primary-productivity-products">Contingency Tables: Assessing the Similarity Between Two Primary Productivity Products</a></li>
-  </ul></li>
-  <li><a href="#full-statistical-analysis-tutorials" id="toc-full-statistical-analysis-tutorials" class="nav-link" data-scroll-target="#full-statistical-analysis-tutorials">Full Statistical Analysis Tutorials</a>
-  <ul class="collapse">
-  <li><a href="#primary-productivity-unbiased-relative-difference-analysis" id="toc-primary-productivity-unbiased-relative-difference-analysis" class="nav-link" data-scroll-target="#primary-productivity-unbiased-relative-difference-analysis">Primary Productivity Unbiased Relative Difference Analysis</a></li>
-  <li><a href="#primary-productivity-absolute-relative-difference-analysis" id="toc-primary-productivity-absolute-relative-difference-analysis" class="nav-link" data-scroll-target="#primary-productivity-absolute-relative-difference-analysis">Primary Productivity Absolute Relative Difference Analysis</a></li>
-  <li><a href="#calculating-trends-and-p-values-for-legacy-and-interim-netpp-products" id="toc-calculating-trends-and-p-values-for-legacy-and-interim-netpp-products" class="nav-link" data-scroll-target="#calculating-trends-and-p-values-for-legacy-and-interim-netpp-products">Calculating Trends and P-Values for Legacy and Interim NetPP Products</a></li>
+  <li><a href="#cohens-kappa-measuring-agreement-beyond-chance" id="toc-cohens-kappa-measuring-agreement-beyond-chance" class="nav-link" data-scroll-target="#cohens-kappa-measuring-agreement-beyond-chance">Cohen’s Kappa: Measuring Agreement Beyond Chance</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#satellite-courses" id="toc-satellite-courses" class="nav-link" data-scroll-target="#satellite-courses">Satellite Courses</a></li>
-  <li><a href="#erddap-server" id="toc-erddap-server" class="nav-link" data-scroll-target="#erddap-server">ERDDAP Server</a></li>
   </ul>
 </nav>
 </nav>
@@ -181,96 +181,245 @@ window.Quarto = {
 
 
 <h1>
-User Resources
+Statistical Analysis
 </h1>
-<section id="code-gallery" class="level2">
-<h2 data-anchor-id="code-gallery">Code Gallery</h2>
-<p>Explore tutorials designed to help users analyze and compare legacy and interim primary productivity using Python or R.</p>
-<section id="customizable-regional-analysis-tutorials" class="level3">
-<h3 data-anchor-id="customizable-regional-analysis-tutorials">Customizable Regional Analysis Tutorials</h3>
-<section id="unbiased-relative-difference-analysis-of-the-legacy-and-interim-products" class="level4">
-<h4 data-anchor-id="unbiased-relative-difference-analysis-of-the-legacy-and-interim-products">Unbiased Relative Difference Analysis of the Legacy and Interim Products</h4>
-<div class="grid">
-<div class="g-col-6">
-<p><img src="images/CCAL_MODIS_SNPP_psi.png" class="img-fluid" style="width:100.0%"></p>
+<p>To evaluate how the interim primary productivity products (<strong>VIIRS-SNPP</strong> and <strong>VIIRS-NOAA20</strong>) differ from the legacy product (<strong>MODIS-Aqua</strong>), we conducted a comprehensive statistical analysis that includes the following methods:</p>
+<ul>
+<li>Calculating the <a href="#unbiased-relative-difference">Unbiased Relative Difference (ψ)</a>, which is a measure of how similar the interim and legacy products netPP values are.</li>
+<li>Comparing <a href="#linear-regression-trends">long-term trends</a> in netPP, which evaluates if the two products track the same trends, or lack of trends, in the data over time.</li>
+</ul>
+<p>For the VIIRS SNPP analysis we used a 10-year time period from January 2013 to December 2023. For the VIIRS NOAA-20 analysis we used a 5-year time period from January 2018 to December 2023.</p>
+<h2>
+Summary of Results
+</h2>
+<p>Short summary here:</p>
+<ul>
+<li>VIIRS SNPP and VIIRS NOAA-20 interim primary productivity products both have generate similar values as the legacy product. Multi-year analysis showed that the mean monthly difference between either interim product and the legacy product was no more that 7%. There where spatial difference…</li>
+<li>Trends…</li>
+</ul>
+<p>The relatively small differences between the interim products and the legacy product suggests that either interim would be a suitable replacement for the legacy product in many applications.</p>
+<section id="unbiased-relative-difference-ψ" class="level2">
+<h2 data-anchor-id="unbiased-relative-difference-ψ">Unbiased Relative Difference (ψ)</h2>
+<p>In plain language, Unbiased Relative Difference (ψ) is the difference between interim and legacy primary productivity values (netPP), normalized to the mean of the two values. Normalizing to the mean avoids the bias of arbitrarily selecting one product as the reference. For a detailed explanation of the calculation, see the <a href="#psi_appendix">Appendix</a>. This analysis allows us to determine how similar netPP values are between the interim and legacy products.</p>
+<p>For our analysis, we calculated ψ for each pixel in our global grid for each month over a multi-year timespan. The resulting monthly maps of global ψ allowed us to generate a timeseries of mean global monthly ψ and a map of the multi-year mean ψ for each pixel in our global grid.</p>
+<div style="text-align: center;">
+<p><img src="images/psi_diagram.png" class="img-fluid" style="width:100.0%" alt="psi diagram"> <strong>Figure 1.</strong></p>
 </div>
-<div class="g-col-6">
-<p>Calculate the mean unbiased relative difference (<span class="math inline">\(\psi\)</span>) between the legacy and interim products for a user-specified region.</p>
-<p><a href="https://example.com">View in Github</a></p>
+<p>MIGHT NEED A LEGEND</p>
+<p><strong>Temporal Variability</strong>. For VIIRS SNPP interim product relative to the legacy product, monthly mean global ψ values are positive over most of the 10-year timeseries, indicating that the interim netPP values are on average greater than the legacy values. The values for the interim product were quite similar to the legacy values, as indicated by ψ values ranging from 0 to 0.07 (0-7% difference from the legacy product) over the entire timeseries. For VIIRS SNPP interim product relative to the legacy product (ADD TEXT HERE)</p>
+<div style="text-align: center;">
+<p><img src="images/psi_timeseries.png" class="img-fluid" style="width:100.0%" alt="psi timeseries"> <strong>Figure 2.</strong> The timeseries of mean global ψ values for each month from January 2013 to December 2022 (a ten-year period).</p>
 </div>
-</div>
-</section>
-<section id="absolute-relative-difference-analysis-of-the-legacy-and-interim-products" class="level4">
-<h4 data-anchor-id="absolute-relative-difference-analysis-of-the-legacy-and-interim-products">Absolute Relative Difference Analysis of the Legacy and Interim Products</h4>
-<div class="grid">
-<div class="g-col-6">
-<p><img src="images/CCAL_MODIS_SNPP_delta.png" class="img-fluid" style="width:100.0%"></p>
-</div>
-<div class="g-col-6">
-<p>Calculate the absolute relative difference (<span class="math inline">\(\Delta\)</span>) between the legacy and interim products for a user-specified region.</p>
-<p><a href="https://example.com">View in Github</a></p>
-</div>
-</div>
-</section>
-<section id="contingency-tables-assessing-the-similarity-between-two-primary-productivity-products" class="level4">
-<h4 data-anchor-id="contingency-tables-assessing-the-similarity-between-two-primary-productivity-products">Contingency Tables: Assessing the Similarity Between Two Primary Productivity Products</h4>
-<div class="grid">
-<div class="g-col-6">
-<p><img src="images/CCAL_modis_snpp_3x3_contingency.png" class="img-fluid" style="width:100.0%"></p>
-</div>
-<div class="g-col-6">
-<p>Construct a contingency matrix to compare the trends between the legacy and interim product for a user-specified region.</p>
-<p><a href="https://example.com">View in Github</a></p>
-</div>
+<p><strong>Spatial Variability</strong>. The 10-year average map reveals the spatial variable in ψ, with most oceanic regions showing &lt;5% difference (lightest blue and pink) between the two netPP products. However, in the tropical and subtropical gyres there is a 5-10% difference between the interim and legacy products (medium blue) and areas of higher differences (&gt;20%) are visible at high latitudes and in coast upwelling regions.</p>
+<div style="text-align: center;">
+<p><img src="images/psi_spatialmap.png" class="img-fluid" style="width:100.0%" alt="psi spatial map"> <strong>Figure 3.</strong> Global maps of the 10-year mean unbiased relative difference (ψ) comparing VIIRS-SNPP with MODIS-Aqua. Positive (blue) values indicate that the interim product netPP values are larger than those of the legacy product and negative (red) values indicate that the interim product netPP values are less than those of the legacy product.</p>
 </div>
 </section>
-</section>
-<section id="full-statistical-analysis-tutorials" class="level3">
-<h3 data-anchor-id="full-statistical-analysis-tutorials">Full Statistical Analysis Tutorials</h3>
-<section id="primary-productivity-unbiased-relative-difference-analysis" class="level4">
-<h4 data-anchor-id="primary-productivity-unbiased-relative-difference-analysis">Primary Productivity Unbiased Relative Difference Analysis</h4>
-<div class="grid">
-<div class="g-col-12">
-<p>Calculate the mean unbiased relative difference (<span class="math inline">\(\psi\)</span>) of the interim VIIRS netPP and legacy MODIS netPP products for each month from the timeseries shared between the two sensors.</p>
-<p><a href="https://example.com">View in Github</a></p>
+<section id="trends-analysis" class="level2">
+<h2 data-anchor-id="trends-analysis">Trends Analysis</h2>
+<p>Temporal trends were calculated globally for the interim and legacy primary productivity products using linear regression methods. For our analysis, we determined the slopes of netPP verses time for each pixel in our global grid over a multi-year timespan using monthly netPP data. Results for the interim and legacy products were compared to identify how well the two products agree on the presence or absence of long-term trends. The purpose of this analysis was to identify how well the interim and legacy primary productivity timeseries agree using an arbitrarily chosen trend analysis method, not to accurately identify environmentally relevant trends in the ocean. We also applied statistical methods <a href="#contingency-matrices-and-cohens-kappa">Contingency Matrices and Cohen’s Kappa</a> to evaluate the strength of agreement. For a detailed explanation of the calculations, see the <a href="#trends_appendix">Appendix</a>.</p>
+<div style="text-align: center;">
+<p><img src="images/trends_diagram.png" class="img-fluid" style="width:100.0%" alt="trends diagram"> <strong>Figure 4.</strong></p>
 </div>
+<p>Visually, the global maps of slopes show very similar trend patterns, indicating that the interim and legacy products yield similar trends (Figure 5).</p>
+<div style="text-align: center;">
+<p><img src="images/global_trends.png" class="img-fluid" style="width:100.0%" alt="global trends"> <strong>Figure 5.</strong> Linear trends in monthly primary productivity from (a) interim VIIRS SNPP and (b) legacy products (c) for the years 2013-2022. Linear trends in monthly primary productivity from (c) interim VIIRS NOAA-20 and (d) legacy products for the years 2018-2022. Positive values (blue) indicate increasing trends in netPP, while negative values (red) indicate decreasing trends.</p>
 </div>
-</section>
-<section id="primary-productivity-absolute-relative-difference-analysis" class="level4">
-<h4 data-anchor-id="primary-productivity-absolute-relative-difference-analysis">Primary Productivity Absolute Relative Difference Analysis</h4>
-<div class="grid">
-<div class="g-col-12">
-<p>Calculate the mean absolute relative difference (<span class="math inline">\(\Delta\)</span>) of the interim VIIRS netPP product and legacy MODIS netPP product for each month from a timeseries shared between the two sensors.</p>
-<p><a href="https://example.com">View in Github</a></p>
+<section id="contingency-matrices-and-cohens-kappa" class="level3">
+<h3 data-anchor-id="contingency-matrices-and-cohens-kappa">Contingency Matrices and Cohen’s Kappa</h3>
+<p>To obtain more quantitative results from the trends analysis, we built contingency matrices using the slope data. Contingency analysis is an approach used to test whether or not there is an association between categorical variables. We treated the slopes from the trend analysis as categorical variables by recording whether the slope had a statistically significant positive (β &gt; 0), a statistically negative value (β &lt; 0), or if the slope was not significantly different from zero (ns). This categorization was done for each pixel in the global maps of slopes for both the interim and legacy products. Therefore, for each pixel location there were nine possible slope combinations (Figure XX). The cells on the downward-sloping diagonal (from left to right) are the combinations where the interim and legacy products agree.</p>
+<p>For our analysis comparing the interim product to the legacy product, the percent of the total pixels that fell into each of the nine combinations was tallied and placed in the corresponding cell in the matrix. Tallying the values on the downward-sloping diagonal yielded the percentage of pixels where the slope trends were in agreement. In addition, we use Cohen’s Kappa as a statistical measure to quantify reliability of the agreement between the two products, accounting for the possibility that they could agree by chance. Cohen’s Kappa values range from 0 (no agreement) to 1 (perfect agreement). Qualitative categories for Cohen’s Kappa values are listed in Table 1.</p>
+<div style="text-align: center;">
+<p><img src="images/contingency_diagrams.png" class="img-fluid" style="width:100.0%" alt="trends diagram"> <strong>Figure 6.</strong> <strong>Table 1.</strong></p>
 </div>
-</div>
-</section>
-<section id="calculating-trends-and-p-values-for-legacy-and-interim-netpp-products" class="level4">
-<h4 data-anchor-id="calculating-trends-and-p-values-for-legacy-and-interim-netpp-products">Calculating Trends and P-Values for Legacy and Interim NetPP Products</h4>
-<div class="grid">
-<div class="g-col-12">
-<p>Generate trends for satellite-derived hourly means of legacy or interim primary productivity products.</p>
-<p><a href="https://example.com">View in Github</a></p>
-</div>
+<p>Tallying the values on the downward-sloping diagonal contingency matrix yield that co-occurrence slope trends shows over 92% agreement between the SNPP interim and legacy products (Figure 7a) and over 94% agreement between the NOAA-20 interim and legacy products (Figure 7b). The Cohen’s Kappa values of 0.77 for the SNPP interim to legacy comparison and 0.82 for the NOAA-20 interim to legacy comparison, translated qualitatively to substantial and almost perfect agreement, respectively.</p>
+<div style="text-align: center;">
+<p><img src="images/contingency_tables.png" class="img-fluid" style="width:100.0%" alt="trends diagram"> <strong>Figure 7.</strong> Contingency table and Cohen’s Kappa statistic comparing (a) the VIIRS SNPP and the legacy products and (b) the VIIRS NOAA-20 and the legacy products.</p>
 </div>
 </section>
 </section>
+<section id="download-statistical-analysis-data-products" class="level2">
+<h2 data-anchor-id="download-statistical-analysis-data-products">Download Statistical Analysis Data Products</h2>
+<p>Access datasets used in the statistical analysis, including unbiased and biased relative differences, correlations, trends, and contingency matrices.</p>
+<ul>
+<li>
+<a>Unbiased Relative Difference (ψ)</a>
+</li>
+<ul>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_snpp_modis.graph">VIIRS-SNPP - MODIS-Aqua</a>
+</li>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph">VIIRS-NOAA20 - MODIS-Aqua</a>
+</li>
+</ul>
+<li>
+<a>Biased Relative Difference (Δ)</a>
+</li>
+<ul>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_snpp_modis.graph">VIIRS-SNPP - MODIS-Aqua</a>
+</li>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_noaa20_modis.graph">VIIRS-NOAA20 - MODIS-Aqua</a>
+</li>
+</ul>
+<li>
+<a>Linear Regression Trends</a>
+</li>
+<ul>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/trends_modis_monthly_9km.graph">MODIS-Aqua</a>
+</li>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/trends_snpp_monthly_9km.graph">VIIRS-SNPP</a>
+</li>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/trends_noaa20_monthly_9km.graph">VIIRS-NOAA20</a>
+</li>
+</ul>
+</ul>
 </section>
-<section id="satellite-courses" class="level2">
-<h2 data-anchor-id="satellite-courses">Satellite Courses</h2>
-<p>
-CoastWatch hosts satellite training opportunites in-person and online, providing users with the knowledge and skills to utilize satellite data in their research.
+<section id="references" class="level2">
+<h2 data-anchor-id="references">References</h2>
+<a href="https://www.sciencedirect.com/science/article/pii/S0034425717301426">Mélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151. </a>
+
+</section>
+<section id="appendix" class="level2">
+<h2 data-anchor-id="appendix">Appendix</h2>
+<p>The following sections provide detailed explanations of how the statistical analyses between the legacy and interim products were calculated. If you are interested in exploring or replicating these analyses yoursel, check out our <a href="./user_resources.html">Code Gallery</a> for step-by-step tutorials.</p>
+<section id="psi_appendix" class="level3">
+<h3 data-anchor-id="psi_appendix">Unbiased Relative Difference (ψ)</h3>
+<p>The pixel-by-pixel <strong>unbiased relative difference (ψ<sup>netPP</sup>)</strong> was computed for the globe for each month at 9km resolution across <a href="#download-statistical-analysis-data-products">two datasets.</a></p>
+<p>The unbiased relative difference (ψ<sup>netPP</sup>) is calculated for each pixel as follows:</p>
+<blockquote class="blockquote">
+<p style="text-align: left; color: black;  font-size: 1.5em;">
+<span class="math inline">\(ψ^{netPP} = \frac{netPP_{VIIRS} - netPP_{MODIS}}{\left(\frac{netPP_{VIIRS} + netPP_{MODIS}}{2}\right)}\)</span>
 </p>
-<p><a href="https://coastwatch.pfeg.noaa.gov/courses/satellite_course.html" target="_blank" style="text-decoration: none;"> <button style="padding: 10px 20px; font-size: 18px; color:white; background-color:  #0072ce; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"> Satellite Courses<span style="margin-left: 10px;">→</span> </button> </a></p>
-</section>
-<section id="erddap-server" class="level2">
-<h2 data-anchor-id="erddap-server">ERDDAP Server</h2>
+</blockquote>
 <p>
-Search satellite data on the CoastWatch West Coast Node ERDDAP data server.
+Where:
 </p>
-<p><a href="https://coastwatch.pfeg.noaa.gov/erddap/index.html" target="_blank" style="text-decoration: none;"> <button style="padding: 10px 20px; font-size: 18px; color:white; background-color:  #0072ce; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"> ERDDAP<span style="margin-left: 10px;">→</span> </button> </a></p>
+<ul>
+<li>
+The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by the mean of <i>netPP<sub>VIIRS</sub></i> and <i>netPP<sub>MODIS</sub></i>.
+</li>
+</ul>
+<p>This metric allows for sensor-to-sensor consistency assessment, ensuring that variations are not biased by absolute magnitude differences.</p>
+</section>
+<section id="delta_appendix" class="level3">
+<h3 data-anchor-id="delta_appendix">Absolute Relative Difference (Δ<sub>rel</sub>)</h3>
+<p>The pixel-by-pixel <strong>absolute relative difference (Δ<sub>rel</sub>)</strong> was created for the globe for each month at 9km resolution across <a href="#download-statistical-analysis-data-products">two datasets.</a></p>
+<p>The absolute relative difference (Δ<sup>netPP</sup>) is calculated for each pixel as follows:</p>
+<blockquote class="blockquote">
+<p style="text-align: left; color: black; font-size: 1.5em;">
+<span class="math inline">\(\Delta^{netPP} = \frac{netPP_{VIIRS} - netPP_{MODIS}}{netPP_{MODIS}}\)</span>
+</p>
+</blockquote>
+<p>
+Where:
+</p>
+<ul>
+<li>
+The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by <i>netPP<sub>MODIS</sub></i>.
+</li>
+</ul>
+<p>This metric is useful for identifying systematic overestimations or underestimations in primary productivity estimates between the sensors.</p>
+</section>
+<section id="trends_appendix" class="level3">
+<h3 data-anchor-id="trends_appendix">Linear Regression Trends</h3>
+<p>The purpose of calculating <strong>linear regression trends</strong> for each of the datasets is to evaluate how much the products agree or disagree in temporal patterns. Linear trends were calculated in the time series of monthly primary productivity for every pixel with either raw data or anomalies for the <a href="#download-statistical-analysis-data-products">MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets</a>. Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.</p>
+<p>The trend analysis follows methods outlined in <a href="#references">Melin et al.&nbsp;2017</a>, see the section 2.3 “Trend estimates and comparison of trends”.</p>
+</section>
+<section id="tables_appendix" class="level3">
+<h3 data-anchor-id="tables_appendix">Contingency Matrix and Cohen’s Kappa</h3>
+<p>To quantitatively assess agreement in trend classifications between MODIS-Aqua and the VIIRS sensors, we use a <strong>contingency matrix</strong> and compute <strong>Cohen’s Kappa</strong>.</p>
+<p>A contingency matrix compares the <strong>direction of linear trends</strong> between two datasets—MODIS and VIIRS—at each pixel. Each trend is classified into one of three categories:</p>
+<ul>
+<li><strong>Positive trend</strong>: statistically significant increasing trend<br>
+</li>
+<li><strong>Negative trend</strong>: statistically significant decreasing trend<br>
+</li>
+<li><strong>No significant trend</strong>: slope not significantly different from zero (e.g., <em>p</em> &gt; 0.05)</li>
+</ul>
+<p>We then count how often each combination occurs across all pixels to build a 3×3 matrix:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>VIIRS Positive</th>
+<th>VIIRS Negative</th>
+<th>VIIRS No Trend</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MODIS Positive</strong></td>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+</tr>
+<tr class="even">
+<td><strong>MODIS Negative</strong></td>
+<td>d</td>
+<td>e</td>
+<td>f</td>
+</tr>
+<tr class="odd">
+<td><strong>MODIS No Trend</strong></td>
+<td>g</td>
+<td>h</td>
+<td>i</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Diagonal cells</strong> (a, e, i) indicate agreement.</li>
+<li><strong>Off-diagonal cells</strong> indicate disagreement.</li>
+</ul>
+<hr>
+<section id="cohens-kappa-measuring-agreement-beyond-chance" class="level4">
+<h4 data-anchor-id="cohens-kappa-measuring-agreement-beyond-chance">Cohen’s Kappa: Measuring Agreement Beyond Chance</h4>
+<p><strong>Cohen’s Kappa (κ)</strong> quantifies how much the agreement between MODIS and VIIRS exceeds what would be expected by chance. It ranges from:</p>
+<ul>
+<li><strong>1</strong> = perfect agreement<br>
+</li>
+<li><strong>0</strong> = no better than random</li>
+</ul>
+<blockquote class="blockquote">
+<p style="text-align: left; color: black; font-size: 1.5em;">
+<span class="math inline">\(\kappa = \frac{P_o - P_e}{1 - P_e}\)</span>
+</p>
+</blockquote>
+<p>Where:</p>
+<ul>
+<li><strong>( P_o )</strong> = observed agreement (proportion of pixels where MODIS and VIIRS agree):</li>
+</ul>
+<p><span class="math display">\[
+P_o = \frac{a + e + i}{N}
+\]</span></p>
+<ul>
+<li><strong>( P_e )</strong> = expected agreement by chance:</li>
+</ul>
+<p><span class="math display">\[
+P_e = \frac{(a + b + c)(a + d + g) + (d + e + f)(b + e + h) + (g + h + i)(c + f + i)}{N^2}
+\]</span></p>
+<ul>
+<li><strong>( N )</strong> = total number of valid pixels (sum of all cells):</li>
+</ul>
+<p><span class="math display">\[
+N = a + b + c + d + e + f + g + h + i
+\]</span></p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

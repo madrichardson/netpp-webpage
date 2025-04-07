@@ -128,6 +128,10 @@ window.Quarto = {
 <span class="menu-text">Statistical Analysis</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./stats2.html"> 
+<span class="menu-text">Statistical Analysis 2</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./user_resources.html"> 
 <span class="menu-text">User Resources</span></a>
   </li>  
@@ -155,7 +159,7 @@ window.Quarto = {
   <ul>
   <li><a href="#spatial-variability-in-the-timeseries-monthly-δ-mean" id="toc-spatial-variability-in-the-timeseries-monthly-δ-mean" class="nav-link" data-scroll-target="#spatial-variability-in-the-timeseries-monthly-δ-mean">Spatial Variability in the Timeseries Monthly Δ Mean</a></li>
   </ul></li>
-  <li><a href="#linear-regression-trends" id="toc-linear-regression-trends" class="nav-link" data-scroll-target="#linear-regression-trends">Linear Regression Trends</a>
+  <li><a href="#trends-analysis" id="toc-trends-analysis" class="nav-link" data-scroll-target="#trends-analysis">Trends Analysis</a>
   <ul>
   <li><a href="#contingency-matrices-and-cohens-kappa" id="toc-contingency-matrices-and-cohens-kappa" class="nav-link" data-scroll-target="#contingency-matrices-and-cohens-kappa">Contingency Matrices and Cohen’s Kappa</a></li>
   </ul></li>
@@ -187,17 +191,17 @@ window.Quarto = {
 <h1>
 Statistical Analysis
 </h1>
-<p>To evaluate the differences and similarities between the legacy <strong>MODIS-Aqua</strong> primary productivity product and the interim <strong>VIIRS-SNPP</strong> and <strong>VIIRS-NOAA20</strong> products, we conducted a comprehensive statistical analysis.</p>
-<p>The analysis includes:</p>
+<p>To evaluate how the interim primary productivity products (<strong>VIIRS-SNPP</strong> and <strong>VIIRS-NOAA20</strong>) differ from the legacy product (<strong>MODIS-Aqua</strong>), we conducted a comprehensive statistical analysis that includes the following methods:</p>
 <ul>
 <li><a href="#unbiased-relative-difference"><strong>Unbiased Relative Difference (ψ)</strong></a> &amp; <a href="#biased-relative-difference"><strong>Biased Relative Difference (Δ<sub>rel</sub>)</strong></a> <span class="math inline">\(\Rightarrow\)</span> Measures how VIIRS compares to MODIS without and with bias.</li>
 <li><a href="#pearson-correlation-coefficients"><strong>Pearson Correlation Coefficients &amp; P-values</strong></a> <span class="math inline">\(\Rightarrow\)</span> Evaluates how VIIRS follows MODIS over time.</li>
 <li><a href="#linear-regression-trends"><strong>Linear Regression Trends &amp; P-values</strong></a> <span class="math inline">\(\Rightarrow\)</span> Identifies long-term changes in productivity.</li>
 <li><a href="#contingency-matrices"><strong>Contingency Matrices</strong></a> <span class="math inline">\(\Rightarrow\)</span> Measures trend agreement across datasets.</li>
 </ul>
+<p>For the VIIRS SNPP analysis we used a 10-year time period from January 2013 to December 2023. For the VIIRS NOAA-20 analysis we used a 5-year time period from January 2018 to December 2023.</p>
 <section id="unbiased-relative-difference-ψ" class="level2">
 <h2 data-anchor-id="unbiased-relative-difference-ψ">Unbiased Relative Difference (ψ)</h2>
-<p>The unbiased relative difference (ψ<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to assess the consistency in netPP estimates between interim VIIRS and legacy MODIS datasets. This metric provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.</p>
+<p>MR: The unbiased relative difference (ψ<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to assess the consistency in netPP estimates between interim VIIRS and legacy MODIS datasets. This metric provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.</p>
 <p>For a detailed explanation of the calculation, see the <a href="#psi_appendix">Appendix</a>.</p>
 <section id="spatial-variability-in-the-timeseries-monthly-mean-ψ" class="level3">
 <h3 data-anchor-id="spatial-variability-in-the-timeseries-monthly-mean-ψ">Spatial Variability in the Timeseries Monthly Mean ψ</h3>
@@ -243,8 +247,8 @@ Statistical Analysis
 <p>VIIRS-SNPP aligns more closely with MODIS than VIIRS-NOAA20, however both VIIRS sensor demonstrate consistent spatial patterns, reflecting that they can be used for long-term productivity analyses.</p>
 </section>
 </section>
-<section id="linear-regression-trends" class="level2">
-<h2 data-anchor-id="linear-regression-trends">Linear Regression Trends</h2>
+<section id="trends-analysis" class="level2">
+<h2 data-anchor-id="trends-analysis">Trends Analysis</h2>
 <p>In order to identify temporal patterns in primary productivity, linear regression trends are calculated at each pixel (latitude and longitude) over a timeseries of monthly data. This approach allows us to visualize spatial patterns of change and evaluate how different satellite sensors track long-term primary productivity patterns. For this analysis, trends between MODIS-Aqua and VIIRS-SNPP were calculated over a 10-year period (2013-2018; 120 months), while trends between MODIS-Aqua and VIIRS-NOAA20 were calculated over a 5-year period (2018-2022; 60 months). The maps shown below provide a visual comparison of these trends between MODIS-Aqua and the VIIRS sensors, highlighting regions of agreement and disagreement.</p>
 <p>While the maps are useful for visually identifying patterns, a more quantitative assessment of agreement is provided through <a href="#contingency-matrices-and-cohens-kappa">contingency matrices and Cohen’s Kappa statistics</a>.</p>
 <p>For a detailed explanation of the calculations, see the <a href="#trends_appendix">Appendix</a>.</p>

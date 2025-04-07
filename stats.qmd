@@ -14,18 +14,18 @@ sidebar:
 
 <h1> Statistical Analysis </h1>
 
-To evaluate the differences and similarities between the legacy **MODIS-Aqua** primary productivity product and the interim **VIIRS-SNPP** and **VIIRS-NOAA20** products, we conducted a comprehensive statistical analysis.
-
-The analysis includes:
+To evaluate how the interim primary productivity products (**VIIRS-SNPP** and **VIIRS-NOAA20**) differ from the legacy product (**MODIS-Aqua**), we conducted a comprehensive statistical analysis that includes the following methods:
 
 - [**Unbiased Relative Difference (&psi;)**](#unbiased-relative-difference) & [**Biased Relative Difference (&Delta;<sub>rel</sub>)**](#biased-relative-difference) $\Rightarrow$ Measures how VIIRS compares to MODIS without and with bias.
 - [**Pearson Correlation Coefficients & P-values**](#pearson-correlation-coefficients) $\Rightarrow$  Evaluates how VIIRS follows MODIS over time.
 - [**Linear Regression Trends & P-values**](#linear-regression-trends) $\Rightarrow$  Identifies long-term changes in productivity.
 - [**Contingency Matrices**](#contingency-matrices) $\Rightarrow$  Measures trend agreement across datasets.
 
+For the VIIRS SNPP analysis we used a 10-year time period from January 2013 to December 2023. For the VIIRS NOAA-20 analysis we used a 5-year time period from January 2018 to December 2023.
+
 ## Unbiased Relative Difference (&psi;)
 
-The unbiased relative difference (&psi;<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to assess the consistency in netPP estimates between interim VIIRS and legacy MODIS datasets. This metric provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.
+MR: The unbiased relative difference (&psi;<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products was calculated to assess the consistency in netPP estimates between interim VIIRS and legacy MODIS datasets. This metric provides validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.
 
 For a detailed explanation of the calculation, see the [Appendix](#psi_appendix).
 
@@ -85,7 +85,7 @@ The **largest overestimations** occur in equitorial upwelling zones, where VIIRS
 
 VIIRS-SNPP aligns more closely with MODIS than VIIRS-NOAA20, however both VIIRS sensor demonstrate consistent spatial patterns, reflecting that they can be used for long-term productivity analyses. 
 
-## Linear Regression Trends
+## Trends Analysis
 
 In order to identify temporal patterns in primary productivity, linear regression trends are calculated at each pixel (latitude and longitude) over a timeseries of monthly data. This approach allows us to visualize spatial patterns of change and evaluate how different satellite sensors track long-term primary productivity patterns. For this analysis, trends between MODIS-Aqua and VIIRS-SNPP were calculated over a 10-year period (2013-2018; 120 months), while trends between MODIS-Aqua and VIIRS-NOAA20 were calculated over a 5-year period (2018-2022; 60 months). The maps shown below provide a visual comparison of these trends between MODIS-Aqua and the VIIRS sensors, highlighting regions of agreement and disagreement.
 
