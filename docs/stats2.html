@@ -38,6 +38,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -151,7 +154,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#summary-of-results" id="toc-summary-of-results" class="nav-link active" data-scroll-target="#summary-of-results">Summary of Results</a></li>
-  <li><a href="#unbiased-relative-difference-ψ" id="toc-unbiased-relative-difference-ψ" class="nav-link" data-scroll-target="#unbiased-relative-difference-ψ">Unbiased Relative Difference (ψ)</a></li>
+  <li><a href="#psi" id="toc-psi" class="nav-link" data-scroll-target="#psi">Unbiased Relative Difference (ψ)</a></li>
   <li><a href="#trends-analysis" id="toc-trends-analysis" class="nav-link" data-scroll-target="#trends-analysis">Trends Analysis</a>
   <ul>
   <li><a href="#contingency-matrices-and-cohens-kappa" id="toc-contingency-matrices-and-cohens-kappa" class="nav-link" data-scroll-target="#contingency-matrices-and-cohens-kappa">Contingency Matrices and Cohen’s Kappa</a></li>
@@ -161,8 +164,7 @@ window.Quarto = {
   <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
   <ul>
   <li><a href="#psi_appendix" id="toc-psi_appendix" class="nav-link" data-scroll-target="#psi_appendix">Unbiased Relative Difference (ψ)</a></li>
-  <li><a href="#delta_appendix" id="toc-delta_appendix" class="nav-link" data-scroll-target="#delta_appendix">Absolute Relative Difference (Δ<sub>rel</sub>)</a></li>
-  <li><a href="#trends_appendix" id="toc-trends_appendix" class="nav-link" data-scroll-target="#trends_appendix">Linear Regression Trends</a></li>
+  <li><a href="#trends_appendix" id="toc-trends_appendix" class="nav-link" data-scroll-target="#trends_appendix">Trends Analysis</a></li>
   <li><a href="#tables_appendix" id="toc-tables_appendix" class="nav-link" data-scroll-target="#tables_appendix">Contingency Matrix and Cohen’s Kappa</a>
   <ul class="collapse">
   <li><a href="#cohens-kappa-measuring-agreement-beyond-chance" id="toc-cohens-kappa-measuring-agreement-beyond-chance" class="nav-link" data-scroll-target="#cohens-kappa-measuring-agreement-beyond-chance">Cohen’s Kappa: Measuring Agreement Beyond Chance</a></li>
@@ -186,8 +188,8 @@ Statistical Analysis
 </h1>
 <p>To evaluate how the interim primary productivity products (<strong>VIIRS-SNPP</strong> and <strong>VIIRS-NOAA20</strong>) differ from the legacy product (<strong>MODIS-Aqua</strong>), we conducted a comprehensive statistical analysis that includes the following methods:</p>
 <ul>
-<li>Calculating the <a href="#unbiased-relative-difference">Unbiased Relative Difference (ψ)</a>, which is a measure of how similar the interim and legacy products netPP values are.</li>
-<li>Comparing <a href="#linear-regression-trends">long-term trends</a> in netPP, which evaluates if the two products track the same trends, or lack of trends, in the data over time.</li>
+<li>Calculating the <a href="#psi">Unbiased Relative Difference (ψ)</a>, which is a measure of how similar the interim and legacy products netPP values are.</li>
+<li>Comparing <a href="#trends-analysis">long-term trends</a> in netPP, which evaluates if the two products track the same trends, or lack of trends, in the data over time.</li>
 </ul>
 <p>For the VIIRS SNPP analysis we used a 10-year time period from January 2013 to December 2023. For the VIIRS NOAA-20 analysis we used a 5-year time period from January 2018 to December 2023.</p>
 <section id="summary-of-results" class="level2">
@@ -199,21 +201,24 @@ Statistical Analysis
 </ul>
 <p>The relatively small differences between the interim products and the legacy product suggests that either interim would be a suitable replacement for the legacy product in many applications.</p>
 </section>
-<section id="unbiased-relative-difference-ψ" class="level2">
-<h2 data-anchor-id="unbiased-relative-difference-ψ">Unbiased Relative Difference (ψ)</h2>
+<section id="psi" class="level2">
+<h2 data-anchor-id="psi">Unbiased Relative Difference (ψ)</h2>
 <p>In plain language, Unbiased Relative Difference (ψ) is the difference between interim and legacy primary productivity values (netPP), normalized to the mean of the two values. Normalizing to the mean avoids the bias of arbitrarily selecting one product as the reference. For a detailed explanation of the calculation, see the <a href="#psi_appendix">Appendix</a>. This analysis allows us to determine how similar netPP values are between the interim and legacy products.</p>
 <p>For our analysis, we calculated ψ for each pixel in our global grid for each month over a multi-year timespan. The resulting monthly maps of global ψ allowed us to generate a timeseries of mean global monthly ψ and a map of the multi-year mean ψ for each pixel in our global grid.</p>
 <div style="text-align: center;">
 <p><img src="images/psi_diagram.png" class="img-fluid" style="width:100.0%" alt="psi diagram"> <strong>Figure 1.</strong></p>
 </div>
 <p>MIGHT NEED A LEGEND</p>
-<p><strong>Temporal Variability</strong>. For VIIRS SNPP interim product relative to the legacy product, monthly mean global ψ values are positive over most of the 10-year timeseries, indicating that the interim netPP values are on average greater than the legacy values. The values for the interim product were quite similar to the legacy values, as indicated by ψ values ranging from 0 to 0.07 (0-7% difference from the legacy product) over the entire timeseries. For VIIRS SNPP interim product relative to the legacy product (ADD TEXT HERE)</p>
+<p><strong>Temporal Variability</strong>. For VIIRS SNPP interim product relative to the legacy product, monthly mean global ψ values are positive over most of the 10-year timeseries, indicating that the interim netPP values are on average greater than the legacy values. The values for the interim product were quite similar to the legacy values, as indicated by ψ values ranging from 0 to 0.07 (0-7% difference from the legacy product) over the entire timeseries.</p>
+<p>For VIIRS NOAA20 interim product relative to the legacy product, monthly mean global ψ</p>
 <div style="text-align: center;">
-<p><img src="images/greyscale_psi_timeseries.png" class="img-fluid" style="max-width: 1600px;;width:100.0%" alt="psi timeseries"> <strong>Figure 2.</strong> The timeseries of mean global ψ values for each month from January 2013 to December 2022 (a ten-year period).</p>
+<p><span style="font-size: 1.5em; font-weight: bold;">Timeseries: Monthly Means of Unbiased Relative Difference</span></p>
+<p><a href="images/greyscale_psi_timeseries.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="psi Timeseries"><img src="images/greyscale_psi_timeseries.png" class="img-fluid" style="max-width: 1600px;;width:100.0%" alt="psi Timeseries"></a> <strong>Figure 2.</strong> The timeseries of mean global ψ values for each month from January 2013 to December 2022 (a ten-year period).</p>
 </div>
 <p><strong>Spatial Variability</strong>. The 10-year average map reveals the spatial variable in ψ, with most oceanic regions showing &lt;5% difference (lightest blue and pink) between the two netPP products. However, in the tropical and subtropical gyres there is a 5-10% difference between the interim and legacy products (medium blue) and areas of higher differences (&gt;20%) are visible at high latitudes and in coast upwelling regions.</p>
 <div style="text-align: center;">
-<p><img src="images/psi_spatialmap.png" class="img-fluid" style="width:100.0%" alt="psi spatial map"> <strong>Figure 3.</strong> Global maps of the 10-year mean unbiased relative difference (ψ) comparing VIIRS-SNPP with MODIS-Aqua. Positive (blue) values indicate that the interim product netPP values are larger than those of the legacy product and negative (red) values indicate that the interim product netPP values are less than those of the legacy product.</p>
+<p><span style="font-size: 1.5em; font-weight: bold;">Unbiased Relative Difference</span></p>
+<p><a href="images/new_psi_comparison.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="psi Spatial Map"><img src="images/new_psi_comparison.png" class="img-fluid" style="width:100.0%" alt="psi Spatial Map"></a> <strong>Figure 3.</strong> Global maps of the multi-year mean unbiased relative difference (ψ) comparing VIIRS-SNPP(3a) and VIIRS-NOAA(3b) with MODIS-Aqua. Positive (blue) values indicate that the interim product netPP values are larger than those of the legacy product and negative (red) values indicate that the interim product netPP values are less than those of the legacy product.</p>
 </div>
 </section>
 <section id="trends-analysis" class="level2">
@@ -224,7 +229,7 @@ Statistical Analysis
 </div>
 <p>Visually, the global maps of slopes show very similar trend patterns, indicating that the interim and legacy products yield similar trends (Figure 5).</p>
 <div style="text-align: center;">
-<p><img src="images/global_trends.png" class="img-fluid" style="width:100.0%" alt="global trends"> <strong>Figure 5.</strong> Linear trends in monthly primary productivity from (a) interim VIIRS SNPP and (b) legacy products (c) for the years 2013-2022. Linear trends in monthly primary productivity from (c) interim VIIRS NOAA-20 and (d) legacy products for the years 2018-2022. Positive values (blue) indicate increasing trends in netPP, while negative values (red) indicate decreasing trends.</p>
+<p><img src="images/trends_with_centered_colorbar.png" class="img-fluid" style="width:100.0%" alt="global trends"> <strong>Figure 5.</strong> Linear trends in monthly primary productivity from (a) interim VIIRS SNPP and (b) legacy products (c) for the years 2013-2022. Linear trends in monthly primary productivity from (c) interim VIIRS NOAA-20 and (d) legacy products for the years 2018-2022. Positive values (blue) indicate increasing trends in netPP, while negative values (red) indicate decreasing trends.</p>
 </div>
 <section id="contingency-matrices-and-cohens-kappa" class="level3">
 <h3 data-anchor-id="contingency-matrices-and-cohens-kappa">Contingency Matrices and Cohen’s Kappa</h3>
@@ -252,17 +257,6 @@ Statistical Analysis
 </li>
 <li>
 <a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph">VIIRS-NOAA20 - MODIS-Aqua</a>
-</li>
-</ul>
-<li>
-<a>Biased Relative Difference (Δ)</a>
-</li>
-<ul>
-<li>
-<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_snpp_modis.graph">VIIRS-SNPP - MODIS-Aqua</a>
-</li>
-<li>
-<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_noaa20_modis.graph">VIIRS-NOAA20 - MODIS-Aqua</a>
 </li>
 </ul>
 <li>
@@ -308,27 +302,8 @@ The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODI
 </ul>
 <p>This metric allows for sensor-to-sensor consistency assessment, ensuring that variations are not biased by absolute magnitude differences.</p>
 </section>
-<section id="delta_appendix" class="level3">
-<h3 data-anchor-id="delta_appendix">Absolute Relative Difference (Δ<sub>rel</sub>)</h3>
-<p>The pixel-by-pixel <strong>absolute relative difference (Δ<sub>rel</sub>)</strong> was created for the globe for each month at 9km resolution across <a href="#download-statistical-analysis-data-products">two datasets.</a></p>
-<p>The absolute relative difference (Δ<sup>netPP</sup>) is calculated for each pixel as follows:</p>
-<blockquote class="blockquote">
-<p style="text-align: left; color: black; font-size: 1.5em;">
-<span class="math inline">\(\Delta^{netPP} = \frac{netPP_{VIIRS} - netPP_{MODIS}}{netPP_{MODIS}}\)</span>
-</p>
-</blockquote>
-<p>
-Where:
-</p>
-<ul>
-<li>
-The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODIS-based netPP (<i>netPP<sub>MODIS</sub></i>) values for that pixel is divided by <i>netPP<sub>MODIS</sub></i>.
-</li>
-</ul>
-<p>This metric is useful for identifying systematic overestimations or underestimations in primary productivity estimates between the sensors.</p>
-</section>
 <section id="trends_appendix" class="level3">
-<h3 data-anchor-id="trends_appendix">Linear Regression Trends</h3>
+<h3 data-anchor-id="trends_appendix">Trends Analysis</h3>
 <p>The purpose of calculating <strong>linear regression trends</strong> for each of the datasets is to evaluate how much the products agree or disagree in temporal patterns. Linear trends were calculated in the time series of monthly primary productivity for every pixel with either raw data or anomalies for the <a href="#download-statistical-analysis-data-products">MODIS-Aqua, VIIRS-SNPP, and VIIRS-NOAA20 datasets</a>. Finding trends using raw data helps to analyze the absolute agreement in primary productivity estimates between the datasets, whereas calculating with anomalies enables us to focus on trends by removing seasonality. P-values were calculated to test the statistical significance of the trends for each pixel.</p>
 <p>The trend analysis follows methods outlined in <a href="#references">Melin et al.&nbsp;2017</a>, see the section 2.3 “Trend estimates and comparison of trends”.</p>
 </section>
@@ -846,6 +821,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
