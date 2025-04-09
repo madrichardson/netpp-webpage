@@ -75,6 +75,8 @@ Temporal trends were calculated globally for the interim and legacy primary prod
 Visually, the global maps of slopes show very similar trend patterns, indicating that the interim and legacy products yield similar trends (Figure 5). 
 
 ::: {style="text-align: center;"}
+<span style="font-size: 1.5em; font-weight: bold;">Multi-Year Trend Maps</span>
+
 ![global trends](images/trends_with_centered_colorbar.png){width=100%}
 **Figure 5.** Linear trends in monthly primary productivity from (a) interim VIIRS SNPP and (b) legacy products (c) for the years 2013-2022. Linear trends in monthly primary productivity from (c) interim VIIRS NOAA-20 and (d) legacy products for the years 2018-2022. Positive values (blue) indicate increasing trends in netPP, while negative values (red) indicate decreasing trends.
 :::
