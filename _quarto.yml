@@ -11,8 +11,6 @@ website:
       - text: "Algorithm and Data"
         href: algorithm.qmd
       - text: "Statistical Analysis"
-        href: stats.qmd
-      - text: "Statistical Analysis 2"
         href: stats2.qmd
       - text: "User Resources"
         href: user_resources.qmd
