@@ -115,7 +115,7 @@ For our analysis comparing the interim product to the legacy product, the percen
 
 ::: {style="text-align: center;"}
 <span style="font-size: 0.95em; color: #444; display: block; margin-top: 0.5em;">
-**Table 1.** Scale for Cohen's Kappa coefficient values, indicating the level of agreement between two categorical classifications. The scale ranges from ≤ 0 (no agreement) to 1.00 (perfect agreement), with descriptive categories assigned to each interval.
+**Table 1.** Scale for Cohen's Kappa coefficient values, indicating the level of agreement between two categorical classifications. The scale ranges from < 0 (no agreement) to 1.00 (perfect agreement), with descriptive categories assigned to each interval.
 </span>
 ![](images/cohens_kappa.png){.lightbox width=500}
 
