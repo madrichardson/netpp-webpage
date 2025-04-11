@@ -248,7 +248,7 @@ Statistical Analysis
 <p><a href="images/contingency_diagrams.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/contingency_diagrams.png" class="img-fluid" width="500"></a></p>
 <p><span style="font-size: 0.95em; color: #444; display: block; margin-top: 0.5em;"> <strong>Figure 6.</strong> Contingency matrix of all possible combinations of pixel location trends and significance outcomes between the interim and legacy netPP products. Each cell describes one of nine possible category pairings based on whether a pixel exhibited no significant trends (n.s.), a significant positive trend (β &gt; 0), or a significant negative trend (β &lt; 0) in each dataset. Columns represent trend categories from the legacy product; rows represent trend categories from the interim product. </span></p>
 </div>
-<p>For our analysis comparing the interim product to the legacy product, the percent of the total pixels that fell into each of the nine combinations was tallied and placed in the corresponding cell in the matrix. Tallying the values on the downward-sloping diagonal yielded the percentage of pixels where the slope trends were in agreement. In addition, we use Cohen’s Kappa as a statistical measure to quantify reliability of the agreement between the two products, accounting for the possibility that they could agree by chance. Cohen’s Kappa values range from ≤ 0 (no agreement) to 1 (perfect agreement); Cohen’s Kappa was interpreted using a standard scale <a href="#references">Viera and Garrett 2005</a>. Qualitative categories for Cohen’s Kappa values are listed in <strong>Table 1</strong>.</p>
+<p>For our analysis comparing the interim product to the legacy product, the percent of the total pixels that fell into each of the nine combinations was tallied and placed in the corresponding cell in the matrix. Tallying the values on the downward-sloping diagonal yielded the percentage of pixels where the slope trends were in agreement. In addition, we use Cohen’s Kappa as a statistical measure to quantify reliability of the agreement between the two products, accounting for the possibility that they could agree by chance. Cohen’s Kappa values range from &lt; 0 (no agreement) to 1 (perfect agreement); Cohen’s Kappa was interpreted using a standard scale <a href="#references">Viera and Garrett 2005</a>. Qualitative categories for Cohen’s Kappa values are listed in <strong>Table 1</strong>.</p>
 <div style="text-align: center;">
 <p><span style="font-size: 0.95em; color: #444; display: block; margin-top: 0.5em;"> <strong>Table 1.</strong> Scale for Cohen’s Kappa coefficient values, indicating the level of agreement between two categorical classifications. The scale ranges from ≤ 0 (no agreement) to 1.00 (perfect agreement), with descriptive categories assigned to each interval. </span> <a href="images/cohens_kappa.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/cohens_kappa.png" class="img-fluid" width="500"></a></p>
 </div>
@@ -387,7 +387,7 @@ The difference between VIIRS-based netPP (<i>netPP<sub>VIIRS</sub></i>) and MODI
 <ul>
 <li><strong>1</strong> = perfect agreement<br>
 </li>
-<li><strong>≤0</strong> = no better than random</li>
+<li><strong>&lt;0</strong> = no better than random</li>
 </ul>
 <blockquote class="blockquote">
 <p style="text-align: left; color: black; font-size: 1.5em;">
@@ -842,7 +842,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

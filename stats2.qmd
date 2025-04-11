@@ -111,7 +111,7 @@ To obtain more quantitative results from the trends analysis, we built contingen
 </span>
 :::
 
-For our analysis comparing the interim product to the legacy product, the percent of the total pixels that fell into each of the nine combinations was tallied and placed in the corresponding cell in the matrix. Tallying the values on the downward-sloping diagonal yielded the percentage of pixels where the slope trends were in agreement. In addition, we use Cohen's Kappa as a statistical measure to quantify reliability of the agreement between the two products, accounting for the possibility that they could agree by chance. Cohen's Kappa values range from ≤ 0 (no agreement) to 1 (perfect agreement); Cohen's Kappa was interpreted using a standard scale [Viera and Garrett 2005](#references). Qualitative categories for Cohen's Kappa values are listed in **Table 1**.
+For our analysis comparing the interim product to the legacy product, the percent of the total pixels that fell into each of the nine combinations was tallied and placed in the corresponding cell in the matrix. Tallying the values on the downward-sloping diagonal yielded the percentage of pixels where the slope trends were in agreement. In addition, we use Cohen's Kappa as a statistical measure to quantify reliability of the agreement between the two products, accounting for the possibility that they could agree by chance. Cohen's Kappa values range from < 0 (no agreement) to 1 (perfect agreement); Cohen's Kappa was interpreted using a standard scale [Viera and Garrett 2005](#references). Qualitative categories for Cohen's Kappa values are listed in **Table 1**.
 
 ::: {style="text-align: center;"}
 <span style="font-size: 0.95em; color: #444; display: block; margin-top: 0.5em;">
@@ -214,7 +214,7 @@ We then count how often each combination occurs across all pixels to build a 3×
 **Cohen’s Kappa (κ)** quantifies how much the agreement between the legacy and interim products exceeds what would be expected by chance. It ranges from:
 
 - **1** = perfect agreement  
-- **≤0** = no better than random
+- **<0** = no better than random
 
 <blockquote>
   <p style="text-align: left; color: black; font-size: 1.5em;">
