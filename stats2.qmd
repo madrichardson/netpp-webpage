@@ -126,7 +126,7 @@ Tallying the values on the downward-sloping diagonal contingency matrix yield th
 
 ::: {style="text-align: center;"}
 <span style="font-size: 1.5em; font-weight: bold;">Contingency Matrices for Interim and Legacy Products</span>
-![Contingency table and Cohen’s Kappa statistic comparing (**a**) the VIIRS SNPP and the legacy products and (**b**) the VIIRS NOAA-20 and the legacy products.](images/contingency_tables.png){.lightbox width=100%}
+![](images/contingency_tables.png){.lightbox width=100%}
 
 <span style="font-size: 0.95em; color: #444; display: block; margin-top: 0.5em;">
 **Figure 7.** Contingency table and Cohen’s Kappa statistic comparing (**a**) the VIIRS SNPP and the legacy products and (**b**) the VIIRS NOAA-20 and the legacy products.
