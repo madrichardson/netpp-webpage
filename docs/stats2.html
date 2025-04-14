@@ -229,7 +229,7 @@ Statistical Analysis
 </section>
 <section id="trends-analysis" class="level2">
 <h2 data-anchor-id="trends-analysis">Trends Analysis</h2>
-<p>Temporal trends were calculated globally for the interim and legacy primary productivity products using linear regression methods. For our analysis, we determined the slopes of netPP verses time for each pixel in our global grid over a multi-year timespan using monthly netPP data. Results for the interim and legacy products were compared to identify how well the two products agree on the presence or absence of long-term trends. The purpose of this analysis was to identify how well the interim and legacy primary productivity timeseries agree using an arbitrarily chosen trend analysis method, not to accurately identify environmentally relevant trends in the ocean. We also applied statistical methods <a href="#contingency-matrices-and-cohens-kappa">Contingency Matrices and Cohen’s Kappa</a> to evaluate the strength of agreement. For a detailed explanation of the calculations, see the <a href="#trends_appendix">Appendix</a>.</p>
+<p>Temporal trends were calculated globally for the interim and legacy primary productivity products using linear regression methods. For our analysis, we determined the slopes of netPP versus time for each pixel in our global grid over a multi-year timespan using monthly netPP data. Results for the interim and legacy products were compared to identify how well the two products agree on the presence or absence of long-term trends. The purpose of this analysis was to identify how well the interim and legacy primary productivity timeseries agree using an arbitrarily chosen trend analysis method, not to accurately identify environmentally relevant trends in the ocean. We also applied statistical methods <a href="#contingency-matrices-and-cohens-kappa">Contingency Matrices and Cohen’s Kappa</a> to evaluate the strength of agreement. For a detailed explanation of the calculations, see the <a href="#trends_appendix">Appendix</a>.</p>
 <div style="text-align: center;">
 <p><a href="images/trends_diagram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/trends_diagram.png" class="img-fluid" style="width:100.0%"></a></p>
 <p><span style="font-size: 0.95em; color: #444; display: block; margin-top: 0.5em;"> <strong>Figure 4.</strong> Conceptual workflow illustrating how trends in netPP are calculated using linear regression. Monthly netPP maps from January 2013 to December 2022 (yellow layers) are used to estimate the slope (β) at each pixel across time. The slope values are compiled into a spatial map (blue layer) representing trend in productivity over the timeseries. </span></p>
@@ -842,7 +842,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
