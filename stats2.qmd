@@ -62,7 +62,7 @@ For the VIIRS NOAA-20 interim product, monthly mean global &psi; values were als
 ### Spatial Variability
 The 10-year average map (**Figure 3a**) reveals the spatial variable in &psi;, with most oceanic regions showing <5% difference (lightest blue and pink) between the two netPP products. However, in the tropical and subtropical gyres there is a 5-10% difference between SNPP and the legacy product (medium blue) and areas of higher differences (>20%) are visible at high latitudes and in coast upwelling regions.
 
-The 5-year average map (**Figure 3b**) shows similar spatial patterns in &psi; that are consistent with those observed for SNPP. Most open ocean regions show <5% difference between NOAA-20 and legacy netPP products. Moderate differences (5-10%) are apparent in the subtropical gyres and, larger differences (>20%) are observed at higher latitudes in both hemispheres and along coastal upwelling regions. Compared to SNPP, the NOAA-20 map contains slighter larger areas of difference. 
+The 5-year average map (**Figure 3b**) shows similar spatial patterns in &psi; that are consistent with those observed for SNPP. Most open ocean regions show <5% difference between NOAA-20 and legacy netPP products. Moderate differences (5-10%) are apparent in the subtropical gyres and larger differences (>20%) are observed at higher latitudes in both hemispheres and along coastal upwelling regions. Compared to SNPP, the NOAA-20 map contains slightly larger areas of difference. 
 
 ::: {style="text-align: center;"}
 <span style="font-size: 1.5em; font-weight: bold;">Unbiased Relative Difference</span>
