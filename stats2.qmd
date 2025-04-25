@@ -145,9 +145,8 @@ Access datasets used in the statistical analysis, including unbiased and biased 
     </ul>
   <li><a>Linear Regression Trends</a></li>
     <ul>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/trends_modis_monthly_9km.graph">MODIS-Aqua</a></li>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/trends_snpp_monthly_9km.graph">VIIRS-SNPP</a></li>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/trends_noaa20_monthly_9km.graph">VIIRS-NOAA-20</a></li>
+      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_trends_viirssnpp_and_modisaqua.graph">MODIS-Aqua & VIIRS SNPP</a></li>
+      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_trends_viirsnoaa20_and_modisaqua.graph">MODIS-Aqua & VIIRS NOAA-20</a></li>
     </ul>
 </ul>
 

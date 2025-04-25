@@ -193,7 +193,7 @@
     "href": "stats2.html#download-statistical-analysis-data-products",
     "title": "\nStatistical Analysis\n",
     "section": "Download Statistical Analysis Data Products",
-    "text": "Download Statistical Analysis Data Products\nAccess datasets used in the statistical analysis, including unbiased and biased relative differences, correlations, trends, and contingency matrices.\n\n\nUnbiased Relative Difference (ψ)\n\n\n\nVIIRS-SNPP - MODIS-Aqua\n\n\nVIIRS-NOAA-20 - MODIS-Aqua\n\n\n\nLinear Regression Trends\n\n\n\nMODIS-Aqua\n\n\nVIIRS-SNPP\n\n\nVIIRS-NOAA-20"
+    "text": "Download Statistical Analysis Data Products\nAccess datasets used in the statistical analysis, including unbiased and biased relative differences, correlations, trends, and contingency matrices.\n\n\nUnbiased Relative Difference (ψ)\n\n\n\nVIIRS-SNPP - MODIS-Aqua\n\n\nVIIRS-NOAA-20 - MODIS-Aqua\n\n\n\nLinear Regression Trends\n\n\n\nMODIS-Aqua & VIIRS SNPP\n\n\nMODIS-Aqua & VIIRS NOAA-20"
   },
   {
     "objectID": "stats2.html#references",
