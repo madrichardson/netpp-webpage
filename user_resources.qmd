@@ -47,7 +47,7 @@ Calculate the absolute relative difference ($\Delta$) between the legacy and int
 #### Contingency Tables: Assessing the Similarity Between Two Primary Productivity Products
 ::: {.grid}
 ::::{.g-col-6}
-![](images/CCAL_modis_snpp_3x3_contingency.png){width=100%}
+![](images/CCAL_3x3_table.png){width=100%}
 ::::
 :::: {.g-col-6}
 Construct a contingency matrix to compare the trends between the legacy and interim product for a user-specified region.
