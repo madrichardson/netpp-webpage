@@ -112,3 +112,14 @@ Generate trends for satellite-derived hourly means of legacy or interim primary 
         ERDDAP<span style="margin-left: 10px;">&rarr;</span>
     </button>
 </a>
+
+## Download Statistical Analysis Data Products
+Access the absolute relative difference dataset below. We included this analysis so users can directly compare the absolute differences between the legacy and interim netPP products.
+
+<ul>
+  <li><a>Absolute Relative Difference (&psi;)</a></li>
+    <ul>
+      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_snpp_modis.graph">VIIRS-SNPP - MODIS-Aqua</a></li>
+      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_noaa20_modis.graph">VIIRS-NOAA-20 - MODIS-Aqua</a></li>
+    </ul>
+</ul>
