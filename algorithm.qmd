@@ -83,29 +83,4 @@ sidebar:
   <h4><strong>VIIRS NOAA20 Interim Product</strong></h4>
   <p>The VIIRS NOAA20 interim netPP product uses chlorophyll, sea surface temperature, and photosynthetically active radiation derived from the VIIRS sensor on the NOAA20 satellite. The dataset began in 2018 and continues to the present, offering daily and monthly versions of the dataset.</p>
 
-## Download Algorithm Input Data
-<ul>
-  <li><a>MODIS Aqua netPP</a></li>
-    <ul>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMH1pp1day.graph">Daily Composite</a></li>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMH1ppmday.graph">Monthly Composite</a></li>
-    </ul>
-  <li><a>MODIS Aqua input data for legacy netPP</a></li>
-    <ul>
-      <li><a href="https://www.earthdata.nasa.gov/">MODIS Chlorophyll a</a></li>
-      <li><a href="https://www.earthdata.nasa.gov/">MODIS PAR</a></li>
-      <li><a href="https://www.earthdata.nasa.gov/">MODIS SST</a></li>
-    </ul>
-  <li><a>VIIRS SNPP input data for interim netPP</a></li>
-    <ul>
-      <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP Chlorophyll a</a></li>
-      <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP PAR</a></li>
-      <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP SST</a></li>
-    </ul>
-  <li><a>VIIRS NOAA-20 input data for interim netPP</a></li>
-    <ul>
-      <li><a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 Chlorophyll a</a></li>
-      <li><a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 PAR</a></li>
-      <li><a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 SST</a></li>
-    </ul>
-</ul>
+  <p>Find the algorithm input data in [User Resources](user_resources.qmd#download-algorithm-input-data)

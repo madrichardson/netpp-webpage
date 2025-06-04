@@ -164,6 +164,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#satellite-courses" id="toc-satellite-courses" class="nav-link" data-scroll-target="#satellite-courses">Satellite Courses</a></li>
   <li><a href="#erddap-server" id="toc-erddap-server" class="nav-link" data-scroll-target="#erddap-server">ERDDAP Server</a></li>
+  <li><a href="#download-interim-product-data" id="toc-download-interim-product-data" class="nav-link" data-scroll-target="#download-interim-product-data">Download Interim Product Data</a></li>
+  <li><a href="#download-algorithm-input-data" id="toc-download-algorithm-input-data" class="nav-link" data-scroll-target="#download-algorithm-input-data">Download Algorithm Input Data</a></li>
   <li><a href="#download-statistical-analysis-data-products" id="toc-download-statistical-analysis-data-products" class="nav-link" data-scroll-target="#download-statistical-analysis-data-products">Download Statistical Analysis Data Products</a></li>
   </ul>
 </nav>
@@ -268,10 +270,106 @@ Search satellite data on the CoastWatch West Coast Node ERDDAP data server.
 </p>
 <p><a href="https://coastwatch.pfeg.noaa.gov/erddap/index.html" target="_blank" style="text-decoration: none;"> <button style="padding: 10px 20px; font-size: 18px; color:white; background-color:  #0072ce; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;"> ERDDAP<span style="margin-left: 10px;">→</span> </button> </a></p>
 </section>
+<section id="download-interim-product-data" class="level2">
+<h2 data-anchor-id="download-interim-product-data">Download Interim Product Data</h2>
+<ul>
+<li>
+<a>VIIRS SNPP Interim Primary Productivity</a>
+</li>
+<ul>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/productivity_viirs_snpp_daily.graph">Daily Composites</a>
+</li>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/productivity_viirs_snpp_monthly.graph">Monthly Composites</a>
+</li>
+</ul>
+<li>
+<a>VIIRS NOAA-20 Interim Primary Productivity</a>
+</li>
+<ul>
+<li>
+<a href="https://example.com">Daily Composites</a>
+</li>
+<li>
+<a href="https://example.com">Monthly Composites</a>
+</li>
+</ul>
+</ul>
+</section>
+<section id="download-algorithm-input-data" class="level2">
+<h2 data-anchor-id="download-algorithm-input-data">Download Algorithm Input Data</h2>
+<ul>
+<li>
+<a>MODIS Aqua netPP</a>
+</li>
+<ul>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMH1pp1day.graph">Daily Composite</a>
+</li>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMH1ppmday.graph">Monthly Composite</a>
+</li>
+</ul>
+<li>
+<a>MODIS Aqua input data for legacy netPP</a>
+</li>
+<ul>
+<li>
+<a href="https://www.earthdata.nasa.gov/">MODIS Chlorophyll a</a>
+</li>
+<li>
+<a href="https://www.earthdata.nasa.gov/">MODIS PAR</a>
+</li>
+<li>
+<a href="https://www.earthdata.nasa.gov/">MODIS SST</a>
+</li>
+</ul>
+<li>
+<a>VIIRS SNPP input data for interim netPP</a>
+</li>
+<ul>
+<li>
+<a href="https://www.earthdata.nasa.gov/">VIIRS SNPP Chlorophyll a</a>
+</li>
+<li>
+<a href="https://www.earthdata.nasa.gov/">VIIRS SNPP PAR</a>
+</li>
+<li>
+<a href="https://www.earthdata.nasa.gov/">VIIRS SNPP SST</a>
+</li>
+</ul>
+<li>
+<a>VIIRS NOAA-20 input data for interim netPP</a>
+</li>
+<ul>
+<li>
+<a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 Chlorophyll a</a>
+</li>
+<li>
+<a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 PAR</a>
+</li>
+<li>
+<a href="https://www.earthdata.nasa.gov/">VIIRS NOAA20 SST</a>
+</li>
+</ul>
+</ul>
+</section>
 <section id="download-statistical-analysis-data-products" class="level2">
 <h2 data-anchor-id="download-statistical-analysis-data-products">Download Statistical Analysis Data Products</h2>
-<p>Access the absolute relative difference dataset below. We included this analysis so users can directly compare the absolute differences between the legacy and interim netPP products.</p>
+Access datasets used in the statistical analysis, including unbiased relative differences, absolute relative differences, correlations, trends, and contingency matrices.
 <ul>
+<li>
+<a>Unbiased Relative Difference (ψ)</a>
+</li>
+<ul>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_snpp_modis.graph">VIIRS-SNPP - MODIS-Aqua</a>
+</li>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph">VIIRS-NOAA-20 - MODIS-Aqua</a>
+</li>
+</ul>
 <li>
 <a>Absolute Relative Difference (ψ)</a>
 </li>
@@ -281,6 +379,17 @@ Search satellite data on the CoastWatch West Coast Node ERDDAP data server.
 </li>
 <li>
 <a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_delta_noaa20_modis.graph">VIIRS-NOAA-20 - MODIS-Aqua</a>
+</li>
+</ul>
+<li>
+<a>Linear Regression Trends</a>
+</li>
+<ul>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_trends_viirssnpp_and_modisaqua.graph">MODIS-Aqua &amp; VIIRS-SNPP</a>
+</li>
+<li>
+<a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_trends_viirsnoaa20_and_modisaqua.graph">MODIS-Aqua &amp; VIIRS-NOAA-20</a>
 </li>
 </ul>
 </ul>
@@ -295,7 +404,7 @@ Search satellite data on the CoastWatch West Coast Node ERDDAP data server.
 </div>
 
 <p style="text-align: right; font-size: 14px; margin-top: 10px;">
-  <em>Created 2025-01-01 | Last modified 2025-04-10</em>
+  <em>Created 2025-01-01 | Last modified 2025-06-04</em>
 </p>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
