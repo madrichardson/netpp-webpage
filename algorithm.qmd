@@ -83,4 +83,4 @@ sidebar:
   <h4><strong>VIIRS NOAA20 Interim Product</strong></h4>
   <p>The VIIRS NOAA20 interim netPP product uses chlorophyll, sea surface temperature, and photosynthetically active radiation derived from the VIIRS sensor on the NOAA20 satellite. The dataset began in 2018 and continues to the present, offering daily and monthly versions of the dataset.</p>
 
-  <p>Find the algorithm input data in [User Resources](user_resources.qmd#download-algorithm-input-data)
+  <p>Find the algorithm input data in [User Resources](user_resources.qmd#download-algorithm-input-data).

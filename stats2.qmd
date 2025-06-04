@@ -31,6 +31,8 @@ For the VIIRS NOAA-20 analysis, we used a 5-year time period from January 2018 t
 
 The relatively small differences between the interim products and the legacy product suggests that either interim would be a suitable replacement for the legacy product in many applications. 
 
+To access datasets used in the statistical analysis, find it in [User Resources](user_resources.qmd#download-statistical-analysis-data-products).
+
 ## Unbiased Relative Difference (&psi;) {#psi}
 
 In plain language, Unbiased Relative Difference (&psi;) is the difference between interim and legacy primary productivity values (netPP), normalized to the mean of the two values. Normalizing to the mean avoids the bias of arbitrarily selecting one product as the reference. For a detailed explanation of the calculation, see the [Appendix](#psi_appendix). This analysis allows us to determine how similar netPP values are between the interim and legacy products.
@@ -132,23 +134,6 @@ Tallying the values on the downward-sloping diagonal contingency matrix yields 8
 **Figure 7.** Contingency table and Cohen’s Kappa statistic comparing (**a**) the VIIRS SNPP and the legacy products and (**b**) the VIIRS NOAA-20 and the legacy products.
 </span>
 :::
-
-
-## Download Statistical Analysis Data Products
-Access datasets used in the statistical analysis, including unbiased relative differences, correlations, trends, and contingency matrices.
-
-<ul>
-  <li><a>Unbiased Relative Difference (&psi;)</a></li>
-    <ul>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_snpp_modis.graph">VIIRS-SNPP - MODIS-Aqua</a></li>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph">VIIRS-NOAA-20 - MODIS-Aqua</a></li>
-    </ul>
-  <li><a>Linear Regression Trends</a></li>
-    <ul>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_trends_viirssnpp_and_modisaqua.graph">MODIS-Aqua & VIIRS-SNPP</a></li>
-      <li><a href="https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_trends_viirsnoaa20_and_modisaqua.graph">MODIS-Aqua & VIIRS-NOAA-20</a></li>
-    </ul>
-</ul>
 
 ## References
 <p><a href="https://www.sciencedirect.com/science/article/pii/S0034425717301426">Mélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151. </a></li></p>
