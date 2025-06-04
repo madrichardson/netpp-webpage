@@ -87,7 +87,8 @@ sidebar:
 <ul>
   <li><a>MODIS Aqua netPP</a></li>
     <ul>
-      <li><a href="https://example.com">MODIS netPP</a></li>
+      <li><a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMH1pp1day.graph">Daily Composite</a></li>
+      <li><a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMH1ppmday.graph">Monthly Composite</a></li>
     </ul>
   <li><a>MODIS Aqua input data for legacy netPP</a></li>
     <ul>
@@ -95,19 +96,11 @@ sidebar:
       <li><a href="https://www.earthdata.nasa.gov/">MODIS PAR</a></li>
       <li><a href="https://www.earthdata.nasa.gov/">MODIS SST</a></li>
     </ul>
-  <li><a>VIIRS SNPP netPP</a></li>
-    <ul>
-      <li><a href="https://example.com">VIIRS SNPP netPP</a></li>
-    </ul>
   <li><a>VIIRS SNPP input data for interim netPP</a></li>
     <ul>
       <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP Chlorophyll a</a></li>
       <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP PAR</a></li>
       <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP SST</a></li>
-    </ul>
-  <li><a>VIIRS NOAA-20 netPP</a></li>
-    <ul>
-      <li><a href="https://example.com">VIIRS NOAA20 netPP</a></li>
     </ul>
   <li><a>VIIRS NOAA-20 input data for interim netPP</a></li>
     <ul>
