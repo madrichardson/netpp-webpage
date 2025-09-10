@@ -39,6 +39,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-08e1269e8557b430e2197ccc38ae6770.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -192,7 +195,7 @@ User Resources
 <h4 data-anchor-id="unbiased-relative-difference-analysis-of-the-legacy-and-interim-products">Unbiased Relative Difference Analysis of the Legacy and Interim Products</h4>
 <div class="grid">
 <div class="g-col-6">
-<p><img src="images/CCAL_MODIS_SNPP_psi.png" class="img-fluid" style="width:100.0%"></p>
+<p><a href="images/ccal_psi_netpp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/ccal_psi_netpp.png" class="img-fluid" style="width:90.0%"></a></p>
 </div>
 <div class="g-col-6">
 <p>Calculate the mean unbiased relative difference (<span class="math inline">\(\psi\)</span>) between the legacy and interim products for a user-specified region.</p>
@@ -204,7 +207,7 @@ User Resources
 <h4 data-anchor-id="absolute-relative-difference-analysis-of-the-legacy-and-interim-products">Absolute Relative Difference Analysis of the Legacy and Interim Products</h4>
 <div class="grid">
 <div class="g-col-6">
-<p><img src="images/CCAL_MODIS_SNPP_delta.png" class="img-fluid" style="width:100.0%"></p>
+<p><a href="images/carb_delta_netpp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/carb_delta_netpp.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
 <div class="g-col-6">
 <p>Calculate the absolute relative difference (<span class="math inline">\(\Delta\)</span>) between the legacy and interim products for a user-specified region.</p>
@@ -216,7 +219,7 @@ User Resources
 <h4 data-anchor-id="contingency-tables-assessing-the-similarity-between-two-primary-productivity-products">Contingency Tables: Assessing the Similarity Between Two Primary Productivity Products</h4>
 <div class="grid">
 <div class="g-col-6">
-<p><img src="images/CCAL_3x3_table.png" class="img-fluid" style="width:100.0%"></p>
+<p><a href="images/CCAL_contingency_table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/CCAL_contingency_table.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
 <div class="g-col-6">
 <p>Construct a contingency matrix to compare the trends between the legacy and interim products for a user-specified region.</p>
@@ -289,10 +292,10 @@ Search satellite data on the CoastWatch West Coast Node ERDDAP data server.
 </li>
 <ul>
 <li>
-<a href="https://example.com">Daily Composites</a>
+<a href="https://coastwatch.pfeg.noaa.gov/erddap/search/index.html?page=1&amp;itemsPerPage=1000&amp;searchFor=productivity_viirs_noaa20_daily">Daily Composites</a>
 </li>
 <li>
-<a href="https://example.com">Monthly Composites</a>
+<a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/productivity_viirs_noaa20_monthly.graph">Monthly Composites</a>
 </li>
 </ul>
 </ul>
@@ -403,7 +406,7 @@ Search satellite data on the CoastWatch West Coast Node ERDDAP data server.
 </div>
 
 <p style="text-align: right; font-size: 14px; margin-top: 10px;">
-  <em>Created 2025-01-01 | Last modified 2025-06-04</em>
+  <em>Created 2025-01-01 | Last modified 2025-09-10</em>
 </p>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -798,6 +801,38 @@ Search satellite data on the CoastWatch West Coast Node ERDDAP data server.
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
